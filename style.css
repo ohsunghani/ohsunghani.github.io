@@ -1,8 +1,146 @@
-body{margin:0;font-family:Arial,sans-serif;background:#f6f8fb;color:#333}
-header{background:linear-gradient(90deg,#1d5fa7,#ef8a24);color:#fff;padding:18px}
-.wrap{max-width:1100px;margin:auto;padding:24px}
-.hero{text-align:center;padding:40px 20px}.hero img{max-width:360px;width:90%}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.card{background:#fff;border-radius:14px;padding:18px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
-.btn{display:inline-block;background:#1d5fa7;color:#fff;padding:10px 16px;border-radius:8px;text-decoration:none;margin:4px}
-footer{text-align:center;padding:30px;color:#666}
+/* 1. 프리미엄 웹 폰트 (Pretendard) 적용: 가독성과 세련미의 핵심 */
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
+
+/* 2. 컬러 팔레트 정의 (한의원 로고 맞춤형 블루 톤) */
+:root {
+    --primary-color: #1a5c8b; /* 깊고 신뢰감 주는 네이비 블루 */
+    --accent-color: #3a8bcd;  /* 청량하고 부드러운 스카이 블루 (포인트) */
+    --bg-color: #f8fafd;      /* 눈이 편안한 미세한 푸른빛의 화이트 */
+    --text-main: #2c3e50;     /* 가독성을 높이는 짙은 차콜 네이비 */
+    --text-light: #667580;    /* 부드러운 서브 텍스트 컬러 */
+}
+
+/* 3. 전체 기본 설정 */
+body {
+    margin: 0;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    background: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    word-break: keep-all; /* 한국어 줄바꿈 최적화 */
+}
+
+/* 4. 상단 헤더 (깔끔하고 고정된 형태) */
+header {
+    background: #ffffff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.04);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+header .wrap {
+    padding: 20px 24px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    letter-spacing: -0.5px;
+    margin: 0 auto;
+}
+
+/* 5. 콘텐츠 영역 중앙 정렬 및 여백 */
+.wrap {
+    max-width: 1000px;
+    margin: auto;
+    padding: 40px 24px;
+}
+
+/* 6. 메인 히어로 섹션 */
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #e3edf7 0%, #ffffff 100%);
+    border-radius: 24px;
+    margin-bottom: 50px;
+    box-shadow: 0 10px 30px rgba(26, 92, 139, 0.05);
+}
+
+.hero img {
+    max-width: 280px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    letter-spacing: -1px;
+}
+
+.hero p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    margin-bottom: 30px;
+}
+
+/* 7. 섹션 제목 스타일 */
+h2 {
+    font-size: 1.6rem;
+    color: var(--text-main);
+    margin-top: 50px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e3edf7;
+    padding-bottom: 10px;
+}
+
+/* 8. 그리드 레이아웃 */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+/* 9. 진료 과목 등 카드 디자인 */
+.card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 24px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f4f8;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(26, 92, 139, 0.08);
+    border-color: var(--accent-color);
+}
+
+.card h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    border: none;
+    padding: 0;
+    color: var(--primary-color);
+}
+
+/* 10. 버튼 디자인 */
+.btn {
+    display: inline-block;
+    background: var(--primary-color);
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 12px;
+    text-decoration: none;
+    margin: 6px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(26, 92, 139, 0.2);
+}
+
+.btn:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(58, 139, 205, 0.3);
+}
+
+/* 11. 하단 푸터 */
+footer {
+    text-align: center;
+    padding: 40px;
+    color: #999;
+    font-size: 0.9rem;
+    border-top: 1px solid #e3edf7;
+    background: #fff;
+}
