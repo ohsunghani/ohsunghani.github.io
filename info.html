@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang='ko'>
+<head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width,initial-scale=1'>
+    <title>진료 안내 및 오시는 길 - 오성한의원</title>
+    <meta name='description' content='오성한의원 진료시간, 오시는 길 및 중점 진료 과목 안내입니다. 경기도 파주시 조리읍 올리브영 2층.'>
+    <link rel='stylesheet' href='style.css'>
+    <style>
+        .info-section { display: flex; flex-wrap: wrap; gap: 30px; margin-top: 30px; }
+        .info-card { flex: 1; min-width: 300px; background: #fff; padding: 40px 30px; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.03); border: 1px solid #f0f4f8; }
+        .info-title { color: var(--primary-color); font-size: 1.4rem; margin-top: 0; margin-bottom: 25px; border-bottom: 2px solid #e3edf7; padding-bottom: 10px; }
+        
+        .time-list { list-style: none; padding: 0; margin: 0; }
+        .time-list li { margin-bottom: 20px; font-size: 1.15rem; display: flex; justify-content: space-between; align-items: center; }
+        .time-list li strong { color: var(--text-main); font-weight: 700; }
+        .time-list li span { color: var(--text-light); font-weight: 500; }
+        .highlight-text { color: var(--accent-color); font-size: 0.95rem; font-weight: bold; }
+        
+        .clinic-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 40px; }
+        .tag { background: #e3edf7; color: var(--primary-color); padding: 10px 18px; border-radius: 30px; font-weight: 600; font-size: 1.05rem; }
+        
+        .contact-info p { font-size: 1.15rem; margin-bottom: 15px; color: var(--text-main); }
+    </style>
+</head>
+<body>
+    <header><div class='wrap'><a href="index.html" style="color:var(--primary-color); text-decoration:none;">오성한의원</a></div></header>
+    <div class='wrap'>
+        <h1>진료 안내 및 오시는 길</h1>
+        
+        <div class="info-section">
+            <!-- 1. 진료 시간 카드 -->
+            <div class="info-card">
+                <h2 class="info-title">🕒 진료 시간</h2>
+                <ul class="time-list">
+                    <li><strong>평일</strong> <span>오전 9:00 ~ 오후 6:00</span></li>
+                    <li>
+                        <div><strong>토요일</strong><br><span class="highlight-text">(점심시간 없이 진료)</span></div> 
+                        <span>오전 9:00 ~ 오후 1:00</span>
+                    </li>
+                    <li><strong>점심시간</strong> <span>오후 1:00 ~ 오후 2:00</span></li>
+                    <li style="border-top: 1px dashed #e3edf7; padding-top: 20px; margin-top: 10px;">
+                        <strong style="color: #e74c3c;">일요일, 공휴일</strong> <span style="color: #e74c3c; font-weight: bold;">휴진</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 2. 중점 진료 및 오시는 길 카드 -->
+            <div class="info-card">
+                <h2 class="info-title"> 중점 진료 과목</h2>
+                <div class="clinic-tags">
+                    <span class="tag">통증클리닉</span>
+                    <span class="tag">약침클리닉</span>
+                    <span class="tag">다이어트클리닉</span>
+                    <span class="tag">비염</span>
+                    <span class="tag">감기</span>
+                    <span class="tag">교통사고</span>
+                </div>
+
+                <h2 class="info-title"> 오시는 길</h2>
+                <div class="contact-info">
+                    <p><strong>주소 :</strong> 경기도 파주시 조리읍 봉천로 35-1, 올리브영 2층</p>
+                    <p><strong>진료문의 :</strong> <a href="tel:031-946-7510" style="color:var(--primary-color); text-decoration:none; font-weight:bold; font-size: 1.4rem;">031-946-7510</a></p>
+                    <p style="font-size: 0.95rem; color: var(--text-light); margin-top: 10px; line-height: 1.4;">※ 스마트폰에서 위 전화번호를 터치하시면<br>한의원 데스크로 바로 연결됩니다.</p>
+                </div>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 50px; margin-bottom: 20px;">
+            <a class='btn' href='index.html'>메인 화면으로 돌아가기</a>
+        </div>
+    </div>
+    <footer>© 오성한의원. All Rights Reserved.</footer>
+</body>
+</html>
