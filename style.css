@@ -1,7 +1,5 @@
-/* 1. 프리미엄 웹 폰트 (Pretendard) 적용: 가독성과 세련미의 핵심 */
 @import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.css');
 
-/* 2. 컬러 팔레트 정의 (한의원 로고 맞춤형 블루 톤) */
 :root {
     --primary-color: #1a5c8b; /* 깊고 신뢰감 주는 네이비 블루 */
     --accent-color: #3a8bcd;  /* 청량하고 부드러운 스카이 블루 (포인트) */
@@ -10,17 +8,15 @@
     --text-light: #667580;    /* 부드러운 서브 텍스트 컬러 */
 }
 
-/* 3. 전체 기본 설정 */
 body {
     margin: 0;
     font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
     background: var(--bg-color);
     color: var(--text-main);
     line-height: 1.6;
-    word-break: keep-all; /* 한국어 줄바꿈 최적화 */
+    word-break: keep-all;
 }
 
-/* 4. 상단 헤더 (깔끔하고 고정된 형태) */
 header {
     background: #ffffff;
     box-shadow: 0 2px 10px rgba(0,0,0,0.04);
@@ -36,16 +32,15 @@ header .wrap {
     color: var(--primary-color);
     letter-spacing: -0.5px;
     margin: 0 auto;
+    max-width: 1000px;
 }
 
-/* 5. 콘텐츠 영역 중앙 정렬 및 여백 */
 .wrap {
     max-width: 1000px;
     margin: auto;
     padding: 40px 24px;
 }
 
-/* 6. 메인 히어로 섹션 */
 .hero {
     text-align: center;
     padding: 60px 20px;
@@ -53,12 +48,6 @@ header .wrap {
     border-radius: 24px;
     margin-bottom: 50px;
     box-shadow: 0 10px 30px rgba(26, 92, 139, 0.05);
-}
-
-.hero img {
-    max-width: 280px;
-    width: 100%;
-    margin-bottom: 20px;
 }
 
 .hero h1 {
@@ -74,7 +63,6 @@ header .wrap {
     margin-bottom: 30px;
 }
 
-/* 7. 섹션 제목 스타일 */
 h2 {
     font-size: 1.6rem;
     color: var(--text-main);
@@ -84,14 +72,12 @@ h2 {
     padding-bottom: 10px;
 }
 
-/* 8. 그리드 레이아웃 */
 .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 20px;
 }
 
-/* 9. 진료 과목 등 카드 디자인 */
 .card {
     background: #fff;
     border-radius: 16px;
@@ -107,7 +93,7 @@ h2 {
     border-color: var(--accent-color);
 }
 
-.card h2 {
+.card h2, .card h3 {
     margin-top: 0;
     font-size: 1.3rem;
     border: none;
@@ -115,7 +101,6 @@ h2 {
     color: var(--primary-color);
 }
 
-/* 10. 버튼 디자인 */
 .btn {
     display: inline-block;
     background: var(--primary-color);
@@ -135,7 +120,6 @@ h2 {
     box-shadow: 0 6px 16px rgba(58, 139, 205, 0.3);
 }
 
-/* 11. 하단 푸터 */
 footer {
     text-align: center;
     padding: 40px;
@@ -143,4 +127,34 @@ footer {
     font-size: 0.9rem;
     border-top: 1px solid #e3edf7;
     background: #fff;
+    margin-top: 60px;
+}
+
+/* FAQ 전용 스타일 추가 */
+.faq-item {
+    background: #fff;
+    margin-bottom: 15px;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+    border: 1px solid #f0f4f8;
+}
+
+.faq-q {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.faq-a {
+    color: var(--text-main);
+    line-height: 1.6;
+}
+
+.category-title {
+    margin-top: 40px;
+    color: var(--accent-color);
+    border-bottom: 2px solid #e3edf7;
+    padding-bottom: 10px;
 }
