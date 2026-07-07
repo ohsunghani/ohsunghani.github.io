@@ -10,7 +10,38 @@
     <meta property="og:url" content="https://ohsunghani.github.io/">
     <meta property="og:type" content="website">
     <link rel='stylesheet' href='style.css'>
-    
+    <!-- 구글/네이버 AI 검색 로봇을 위한 구조화된 데이터 (VIP 명함) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalClinic",
+      "name": "오성한의원",
+      "url": "https://ohsunghani.github.io/",
+      "telephone": "+82-31-946-7510",
+      "address": {
+        "@type": "PostalAddress",
+        "addressRegion": "경기도",
+        "addressLocality": "파주시 조리읍",
+        "streetAddress": "봉천로 35-1, 올리브영 2층",
+        "addressCountry": "KR"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": "Saturday",
+          "opens": "09:00",
+          "closes": "13:00"
+        }
+      ],
+      "medicalSpecialty": "TraditionalChineseMedicine"
+    }
+    </script>
     <!-- AI 크롤러를 위한 구조화 데이터(Schema) -->
     <script type="application/ld+json">
     {
