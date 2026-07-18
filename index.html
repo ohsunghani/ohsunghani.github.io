@@ -17,7 +17,7 @@
     <meta name="twitter:title" content="오성한의원 - 파주 봉일천 한의원">
     <meta name="twitter:image" content="https://ohsunghani.github.io/images/logo.png">
 
-    <!-- GEO 최적화를 위한 100점 만점 구조화 데이터 -->
+    <!-- GEO 최적화 100점 만점 통합 스키마 -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -28,6 +28,14 @@
           "url": "https://ohsunghani.github.io/",
           "name": "오성한의원",
           "publisher": { "@id": "https://ohsunghani.github.io/#clinic" }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://ohsunghani.github.io/#webpage",
+          "url": "https://ohsunghani.github.io/",
+          "name": "오성한의원 - 파주 봉일천 한의원",
+          "isPartOf": { "@id": "https://ohsunghani.github.io/#website" },
+          "about": { "@id": "https://ohsunghani.github.io/#clinic" }
         },
         {
           "@type": "MedicalClinic",
