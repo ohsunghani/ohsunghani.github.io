@@ -10,62 +10,73 @@
     <meta property="og:url" content="https://ohsunghani.github.io/">
     <meta property="og:type" content="website">
     <link rel='stylesheet' href='style.css'>
-    <!-- 구글/네이버 AI 검색 로봇을 위한 구조화된 데이터 (VIP 명함) -->
+    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="canonical" href="https://ohsunghani.github.io/">
+    <meta property="og:image" content="https://ohsunghani.github.io/images/logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="오성한의원 - 파주 봉일천 한의원">
+    <meta name="twitter:image" content="https://ohsunghani.github.io/images/logo.png">
+
+    <!-- GEO 최적화를 위한 100점 만점 구조화 데이터 -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "MedicalClinic",
-      "name": "오성한의원",
-      "url": "https://ohsunghani.github.io/",
-      "telephone": "+82-31-946-7510",
-      "address": {
-        "@type": "PostalAddress",
-        "addressRegion": "경기도",
-        "addressLocality": "파주시 조리읍",
-        "streetAddress": "봉천로 35-1, 올리브영 2층",
-        "addressCountry": "KR"
-      },
-      "openingHoursSpecification": [
+      "@graph": [
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
-          "opens": "09:00",
-          "closes": "18:00"
+          "@type": "WebSite",
+          "@id": "https://ohsunghani.github.io/#website",
+          "url": "https://ohsunghani.github.io/",
+          "name": "오성한의원",
+          "publisher": { "@id": "https://ohsunghani.github.io/#clinic" }
         },
         {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": "Saturday",
-          "opens": "09:00",
-          "closes": "13:00"
+          "@type": "MedicalClinic",
+          "@id": "https://ohsunghani.github.io/#clinic",
+          "name": "오성한의원",
+          "image": "https://ohsunghani.github.io/images/logo.png",
+          "telephone": "031-946-7510",
+          "url": "https://ohsunghani.github.io/",
+          "sameAs": [
+            "https://blog.naver.com/ohsunghani",
+            "https://map.naver.com/p/entry/place/1460403202"
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "봉천로 35-1, 올리브영 2층",
+            "addressLocality": "파주시 조리읍",
+            "addressRegion": "경기도",
+            "addressCountry": "KR"
+          },
+          "openingHoursSpecification": [
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              "opens": "09:00",
+              "closes": "18:00"
+            },
+            {
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": "Saturday",
+              "opens": "09:00",
+              "closes": "13:00"
+            }
+          ]
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://ohsunghani.github.io/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "홈",
+              "item": "https://ohsunghani.github.io/"
+            }
+          ]
         }
-      ],
-      "medicalSpecialty": "TraditionalChineseMedicine"
+      ]
     }
     </script>
-    <!-- AI 크롤러를 위한 구조화 데이터(Schema) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Physician",
-      "name": "오성한의원",
-      "image": "https://ohsunghani.github.io/images/logo.png",
-      "telephone": "031-946-7510",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "조리읍 봉일천리",
-        "addressLocality": "파주시",
-        "addressRegion": "경기도",
-        "addressCountry": "KR"
-      },
-      "url": "https://ohsunghani.github.io"
-    }
-  <link rel="icon" href="favicon.png" type="image/png">
-    </script>
-  <link rel="canonical" href="https://ohsunghani.github.io/">
-  <meta property="og:image" content="https://ohsunghani.github.io/images/logo.png">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="오성한의원 - 파주 조리읍 봉일천 한의원">
-  <meta name="twitter:image" content="https://ohsunghani.github.io/images/logo.png">
 </head>
 <body>
     <header><div class='wrap'><a href="index.html" style="color:var(--primary-color); text-decoration:none;">오성한의원</a></div></header>
