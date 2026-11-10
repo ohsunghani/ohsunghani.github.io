@@ -9,7 +9,7 @@ import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://ohsunghani.github.io/'
-VERSION = '20261110-journal1'
+VERSION = '20261110-compact1'
 LABELS = {
     'pain': '통증 · 자세', 'accident': '교통사고',
     'treatment': '치료 · 내원 안내', 'herbal': '한약 · 공진단',
@@ -35,7 +35,7 @@ def head(title, description, filename, schema=None):
 <title>{escape(title)} | 오성한의원</title><meta name="description" content="{attr(description)}">
 <link rel="canonical" href="{url}"><link rel="icon" href="../favicon.png" type="image/png">
 <meta property="og:type" content="{'article' if schema and schema.get('@type') == 'Article' else 'website'}"><meta property="og:title" content="{attr(title)}"><meta property="og:description" content="{attr(description)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE}og-image.png">
-<link rel="stylesheet" href="../style.css?v=20261110-gothic3"><link rel="stylesheet" href="../pages.css?v=20261110-gothic3"><link rel="stylesheet" href="../journal.css?v={VERSION}">
+<link rel="stylesheet" href="../style.css?v={VERSION}"><link rel="stylesheet" href="../pages.css?v={VERSION}"><link rel="stylesheet" href="../journal.css?v={VERSION}">
 {structured(schema) if schema else ''}'''
 
 def related(article, articles):
@@ -105,7 +105,7 @@ def build():
     (ROOT/'health/index.html').write_text(page)
     home = (ROOT/'index.html').read_text()
     blog_links = '<div class="journal-blog-links"><span>블로그 카테고리</span><a href="https://blog.naver.com/PostList.naver?blogId=ohsunghani&amp;from=postList&amp;categoryNo=25" target="_blank" rel="noopener noreferrer">진료 철학</a><a href="https://blog.naver.com/PostList.naver?blogId=ohsunghani&amp;from=postList&amp;categoryNo=16" target="_blank" rel="noopener noreferrer">교통사고 치료 이야기</a><a href="https://blog.naver.com/PostList.naver?blogId=ohsunghani&amp;from=postList&amp;categoryNo=18" target="_blank" rel="noopener noreferrer">공진단 이야기</a></div>'
-    home_section = '<section class="section container" aria-labelledby="journal-title"><div class="section-head"><div><span class="eyebrow">OHSUNG JOURNAL</span><h2 class="section-title" id="journal-title">일상 가까이,<br>건강 이야기.</h2></div><a class="text-link" href="health/index.html">건강칼럼 전체 보기 '+ARROW+'</a></div><p class="journal-home-description">궁금했던 건강 이야기를 오성한의원 홈페이지에서 읽어보세요.</p><div class="journal-grid journal-home-grid">'+''.join(card(a,'health/','h3') for a in articles[:3])+'</div>'+blog_links+'</section>'
+    home_section = '<section class="section container" aria-labelledby="journal-title"><div class="section-head"><div><span class="eyebrow">OHSUNG JOURNAL</span><h2 class="section-title" id="journal-title">일상 가까이, 건강 이야기.</h2></div><a class="text-link" href="health/index.html">건강칼럼 전체 보기 '+ARROW+'</a></div><p class="journal-home-description">궁금했던 건강 이야기를 오성한의원 홈페이지에서 읽어보세요.</p><div class="journal-grid journal-home-grid">'+''.join(card(a,'health/','h3') for a in articles[:3])+'</div>'+blog_links+'</section>'
     home, count = re.subn(r'<section class="section container" aria-labelledby="journal-title">.*?</section>',home_section,home,flags=re.S)
     assert count == 1, 'Home article section not found'
     if 'journal.css' not in home:
