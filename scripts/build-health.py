@@ -24,6 +24,24 @@ def attr(text):
 def structured(data):
     return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False).replace('<', '\\u003c') + '</script>'
 
+def sync_existing_article_title(text, article, updated):
+    """Keep the original article body while syncing its catalog title everywhere."""
+    replacements = [
+        (r'<title>.*?</title>', '<title>'+escape(article['title'])+' | 오성한의원</title>'),
+        (r'<meta property="og:title" content="[^"]*">', '<meta property="og:title" content="'+attr(article['title'])+'">'),
+        (r'<h1>.*?</h1>', '<h1>'+escape(article['title'])+'</h1>'),
+    ]
+    for pattern, replacement in replacements:
+        text, count = re.subn(pattern, lambda match: replacement, text, count=1, flags=re.S)
+        assert count == 1, 'Original article title field not found'
+    def update_schema(match):
+        schema = json.loads(match.group(1))
+        if schema.get('@type') == 'Article':
+            schema['headline'] = article['title']
+            schema['dateModified'] = updated
+        return structured(schema)
+    return re.sub(r'<script type="application/ld\+json">(.*?)</script>', update_schema, text, flags=re.S)
+
 def card(article, prefix='', heading='h2'):
     original_date = article.get('published_date')
     meta = f'<span class="journal-date">블로그 원문 {attr(original_date.replace("-", "."))}</span>' if original_date else ''
@@ -79,7 +97,8 @@ def build():
         if article.get('existing'):
             path = ROOT/'health'/f'{article["slug"]}.html'
             text = path.read_text()
-            # Keep the established article and its URL, adding only archive navigation.
+            # Keep the established body and URL; sync its title and archive navigation.
+            text = sync_existing_article_title(text, article, updated)
             if 'journal.css' not in text:
                 text = text.replace('</head>',f'<link rel="stylesheet" href="../journal.css?v={VERSION}">\n</head>')
             else:
