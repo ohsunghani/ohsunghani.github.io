@@ -1,15 +1,21 @@
 #!/usr/bin/env python3
 """Render the clinic's static article archive from health/articles.json."""
 from pathlib import Path
-from html import escape
-from datetime import date
+from html import escape, unescape
+from datetime import date, datetime, timedelta, timezone
+from email.utils import format_datetime
+from html.parser import HTMLParser
+from urllib.parse import urljoin, urlsplit, unquote, quote
 import json
 import re
+import subprocess
+import sys
 import xml.etree.ElementTree as ET
 
 ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://ohsunghani.github.io/'
 VERSION = '20261110-compact1'
+RSS_LINK = '<link rel="alternate" type="application/rss+xml" title="오성한의원 홈페이지 소식" href="'+SITE+'rss.xml">'
 LABELS = {
     'pain': '통증 · 자세', 'accident': '교통사고',
     'treatment': '치료 · 내원 안내', 'herbal': '한약 · 공진단',
@@ -20,6 +26,126 @@ SEARCH = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor
 
 def attr(text):
     return escape(str(text), quote=True)
+
+def rss_date(value):
+    # The catalog records calendar dates in Korea, without a publication time.
+    return format_datetime(datetime.fromisoformat(value).replace(tzinfo=timezone(timedelta(hours=9))))
+
+class SearchMetadata(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.canonicals = []
+        self.noindex = False
+        self.redirect = False
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        if tag == 'link' and 'canonical' in (attrs.get('rel') or '').lower().split():
+            self.canonicals.append(attrs.get('href') or '')
+        if tag == 'meta':
+            name = (attrs.get('name') or '').lower()
+            tokens = re.split(r'[,;\s]+', (attrs.get('content') or '').lower())
+            if name in {'robots', 'googlebot', 'naverbot', 'yeti'} and {'noindex', 'none'} & set(tokens):
+                self.noindex = True
+            self.redirect |= (attrs.get('http-equiv') or '').lower() == 'refresh'
+
+def page_last_modified(path):
+    result = subprocess.run(['git', 'log', '-1', '--format=%cI', '--', str(path.relative_to(ROOT))], cwd=ROOT, capture_output=True, text=True)
+    value = result.stdout.strip()
+    changed = datetime.fromisoformat(value) if result.returncode == 0 and value else datetime.fromtimestamp(path.stat().st_mtime, timezone.utc)
+    return changed.astimezone(timezone(timedelta(hours=9))).date().isoformat()
+
+def build_search():
+    """Rebuild discovery files from existing, indexable HTML; remove stale URLs."""
+    data = json.loads((ROOT/'health/articles.json').read_text())
+    ns = 'http://www.sitemaps.org/schemas/sitemap/0.9'
+    ET.register_namespace('', ns)
+    sitemap = ET.Element('{'+ns+'}urlset')
+    seen = set()
+    for path in sorted(ROOT.rglob('*.html'), key=lambda p: (p != ROOT/'index.html', str(p))):
+        relative = path.relative_to(ROOT)
+        if any(part.startswith(('.', '_')) or part in {'scripts', 'node_modules'} for part in relative.parts):
+            continue
+        if path.name == '404.html' or re.fullmatch(r'(?:google|naver)[a-zA-Z0-9]+\.html', path.name):
+            continue
+        metadata = SearchMetadata()
+        metadata.feed(path.read_text())
+        if metadata.noindex or metadata.redirect:
+            continue
+        assert len(metadata.canonicals) <= 1, 'Multiple canonical URLs: '+str(relative)
+        expected = SITE + ('' if relative.as_posix() == 'index.html' else quote(relative.as_posix(), safe='/'))
+        canonical = urljoin(expected, metadata.canonicals[0]) if metadata.canonicals else expected
+        parsed = urlsplit(canonical)
+        if parsed.netloc != urlsplit(SITE).netloc:
+            continue  # An explicit canonical on another site is not an index target here.
+        assert parsed.scheme == 'https' and not parsed.query and not parsed.fragment, 'Invalid canonical URL: '+canonical
+        target = (ROOT/unquote(parsed.path).lstrip('/')).resolve()
+        if target.is_dir():
+            target /= 'index.html'
+        assert target.is_relative_to(ROOT) and target.exists(), 'Canonical target is missing: '+canonical
+        if target != path.resolve():
+            continue  # A local duplicate belongs under the canonical page's URL only.
+        assert canonical not in seen, 'Duplicate canonical URL: '+canonical
+        seen.add(canonical)
+        node = ET.SubElement(sitemap, '{'+ns+'}url')
+        ET.SubElement(node, '{'+ns+'}loc').text = canonical
+        ET.SubElement(node, '{'+ns+'}lastmod').text = page_last_modified(path)
+    assert seen, 'No indexable site pages found'
+    ET.indent(sitemap, space='  ')
+    (ROOT/'sitemap.xml').write_bytes(ET.tostring(sitemap, encoding='utf-8', xml_declaration=True)+b'\n')
+    last_changed = max(node.find('{'+ns+'}lastmod').text for node in sitemap)
+    write_rss(data['articles'], sitemap, last_changed)
+    print(f'Built sitemap and sitewide RSS for {len(seen)} indexable pages.')
+
+def write_rss(catalog, sitemap, updated):
+    """Publish the complete, rendered content of every page in the sitemap."""
+    atom = 'http://www.w3.org/2005/Atom'
+    ET.register_namespace('atom', atom)
+    feed = ET.Element('rss', {'version': '2.0'})
+    channel = ET.SubElement(feed, 'channel')
+    ET.SubElement(channel, 'title').text = '오성한의원 홈페이지 소식'
+    ET.SubElement(channel, 'link').text = SITE
+    ET.SubElement(channel, 'description').text = '파주 봉일천 오성한의원의 진료 안내, 의료진 소개, 자주 묻는 질문과 건강칼럼을 전합니다.'
+    ET.SubElement(channel, 'language').text = 'ko-kr'
+    ET.SubElement(channel, 'lastBuildDate').text = rss_date(updated)
+    ET.SubElement(channel, '{'+atom+'}link', {'href': SITE+'rss.xml', 'rel': 'self', 'type': 'application/rss+xml'})
+    by_url = {SITE+'health/'+a['slug']+'.html': (i, a) for i, a in enumerate(catalog)}
+    ns = 'http://www.sitemaps.org/schemas/sitemap/0.9'
+    urls = [node.find('{'+ns+'}loc').text for node in sitemap]
+    assert urls and len(set(urls)) == len(urls), 'Empty or duplicate RSS pages'
+    core = [url for url in urls if url not in by_url]
+    columns = sorted((url for url in urls if url in by_url), key=lambda url: (by_url[url][1].get('website_published', ''), by_url[url][0]), reverse=True)
+    for url in core+columns:
+        assert url.startswith(SITE), 'Unexpected RSS domain'
+        path = (ROOT/(unquote(url[len(SITE):]) or 'index.html')).resolve()
+        assert path.is_relative_to(ROOT), 'Unexpected RSS page path'
+        if path.is_dir():
+            path /= 'index.html'
+        page = path.read_text()
+        article = by_url[url][1] if url in by_url else None
+        pattern = r'<article class="article-body">(.*?)</article>' if article else r'<main\b[^>]*>(.*?)</main>'
+        match = re.search(pattern, page, re.S|re.I)
+        if not match and not article:
+            match = re.search(r'<body\b[^>]*>(.*?)</body>', page, re.S|re.I)
+        assert match and match.group(1).strip(), 'Missing RSS page content: '+url
+        body = re.sub(r'<(script|style|svg)\b[^>]*>.*?</\1>', '', match.group(1), flags=re.S|re.I)
+        body = re.sub(r'''\b(href|src)=(['"])(.*?)\2''', lambda m: m[1]+'="'+attr(urljoin(url, unescape(m[3])))+'"', body, flags=re.S|re.I)
+        title_match = re.search(r'<title\b[^>]*>(.*?)</title>', page, re.S|re.I)
+        assert title_match, 'Missing RSS page title: '+url
+        title = article['title'] if article else unescape(re.sub(r'<[^>]+>', '', title_match.group(1)))
+        item = ET.SubElement(channel, 'item')
+        ET.SubElement(item, 'title').text = title
+        ET.SubElement(item, 'link').text = url
+        ET.SubElement(item, 'guid', {'isPermaLink': 'true'}).text = url
+        if article and article.get('website_published'):
+            ET.SubElement(item, 'pubDate').text = rss_date(article['website_published'])
+        if article:
+            ET.SubElement(item, 'category').text = LABELS[article['category']]
+        ET.SubElement(item, 'description').text = body
+    ET.indent(feed, space='  ')
+    content = ET.tostring(feed, encoding='utf-8', xml_declaration=True)+b'\n'
+    assert len(content) < 10*1024*1024, 'RSS feed exceeds the submission size limit'
+    (ROOT/'rss.xml').write_bytes(content)
 
 def source_blog_name(url):
     if re.fullmatch(r'https://blog\.naver\.com/ohsunghani/[0-9]+', url):
@@ -56,9 +182,10 @@ def card(article, prefix='', heading='h2'):
 
 def head(title, description, filename, schema=None):
     url = SITE + filename
+    rss_link = '\n'+RSS_LINK if filename == 'health/index.html' else ''
     return f'''<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{escape(title)} | 오성한의원</title><meta name="description" content="{attr(description)}">
-<link rel="canonical" href="{url}"><link rel="icon" href="../favicon.png" type="image/png">
+<link rel="canonical" href="{url}"><link rel="icon" href="../favicon.png" type="image/png">{rss_link}
 <meta property="og:type" content="{'article' if schema and schema.get('@type') == 'Article' else 'website'}"><meta property="og:title" content="{attr(title)}"><meta property="og:description" content="{attr(description)}"><meta property="og:url" content="{url}"><meta property="og:image" content="{SITE}og-image.png">
 <link rel="stylesheet" href="../style.css?v={VERSION}"><link rel="stylesheet" href="../pages.css?v={VERSION}"><link rel="stylesheet" href="../journal.css?v={VERSION}">
 {structured(schema) if schema else ''}'''
@@ -139,21 +266,15 @@ def build():
         home = home.replace('</head>',f'<link rel="stylesheet" href="journal.css?v={VERSION}">\n</head>')
     else:
         home = re.sub(r'journal\.css(?:\?[^\"]*)?', 'journal.css?v='+VERSION, home)
+    if 'type="application/rss+xml"' not in home:
+        home = home.replace('</head>', RSS_LINK+'\n</head>')
     (ROOT/'index.html').write_text(home)
-    ns='http://www.sitemaps.org/schemas/sitemap/0.9'
-    ET.register_namespace('',ns)
-    tree=ET.parse(ROOT/'sitemap.xml'); sm=tree.getroot()
-    current={node.find('{'+ns+'}loc').text:node for node in sm}
-    for path in ['', 'health/index.html']+['health/'+a['slug']+'.html' for a in articles]:
-        url=SITE+path
-        node=current.get(url)
-        if node is None:
-            node=ET.SubElement(sm,'{'+ns+'}url');ET.SubElement(node,'{'+ns+'}loc').text=url
-        lm=node.find('{'+ns+'}lastmod')
-        if lm is None:lm=ET.SubElement(node,'{'+ns+'}lastmod')
-        lm.text=updated
-    ET.indent(tree,space='  ');tree.write(ROOT/'sitemap.xml',encoding='utf-8',xml_declaration=True)
-    print(f'Built {len(articles)} articles, archive, home previews and sitemap.')
+    build_search()
+    print(f'Built {len(articles)} articles, archive and home previews.')
 
 if __name__=='__main__':
-    build()
+    if sys.argv[1:] == ['--search-only']:
+        build_search()
+    else:
+        assert not sys.argv[1:], 'Usage: build-health.py [--search-only]'
+        build()

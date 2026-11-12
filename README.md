@@ -10,9 +10,21 @@
 - `faq.html`: 기존 20개 질문과 검색·분류
 - `health/`: 건강정보 목록과 칼럼
 
-`style.css`는 공통 디자인과 홈, `pages.css`는 상세 페이지, `site.js`는 메뉴·FAQ·주소 복사를 담당합니다. 폰트는 `assets/fonts/`에서 제공하며 OFL 라이선스를 포함합니다. 별도 빌드나 패키지 설치 없이 열 수 있고, GitHub Pages는 `main` 브랜치 루트에서 자동 배포됩니다.
+`style.css`는 공통 디자인과 홈, `pages.css`는 상세 페이지, `site.js`는 메뉴·FAQ·주소 복사를 담당합니다. 폰트는 `assets/fonts/`에서 제공하며 OFL 라이선스를 포함합니다. 별도 패키지 설치 없이 열 수 있고, `main`에 반영하면 GitHub Actions가 사이트맵과 RSS를 생성한 뒤 GitHub Pages에 배포합니다.
 
-전화번호·주소·진료시간을 변경할 때는 각 페이지 공통 안내와 JSON-LD의 정보도 함께 수정합니다. URL을 추가하면 `sitemap.xml`에도 등록합니다.
+전화번호·주소·진료시간을 변경할 때는 각 페이지 공통 안내와 JSON-LD의 정보도 함께 수정합니다.
+
+## 검색엔진 수집 설정
+
+`sitemap.xml`과 전체 사이트 RSS인 `rss.xml`은 실제 HTML 파일을 바탕으로 생성합니다. 페이지 파일을 추가·삭제하면 다음 자동 배포에 반영됩니다. 소유확인 HTML, 404 페이지, `noindex` 페이지, 리다이렉트 페이지, 다른 페이지를 canonical로 지정한 중복 페이지는 제외합니다. 사이트맵의 `lastmod`는 해당 HTML 파일의 Git 수정일을 한국 날짜로 변환합니다.
+
+로컬에서 검색 파일만 갱신하려면 다음 명령을 실행합니다. 이 모드는 기존 HTML 본문을 다시 생성하지 않습니다.
+
+```sh
+python3 scripts/build-health.py --search-only
+```
+
+정식 주소는 `https://ohsunghani.github.io/`입니다. Google Search Console과 네이버 서치어드바이저에도 같은 HTTPS 주소로 등록하고 `https://ohsunghani.github.io/sitemap.xml`을 제출합니다. 네이버 RSS 제출 주소는 `https://ohsunghani.github.io/rss.xml`입니다. `robots.txt`는 전체 수집을 허용하며 사이트맵 주소를 안내합니다. Google·네이버 소유확인 파일은 삭제하지 않습니다.
 
 ## 건강칼럼 추가·수정
 
@@ -22,7 +34,7 @@
 python3 scripts/build-health.py
 ```
 
-건강정보 목록, 홈페이지의 최신 원문 3개 미리보기, 개별 칼럼, 함께 읽을 글, 사이트맵을 함께 갱신합니다. 배포에는 생성된 HTML도 포함합니다. 별도 서버나 패키지 설치는 필요 없습니다. 원래부터 있던 `airconditioner-shoulder.html`의 본문과 주소는 유지합니다.
+건강정보 목록, 홈페이지의 최신 원문 3개 미리보기, 개별 칼럼, 함께 읽을 글, 사이트맵과 RSS를 함께 갱신합니다. 배포에는 생성된 HTML도 포함합니다. 별도 서버나 패키지 설치는 필요 없습니다. 원래부터 있던 `airconditioner-shoulder.html`의 본문과 주소는 유지합니다. 칼럼을 삭제할 때는 JSON 항목과 해당 HTML 파일을 함께 삭제합니다.
 
 - `published_date`는 네이버 블로그 원문의 실제 작성일입니다. 알 수 없으면 `null`로 둡니다.
 - 홈페이지에 처음 게시한 날은 `website_published`, 편집한 날은 맨 위 `updated`에 기록합니다.
