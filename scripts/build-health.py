@@ -21,6 +21,13 @@ SEARCH = '<svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor
 def attr(text):
     return escape(str(text), quote=True)
 
+def source_blog_name(url):
+    if re.fullmatch(r'https://blog\.naver\.com/ohsunghani/[0-9]+', url):
+        return '네이버 블로그'
+    if re.fullmatch(r'https://ohsunghani\.tistory\.com/[0-9]+', url):
+        return '티스토리 블로그'
+    raise ValueError('Unexpected article source')
+
 def structured(data):
     return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False).replace('<', '\\u003c') + '</script>'
 
@@ -72,7 +79,8 @@ def article_html(article, articles, header, footer, updated):
             body += '<ul>'+''.join('<li>'+escape(item)+'</li>' for item in section['items'])+'</ul>'
         toc.append(f'<li><a href="#{ident}">{escape(section["heading"])}</a></li>')
     source_date = f' · 원문 작성일 {article["published_date"].replace("-", ".")}' if article.get('published_date') else ''
-    body += f'<div class="journal-source"><span class="eyebrow">FROM OHSUNG BLOG</span><p>오성한의원 블로그 글을 바탕으로 홈페이지에서 읽기 쉽게 정리했습니다.</p><a class="text-link" href="{attr(article["source_url"])}" target="_blank" rel="noopener noreferrer">{escape(article["source_title"])} {ARROW}</a><p class="small-note">출처: 오성한의원 네이버 블로그{source_date}</p></div>'
+    source_name = source_blog_name(article['source_url'])
+    body += f'<div class="journal-source"><span class="eyebrow">FROM OHSUNG BLOG</span><p>오성한의원 블로그 글을 바탕으로 홈페이지에서 읽기 쉽게 정리했습니다.</p><a class="text-link" href="{attr(article["source_url"])}" target="_blank" rel="noopener noreferrer">{escape(article["source_title"])} {ARROW}</a><p class="small-note">출처: 오성한의원 {source_name}{source_date}</p></div>'
     body += f'<div class="article-back"><a class="text-link" href="index.html">건강칼럼 목록으로 {ARROW}</a></div>'
     schema = {'@context':'https://schema.org','@type':'Article','headline':article['title'], 'description':article['excerpt'], 'url':SITE+'health/'+article['slug']+'.html','mainEntityOfPage':SITE+'health/'+article['slug']+'.html', 'author':{'@type':'Organization','name':'오성한의원','url':SITE}, 'publisher':{'@type':'Organization','name':'오성한의원','url':SITE},'datePublished':article.get('website_published',updated), 'dateModified':updated,'isBasedOn':{'@type':'Article','url':article['source_url'],'headline':article['source_title'],'datePublished':article.get('published_date')}}
     intro = f'<nav class="breadcrumb" aria-label="현재 위치"><a href="../index.html">홈</a><span aria-hidden="true">/</span><a href="index.html">건강정보</a><span aria-hidden="true">/</span><span>{LABELS[article["category"]]}</span></nav><div class="page-intro article-intro"><span class="eyebrow">{LABELS[article["category"]]}</span><h1>{escape(article["title"])}</h1><p class="article-meta">오성한의원 건강칼럼 · 블로그 글을 정리한 건강정보</p></div>'
@@ -88,7 +96,7 @@ def build():
         assert re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',article['slug']), 'Invalid article slug'
         assert article['category'] in LABELS, 'Invalid category'
         if article.get('source_url'):
-            assert article['source_url'].startswith('https://blog.naver.com/ohsunghani/'), 'Unexpected article source'
+            source_blog_name(article['source_url'])
     articles = sorted(articles,key=lambda a:a.get('published_date') or '',reverse=True)
     template = (ROOT/'health/airconditioner-shoulder.html').read_text()
     header = re.search(r'(<a class="skip-link".*?</header>)',template,re.S).group(1)
