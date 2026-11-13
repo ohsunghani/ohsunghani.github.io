@@ -102,6 +102,47 @@ class DiscoveryTests(unittest.TestCase):
         subprocess.run(['git', '-c', 'user.name=Search Test', '-c', 'user.email=test@example.invalid', 'commit', '-qm', 'Fixture'], cwd=self.root, env=env, check=True)
         self.assertEqual(builder.page_last_modified(self.root/'index.html'), '2026-11-11')
 
+    def philosophy_fixture(self):
+        article = {
+            'slug': 'verified-philosophy', 'category': 'philosophy', 'title': 'Verified philosophy',
+            'source_url': 'https://blog.naver.com/ohsunghani/224436078434',
+            'source_title': 'Verified original', 'published_date': '2026-10-27',
+            'website_published': '2026-11-13',
+        }
+        (self.root/'scripts').mkdir(exist_ok=True)
+        registry = {'blog_id': 'ohsunghani', 'category_no': 25, 'sources': [
+            {'url': article['source_url'], 'title': article['source_title'], 'published_date': article['published_date']}
+        ]}
+        (self.root/'scripts/philosophy-sources.json').write_text(json.dumps(registry))
+        return article
+
+    def test_philosophy_rejects_other_sources_before_both_build_modes(self):
+        article = self.philosophy_fixture()
+        for url in ['https://blog.naver.com/ohsunghani/223215818324', 'https://ohsunghani.tistory.com/66']:
+            self.catalog([dict(article, source_url=url)])
+            for build in [builder.build, builder.build_search]:
+                with self.subTest(url=url, mode=build.__name__):
+                    with self.assertRaisesRegex(ValueError, 'Naver category 25'):
+                        build()
+        self.assertFalse((self.root/'sitemap.xml').exists())
+
+    def test_philosophy_rejects_wrong_original_metadata(self):
+        article = self.philosophy_fixture()
+        for changes in [{'source_title': 'Unrelated rewritten original'}, {'published_date': '2026-11-13'}]:
+            self.catalog([dict(article, **changes)])
+            with self.subTest(changes=changes):
+                with self.assertRaisesRegex(ValueError, 'metadata does not match'):
+                    builder.build_search()
+
+    def test_philosophy_accepts_verified_category_original(self):
+        article = self.philosophy_fixture()
+        self.catalog([article])
+        self.page('health/'+article['slug']+'.html', body='<main><article class="article-body"><p>Faithful summary.</p></article></main>')
+        builder.build_search()
+        self.assertEqual(self.urls(), {builder.SITE, builder.SITE+'health/'+article['slug']+'.html'})
+        item = next(i for i in self.items() if i.findtext('category') == '진료 철학')
+        self.assertEqual(item.findtext('title'), article['title'])
+
 
 if __name__ == '__main__':
     unittest.main()

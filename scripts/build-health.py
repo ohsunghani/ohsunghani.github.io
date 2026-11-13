@@ -55,9 +55,26 @@ def page_last_modified(path):
     changed = datetime.fromisoformat(value) if result.returncode == 0 and value else datetime.fromtimestamp(path.stat().st_mtime, timezone.utc)
     return changed.astimezone(timezone(timedelta(hours=9))).date().isoformat()
 
+def validate_philosophy_sources(articles):
+    """Only the clinic's verified Naver category 25 posts qualify as philosophy."""
+    selected = [a for a in articles if a.get('category') == 'philosophy']
+    if not selected:
+        return
+    registry = json.loads((ROOT/'scripts/philosophy-sources.json').read_text())
+    if registry.get('blog_id') != 'ohsunghani' or registry.get('category_no') != 25:
+        raise ValueError('Invalid philosophy source registry')
+    sources = {row['url']: row for row in registry['sources']}
+    for article in selected:
+        source = sources.get(article.get('source_url'))
+        if source is None:
+            raise ValueError('Philosophy requires a verified Naver category 25 source: '+article['slug'])
+        if article.get('source_title') != source['title'] or article.get('published_date') != source['published_date']:
+            raise ValueError('Philosophy source metadata does not match the verified original: '+article['slug'])
+
 def build_search():
     """Rebuild discovery files from existing, indexable HTML; remove stale URLs."""
     data = json.loads((ROOT/'health/articles.json').read_text())
+    validate_philosophy_sources(data['articles'])
     ns = 'http://www.sitemaps.org/schemas/sitemap/0.9'
     ET.register_namespace('', ns)
     sitemap = ET.Element('{'+ns+'}urlset')
@@ -217,6 +234,7 @@ def article_html(article, articles, header, footer, updated):
 def build():
     data = json.loads((ROOT/'health/articles.json').read_text())
     articles = data['articles']
+    validate_philosophy_sources(articles)
     updated = data['updated']
     assert len({a['slug'] for a in articles}) == len(articles), 'Duplicate article slugs'
     for article in articles:
