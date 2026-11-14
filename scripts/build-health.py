@@ -16,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 SITE = 'https://ohsunghani.github.io/'
 VERSION = '20261110-compact1'
 RSS_LINK = '<link rel="alternate" type="application/rss+xml" title="오성한의원 홈페이지 소식" href="'+SITE+'rss.xml">'
+ARTICLE_CREDIT = '<div class="small-note journal-article-credit">작성자: 한의사 김태환 · 직책: 오성한의원 대표원장</div>'
 LABELS = {
     'pain': '통증 · 자세', 'accident': '교통사고',
     'treatment': '치료 · 내원 안내', 'herbal': '한약 · 공진단',
@@ -174,6 +175,13 @@ def source_blog_name(url):
 def structured(data):
     return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False).replace('<', '\\u003c') + '</script>'
 
+def sync_article_credit(text):
+    """Keep one plain-text author credit inside the existing article footer."""
+    text = re.sub(r'<div class="small-note journal-article-credit">.*?</div>', '', text, flags=re.S)
+    marker = '<div class="article-back">'
+    assert text.count(marker) == 1, 'Article footer navigation not found'
+    return text.replace(marker, marker + ARTICLE_CREDIT, 1)
+
 def sync_existing_article_title(text, article, updated):
     """Keep the original article body while syncing its catalog title everywhere."""
     replacements = [
@@ -226,6 +234,7 @@ def article_html(article, articles, header, footer, updated):
     source_name = source_blog_name(article['source_url'])
     body += f'<div class="journal-source"><span class="eyebrow">FROM OHSUNG BLOG</span><p>오성한의원 블로그 글을 바탕으로 홈페이지에서 읽기 쉽게 정리했습니다.</p><a class="text-link" href="{attr(article["source_url"])}" target="_blank" rel="noopener noreferrer">{escape(article["source_title"])} {ARROW}</a><p class="small-note">출처: 오성한의원 {source_name}{source_date}</p></div>'
     body += f'<div class="article-back"><a class="text-link" href="index.html">건강칼럼 목록으로 {ARROW}</a></div>'
+    body = sync_article_credit(body)
     schema = {'@context':'https://schema.org','@type':'Article','headline':article['title'], 'description':article['excerpt'], 'url':SITE+'health/'+article['slug']+'.html','mainEntityOfPage':SITE+'health/'+article['slug']+'.html', 'author':{'@type':'Organization','name':'오성한의원','url':SITE}, 'publisher':{'@type':'Organization','name':'오성한의원','url':SITE},'datePublished':article.get('website_published',updated), 'dateModified':updated,'isBasedOn':{'@type':'Article','url':article['source_url'],'headline':article['source_title'],'datePublished':article.get('published_date')}}
     intro = f'<nav class="breadcrumb" aria-label="현재 위치"><a href="../index.html">홈</a><span aria-hidden="true">/</span><a href="index.html">건강정보</a><span aria-hidden="true">/</span><span>{LABELS[article["category"]]}</span></nav><div class="page-intro article-intro"><span class="eyebrow">{LABELS[article["category"]]}</span><h1>{escape(article["title"])}</h1><p class="article-meta">오성한의원 건강칼럼 · 블로그 글을 정리한 건강정보</p></div>'
     aside = '<aside class="article-aside" aria-label="칼럼 목차"><span class="eyebrow">IN THIS ARTICLE</span><h2>이 글의 내용</h2><ol class="article-toc">'+''.join(toc)+'</ol><a class="text-link" href="index.html">건강칼럼 전체 보기 '+ARROW+'</a><br><a class="text-link" href="../info.html">진료시간 · 오시는 길 '+ARROW+'</a></aside>'
@@ -252,6 +261,7 @@ def build():
             text = path.read_text()
             # Keep the established body and URL; sync its title and archive navigation.
             text = sync_existing_article_title(text, article, updated)
+            text = sync_article_credit(text)
             if 'journal.css' not in text:
                 text = text.replace('</head>',f'<link rel="stylesheet" href="../journal.css?v={VERSION}">\n</head>')
             else:
