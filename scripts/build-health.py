@@ -334,7 +334,8 @@ def card(article, prefix='', heading='h2'):
     return f'''<a class="journal-card" data-journal-entry data-category="{attr(article['category'])}" href="{prefix}{attr(article['slug'])}.html"><span class="journal-category">{LABELS[article['category']]}</span><{heading} class="journal-title">{escape(article['title'])}</{heading}><p class="journal-excerpt">{escape(article['excerpt'])}</p>{meta}<span class="journal-read">칼럼 읽기 {ARROW}</span></a>'''
 
 def head(title, description, filename, schema=None):
-    url = SITE + filename
+    canonical_path = filename[:-10] if filename == 'index.html' or filename.endswith('/index.html') else filename
+    url = SITE + canonical_path
     rss_link = '\n'+RSS_LINK if filename == 'health/index.html' else ''
     return f'''<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>{escape(title)} | 오성한의원</title><meta name="description" content="{attr(description)}">
@@ -407,7 +408,7 @@ def build():
     filters = '<button class="journal-filter" type="button" data-journal-filter="all" aria-pressed="true">전체</button>'
     filters += ''.join(f'<button class="journal-filter" type="button" data-journal-filter="{key}" aria-pressed="false">{label}</button>' for key,label in LABELS.items() if any(a['category']==key for a in articles))
     toolbar = f'<div class="journal-toolbar" data-journal-tools hidden><label class="journal-search">{SEARCH}<input type="search" data-journal-search placeholder="궁금한 증상이나 주제를 검색하세요" aria-label="건강칼럼 검색"></label><div class="journal-filters" aria-label="건강칼럼 분류">{filters}</div><button class="text-link" type="button" data-journal-clear>검색·분류 초기화</button></div>'
-    schema = {'@context':'https://schema.org','@type':'CollectionPage','name':'오성한의원 건강칼럼','url':SITE+'health/index.html','mainEntity':{'@type':'ItemList','numberOfItems':len(articles),'itemListElement':[{'@type':'ListItem','position':i,'name':a['title'],'url':SITE+'health/'+a['slug']+'.html'} for i,a in enumerate(articles,1)]}}
+    schema = {'@context':'https://schema.org','@type':'CollectionPage','name':'오성한의원 건강칼럼','url':SITE+'health/','mainEntity':{'@type':'ItemList','numberOfItems':len(articles),'itemListElement':[{'@type':'ListItem','position':i,'name':a['title'],'url':SITE+'health/'+a['slug']+'.html'} for i,a in enumerate(articles,1)]}}
     original_index = (ROOT/'health/index.html').read_text()
     blog_resources = re.search(r'(<section class="section blog-resources".*?</section>)',original_index,re.S)
     blog_resources = blog_resources.group(1) if blog_resources else ''

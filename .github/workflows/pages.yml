@@ -25,15 +25,23 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
       - uses: actions/configure-pages@v5
       - name: Test search-file generation
-        run: python scripts/test-search.py
+        run: |
+          python scripts/test-search.py
+          python scripts/test-jekyll-sitemap.py
       - name: Rebuild sitemap and RSS from indexable pages
         run: python scripts/build-health.py --search-only
+      - name: Generate final sitemap with the GitHub Pages supported plugin
+        run: python scripts/build-jekyll-sitemap.py
       - name: Prepare public website
         run: |
           mkdir -p _site
-          rsync -a --exclude='.git/' --exclude='.github/' --exclude='scripts/' --exclude='_site/' --exclude='README.md' --exclude='health/articles.json' ./ _site/
+          rsync -a --exclude='.git/' --exclude='.github/' --exclude='scripts/' --exclude='_site/' --exclude='Gemfile' --exclude='Gemfile.lock' --exclude='README.md' --exclude='health/articles.json' ./ _site/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

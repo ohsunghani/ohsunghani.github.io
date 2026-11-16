@@ -18,12 +18,23 @@
 
 `sitemap.xml`과 전체 사이트 RSS인 `rss.xml`은 실제 HTML 파일을 바탕으로 생성합니다. 페이지 파일을 추가·삭제하면 다음 자동 배포에 반영됩니다. 소유확인 HTML, 404 페이지, `noindex` 페이지, 리다이렉트 페이지, 다른 페이지를 canonical로 지정한 중복 페이지는 제외합니다. 칼럼의 사이트맵 `lastmod`와 Article `dateModified`에는 글별 `website_modified`를 사용합니다. 나머지 페이지의 사이트맵 `lastmod`는 해당 HTML 파일의 Git 수정일을 한국 날짜로 변환합니다.
 
+배포 시 최종 사이트맵 XML은 GitHub Pages가 지원하는 `jekyll-sitemap` 1.4.0(Jekyll 3.10.0)으로 생성합니다. 기존 Python 빌드에서 확인한 색인 대상 URL과 수정일을 임시 Jekyll 페이지의 메타데이터로 전달하고, 플러그인의 결과가 그 URL·수정일과 모두 일치할 때만 `sitemap.xml`로 사용합니다. Jekyll이 만든 HTML과 robots.txt는 사용하지 않으므로 홈페이지 화면과 수집 허용 설정은 기존 파일을 그대로 배포합니다. 플러그인은 사이트맵 생성 도구이며 Google의 수집·처리 성공을 보장하는 기능은 아닙니다.
+
+플러그인의 디렉터리 주소 표기에 맞춰 건강칼럼 목록의 대표 주소는 `https://ohsunghani.github.io/health/`입니다. 목록 HTML의 canonical·Open Graph·CollectionPage URL과 사이트맵·RSS가 이 주소를 사용하며, 기존 `/health/index.html` 링크도 같은 목록에 계속 연결됩니다.
+
 칼럼 구조화 데이터는 작성자 김태환(`Person`)과 발행기관 오성한의원(`Organization`)을 구분하며, 화면의 작성자·직책 표시와 같은 정보를 사용합니다. 추가 약력이나 검수 완료 표시는 넣지 않습니다. FAQ 구조화 데이터는 두 빌드 모드 모두 실제 `faq.html`의 질문과 답변에서 생성하므로, 별도의 답변 사본을 편집하지 않습니다.
 
 로컬에서 검색 파일만 갱신하려면 다음 명령을 실행합니다. 이 모드는 기존 HTML 본문을 다시 생성하지 않습니다.
 
 ```sh
 python3 scripts/build-health.py --search-only
+```
+
+배포와 같은 플러그인 결과까지 생성하려면 Ruby 3.3과 Bundler를 준비한 뒤 다음 명령을 추가로 실행합니다. 플러그인 의존성은 `Gemfile.lock`에 고정하며 GitHub Actions에서는 자동으로 설치·실행합니다.
+
+```sh
+bundle install
+python3 scripts/build-jekyll-sitemap.py
 ```
 
 정식 주소는 `https://ohsunghani.github.io/`입니다. Google Search Console과 네이버 서치어드바이저에도 같은 HTTPS 주소로 등록하고 `https://ohsunghani.github.io/sitemap.xml`을 제출합니다. 네이버 RSS 제출 주소는 `https://ohsunghani.github.io/rss.xml`입니다. `robots.txt`는 전체 수집을 허용하며 사이트맵 주소를 안내합니다. Google·네이버 소유확인 파일은 삭제하지 않습니다.
