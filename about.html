@@ -7,23 +7,8 @@
     <meta name='description' content='파주 오성한의원 김태환 원장. 원광대 한의과대학 졸업, 정읍시 보건소 한의과 진료과장 역임.'>
 
 
-    <!-- AI 크롤러를 위한 의료진 구조화 데이터(Physician Schema) -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Physician",
-      "name": "김태환",
-      "jobTitle": "한의사",
-      "worksFor": {
-        "@type": "MedicalOrganization",
-        "name": "오성한의원"
-      },
-      "alumniOf": {
-        "@type": "CollegeOrUniversity",
-        "name": "원광대학교 한의과대학"
-      }
-    }
-    </script>
+    <!-- 의료진 정보와 소속 한의원 -->
+    <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "김태환", "jobTitle": "한의사 · 오성한의원 대표원장", "worksFor": {"@type": "MedicalClinic", "@id": "https://ohsunghani.github.io/#clinic", "name": "오성한의원", "url": "https://ohsunghani.github.io/"}, "alumniOf": {"@type": "CollegeOrUniversity", "name": "원광대학교 한의과대학"}, "@id": "https://ohsunghani.github.io/#kim-taehwan"}</script>
 
 
 <link rel="canonical" href="https://ohsunghani.github.io/about.html">

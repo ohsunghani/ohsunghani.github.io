@@ -7,6 +7,7 @@ from email.utils import format_datetime
 from html.parser import HTMLParser
 from urllib.parse import urljoin, urlsplit, unquote, quote
 import json
+import hashlib
 import re
 import subprocess
 import sys
@@ -17,6 +18,10 @@ SITE = 'https://ohsunghani.github.io/'
 VERSION = '20261110-compact1'
 RSS_LINK = '<link rel="alternate" type="application/rss+xml" title="오성한의원 홈페이지 소식" href="'+SITE+'rss.xml">'
 ARTICLE_CREDIT = '<div class="small-note journal-article-credit">작성자: 한의사 김태환 · 직책: 오성한의원 대표원장</div>'
+CLINIC_ID = SITE + '#clinic'
+AUTHOR_ID = SITE + '#kim-taehwan'
+EDITORIAL_FIELDS = ('slug', 'category', 'title', 'excerpt', 'takeaways', 'sections',
+                    'source_url', 'source_title', 'published_date', 'website_published')
 LABELS = {
     'pain': '통증 · 자세', 'accident': '교통사고',
     'treatment': '치료 · 내원 안내', 'herbal': '한약 · 공진단',
@@ -31,6 +36,114 @@ def attr(text):
 def rss_date(value):
     # The catalog records calendar dates in Korea, without a publication time.
     return format_datetime(datetime.fromisoformat(value).replace(tzinfo=timezone(timedelta(hours=9))))
+
+def korea_today():
+    return datetime.now(timezone(timedelta(hours=9))).date().isoformat()
+
+def article_content_digest(article):
+    """Hash editorial content, excluding generation dates and layout metadata."""
+    payload = {key: article.get(key) for key in EDITORIAL_FIELDS}
+    encoded = json.dumps(payload, ensure_ascii=False, sort_keys=True, separators=(',', ':')).encode()
+    return hashlib.sha256(encoded).hexdigest()
+
+def sync_article_revisions(data):
+    """Advance only a new or substantively changed article's revision date."""
+    changed = False
+    today = korea_today()
+    for article in data['articles']:
+        digest = article_content_digest(article)
+        if article.get('content_digest') != digest or not article.get('website_modified'):
+            article['content_digest'] = digest
+            article['website_modified'] = today
+            changed = True
+    if changed:
+        data['updated'] = today
+    validate_article_revisions(data['articles'])
+    return changed
+
+def validate_article_revisions(articles):
+    # Older discovery-only fixtures may lack revision metadata. Once enabled,
+    # every entry must be generated before the deployment's search-only build.
+    if not any('website_modified' in a or 'content_digest' in a for a in articles):
+        return
+    for article in articles:
+        modified = article.get('website_modified', '')
+        if not re.fullmatch(r'\d{4}-\d{2}-\d{2}', modified):
+            raise ValueError('Missing article revision date; run the full build: '+article['slug'])
+        date.fromisoformat(modified)
+        if article.get('content_digest') != article_content_digest(article):
+            raise ValueError('Article content changed; run the full build: '+article['slug'])
+        if article.get('website_published') and modified < article['website_published']:
+            raise ValueError('Article revision precedes its website publication: '+article['slug'])
+
+class FaqContent(HTMLParser):
+    """Read the actual visible FAQ answers instead of maintaining another copy."""
+    def __init__(self):
+        super().__init__()
+        self.questions = []
+        self.current = None
+        self.in_question = False
+        self.answer_depth = 0
+
+    def handle_starttag(self, tag, attrs):
+        attrs = dict(attrs)
+        classes = (attrs.get('class') or '').split()
+        if tag == 'details' and 'faq-item' in classes:
+            assert self.current is None, 'Nested FAQ items are unsupported'
+            self.current = {'question': [], 'answer': []}
+        elif self.current is not None:
+            if tag == 'summary':
+                self.in_question = True
+            elif tag == 'div':
+                if self.answer_depth:
+                    self.answer_depth += 1
+                elif 'faq-answer' in classes:
+                    self.answer_depth = 1
+
+    def handle_endtag(self, tag):
+        if self.current is None:
+            return
+        if tag == 'summary':
+            self.in_question = False
+        elif tag == 'div' and self.answer_depth:
+            self.answer_depth -= 1
+        elif tag == 'details':
+            question = re.sub(r'^Q\.\s*', '', ''.join(self.current['question']).strip())
+            answer = ''.join(self.current['answer']).strip()
+            assert question and answer, 'Empty FAQ question or answer'
+            self.questions.append((question, answer))
+            self.current = None
+
+    def handle_data(self, data):
+        if self.current is not None:
+            if self.in_question:
+                self.current['question'].append(data)
+            elif self.answer_depth:
+                self.current['answer'].append(data)
+
+def sync_faq_schema():
+    path = ROOT/'faq.html'
+    if not path.exists():
+        return
+    original = path.read_text()
+    content = FaqContent()
+    content.feed(original)
+    assert content.questions and len({q for q, _ in content.questions}) == len(content.questions), 'Invalid FAQ content'
+    schema = {'@context': 'https://schema.org', '@type': 'FAQPage', 'mainEntity': [
+        {'@type': 'Question', 'name': question, 'acceptedAnswer': {'@type': 'Answer', 'text': answer}}
+        for question, answer in content.questions
+    ]}
+    replaced = 0
+    def replace(match):
+        nonlocal replaced
+        if json.loads(match.group(1)).get('@type') != 'FAQPage':
+            return match.group(0)
+        replaced += 1
+        return structured(schema)
+    updated = re.sub(r'<script type="application/ld\+json">(.*?)</script>', replace, original, flags=re.S)
+    assert replaced == 1, 'Expected one FAQ schema'
+    if updated != original:
+        path.write_text(updated)
 
 class SearchMetadata(HTMLParser):
     def __init__(self):
@@ -50,7 +163,9 @@ class SearchMetadata(HTMLParser):
                 self.noindex = True
             self.redirect |= (attrs.get('http-equiv') or '').lower() == 'refresh'
 
-def page_last_modified(path):
+def page_last_modified(path, article=None):
+    if article and article.get('website_modified'):
+        return article['website_modified']
     result = subprocess.run(['git', 'log', '-1', '--format=%cI', '--', str(path.relative_to(ROOT))], cwd=ROOT, capture_output=True, text=True)
     value = result.stdout.strip()
     changed = datetime.fromisoformat(value) if result.returncode == 0 and value else datetime.fromtimestamp(path.stat().st_mtime, timezone.utc)
@@ -76,6 +191,9 @@ def build_search():
     """Rebuild discovery files from existing, indexable HTML; remove stale URLs."""
     data = json.loads((ROOT/'health/articles.json').read_text())
     validate_philosophy_sources(data['articles'])
+    validate_article_revisions(data['articles'])
+    sync_faq_schema()
+    article_paths = {(ROOT/'health'/f'{a["slug"]}.html').resolve(): a for a in data['articles']}
     ns = 'http://www.sitemaps.org/schemas/sitemap/0.9'
     ET.register_namespace('', ns)
     sitemap = ET.Element('{'+ns+'}urlset')
@@ -107,7 +225,7 @@ def build_search():
         seen.add(canonical)
         node = ET.SubElement(sitemap, '{'+ns+'}url')
         ET.SubElement(node, '{'+ns+'}loc').text = canonical
-        ET.SubElement(node, '{'+ns+'}lastmod').text = page_last_modified(path)
+        ET.SubElement(node, '{'+ns+'}lastmod').text = page_last_modified(path, article_paths.get(path.resolve()))
     assert seen, 'No indexable site pages found'
     ET.indent(sitemap, space='  ')
     (ROOT/'sitemap.xml').write_bytes(ET.tostring(sitemap, encoding='utf-8', xml_declaration=True)+b'\n')
@@ -175,6 +293,14 @@ def source_blog_name(url):
 def structured(data):
     return '<script type="application/ld+json">' + json.dumps(data, ensure_ascii=False).replace('<', '\\u003c') + '</script>'
 
+def article_author():
+    return {'@type': 'Person', '@id': AUTHOR_ID, 'name': '김태환',
+            'jobTitle': '한의사 · 오성한의원 대표원장',
+            'worksFor': {'@type': 'MedicalClinic', '@id': CLINIC_ID, 'name': '오성한의원', 'url': SITE}}
+
+def article_publisher():
+    return {'@type': 'Organization', '@id': CLINIC_ID, 'name': '오성한의원', 'url': SITE}
+
 def sync_article_credit(text):
     """Keep one plain-text author credit inside the existing article footer."""
     text = re.sub(r'<div class="small-note journal-article-credit">.*?</div>', '', text, flags=re.S)
@@ -197,6 +323,8 @@ def sync_existing_article_title(text, article, updated):
         if schema.get('@type') == 'Article':
             schema['headline'] = article['title']
             schema['dateModified'] = updated
+            schema['author'] = article_author()
+            schema['publisher'] = article_publisher()
         return structured(schema)
     return re.sub(r'<script type="application/ld\+json">(.*?)</script>', update_schema, text, flags=re.S)
 
@@ -235,7 +363,7 @@ def article_html(article, articles, header, footer, updated):
     body += f'<div class="journal-source"><span class="eyebrow">FROM OHSUNG BLOG</span><p>오성한의원 블로그 글을 바탕으로 홈페이지에서 읽기 쉽게 정리했습니다.</p><a class="text-link" href="{attr(article["source_url"])}" target="_blank" rel="noopener noreferrer">{escape(article["source_title"])} {ARROW}</a><p class="small-note">출처: 오성한의원 {source_name}{source_date}</p></div>'
     body += f'<div class="article-back"><a class="text-link" href="index.html">건강칼럼 목록으로 {ARROW}</a></div>'
     body = sync_article_credit(body)
-    schema = {'@context':'https://schema.org','@type':'Article','headline':article['title'], 'description':article['excerpt'], 'url':SITE+'health/'+article['slug']+'.html','mainEntityOfPage':SITE+'health/'+article['slug']+'.html', 'author':{'@type':'Organization','name':'오성한의원','url':SITE}, 'publisher':{'@type':'Organization','name':'오성한의원','url':SITE},'datePublished':article.get('website_published',updated), 'dateModified':updated,'isBasedOn':{'@type':'Article','url':article['source_url'],'headline':article['source_title'],'datePublished':article.get('published_date')}}
+    schema = {'@context':'https://schema.org','@type':'Article','headline':article['title'], 'description':article['excerpt'], 'url':SITE+'health/'+article['slug']+'.html','mainEntityOfPage':SITE+'health/'+article['slug']+'.html', 'author':article_author(), 'publisher':article_publisher(),'datePublished':article.get('website_published',updated), 'dateModified':updated,'isBasedOn':{'@type':'Article','url':article['source_url'],'headline':article['source_title'],'datePublished':article.get('published_date')}}
     intro = f'<nav class="breadcrumb" aria-label="현재 위치"><a href="../index.html">홈</a><span aria-hidden="true">/</span><a href="index.html">건강정보</a><span aria-hidden="true">/</span><span>{LABELS[article["category"]]}</span></nav><div class="page-intro article-intro"><span class="eyebrow">{LABELS[article["category"]]}</span><h1>{escape(article["title"])}</h1><p class="article-meta">오성한의원 건강칼럼 · 블로그 글을 정리한 건강정보</p></div>'
     aside = '<aside class="article-aside" aria-label="칼럼 목차"><span class="eyebrow">IN THIS ARTICLE</span><h2>이 글의 내용</h2><ol class="article-toc">'+''.join(toc)+'</ol><a class="text-link" href="index.html">건강칼럼 전체 보기 '+ARROW+'</a><br><a class="text-link" href="../info.html">진료시간 · 오시는 길 '+ARROW+'</a></aside>'
     return '<!doctype html>\n<html lang="ko"><head>'+head(article['title'],article['excerpt'],'health/'+article['slug']+'.html',schema)+'</head><body>\n'+header+'<main id="main"><div class="container">'+intro+'<div class="article-layout"><article class="article-body">'+body+'</article>'+aside+'</div>'+related(article,articles)+'</div></main>'+footer+'</body></html>\n'
@@ -244,23 +372,25 @@ def build():
     data = json.loads((ROOT/'health/articles.json').read_text())
     articles = data['articles']
     validate_philosophy_sources(articles)
-    updated = data['updated']
     assert len({a['slug'] for a in articles}) == len(articles), 'Duplicate article slugs'
     for article in articles:
         assert re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*',article['slug']), 'Invalid article slug'
         assert article['category'] in LABELS, 'Invalid category'
         if article.get('source_url'):
             source_blog_name(article['source_url'])
+    if sync_article_revisions(data):
+        (ROOT/'health/articles.json').write_text(json.dumps(data, ensure_ascii=False, indent=2)+'\n')
     articles = sorted(articles,key=lambda a:a.get('published_date') or '',reverse=True)
     template = (ROOT/'health/airconditioner-shoulder.html').read_text()
     header = re.search(r'(<a class="skip-link".*?</header>)',template,re.S).group(1)
     footer = re.search(r'(<footer class="site-footer">.*?)</body>',template,re.S).group(1)
     for article in articles:
+        modified = article['website_modified']
         if article.get('existing'):
             path = ROOT/'health'/f'{article["slug"]}.html'
             text = path.read_text()
             # Keep the established body and URL; sync its title and archive navigation.
-            text = sync_existing_article_title(text, article, updated)
+            text = sync_existing_article_title(text, article, modified)
             text = sync_article_credit(text)
             if 'journal.css' not in text:
                 text = text.replace('</head>',f'<link rel="stylesheet" href="../journal.css?v={VERSION}">\n</head>')
@@ -273,7 +403,7 @@ def build():
             text = text.replace('<!-- JOURNAL RELATED START --><section','<!-- JOURNAL RELATED START --><div class="container"><section').replace('</section><!-- JOURNAL RELATED END -->','</section></div><!-- JOURNAL RELATED END -->')
             path.write_text(text)
         else:
-            (ROOT/'health'/f'{article["slug"]}.html').write_text(article_html(article,articles,header,footer,updated))
+            (ROOT/'health'/f'{article["slug"]}.html').write_text(article_html(article,articles,header,footer,modified))
     filters = '<button class="journal-filter" type="button" data-journal-filter="all" aria-pressed="true">전체</button>'
     filters += ''.join(f'<button class="journal-filter" type="button" data-journal-filter="{key}" aria-pressed="false">{label}</button>' for key,label in LABELS.items() if any(a['category']==key for a in articles))
     toolbar = f'<div class="journal-toolbar" data-journal-tools hidden><label class="journal-search">{SEARCH}<input type="search" data-journal-search placeholder="궁금한 증상이나 주제를 검색하세요" aria-label="건강칼럼 검색"></label><div class="journal-filters" aria-label="건강칼럼 분류">{filters}</div><button class="text-link" type="button" data-journal-clear>검색·분류 초기화</button></div>'
