@@ -69,7 +69,7 @@ class PluginDiscoveryTests(unittest.TestCase):
         self.page('duplicate.html', canonical=builder.SITE)
         self.page('external.html', canonical='https://example.org/')
         self.page('redirect.html', head='<meta http-equiv="refresh" content="0;url=/">')
-        for relative in ['404.html', 'googleabc123.html', 'naverabc123.html', '_site/copy.html', 'scripts/preview.html']:
+        for relative in ['404.html', 'googleabc123.html', 'naverabc123.html', '_site/copy.html', 'scripts/preview.html', 'vendor/bundle/gem-example.html']:
             self.page(relative)
         common = {builder.SITE, builder.SITE+'health/', builder.SITE+'visit/', builder.SITE+'new%20page.html'}
         self.assertEqual(set(self.build_and_check()), common | {builder.SITE+'older.html'})

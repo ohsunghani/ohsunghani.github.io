@@ -41,7 +41,7 @@ jobs:
       - name: Prepare public website
         run: |
           mkdir -p _site
-          rsync -a --exclude='.git/' --exclude='.github/' --exclude='scripts/' --exclude='_site/' --exclude='Gemfile' --exclude='Gemfile.lock' --exclude='README.md' --exclude='health/articles.json' ./ _site/
+          rsync -a --exclude='.git/' --exclude='.github/' --exclude='.bundle/' --exclude='vendor/' --exclude='scripts/' --exclude='_site/' --exclude='Gemfile' --exclude='Gemfile.lock' --exclude='README.md' --exclude='health/articles.json' ./ _site/
       - uses: actions/upload-pages-artifact@v3
         with:
           path: _site

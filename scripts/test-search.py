@@ -65,7 +65,7 @@ class DiscoveryTests(unittest.TestCase):
         self.page('redirect.html', head='<meta http-equiv="refresh" content="0;url=/">')
         self.page('duplicate.html', canonical=builder.SITE)
         self.page('external.html', canonical='https://example.org/')
-        for path in ['404.html', 'naverabc123.html', 'googleabc123.html', '_site/copied.html', '.private/page.html', 'scripts/preview.html']:
+        for path in ['404.html', 'naverabc123.html', 'googleabc123.html', '_site/copied.html', '.private/page.html', 'scripts/preview.html', 'vendor/bundle/gem-example.html']:
             self.page(path)
         builder.build_search()
         self.assertEqual(self.urls(), {builder.SITE})

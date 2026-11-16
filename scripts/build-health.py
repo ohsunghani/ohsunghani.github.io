@@ -200,7 +200,7 @@ def build_search():
     seen = set()
     for path in sorted(ROOT.rglob('*.html'), key=lambda p: (p != ROOT/'index.html', str(p))):
         relative = path.relative_to(ROOT)
-        if any(part.startswith(('.', '_')) or part in {'scripts', 'node_modules'} for part in relative.parts):
+        if any(part.startswith(('.', '_')) or part in {'scripts', 'node_modules', 'vendor'} for part in relative.parts):
             continue
         if path.name == '404.html' or re.fullmatch(r'(?:google|naver)[a-zA-Z0-9]+\.html', path.name):
             continue
