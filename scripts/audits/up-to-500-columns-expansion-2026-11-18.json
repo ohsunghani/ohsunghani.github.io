@@ -1,0 +1,2961 @@
+{
+  "date": "2026-11-18",
+  "baseline_commit": "377d3a847fca9e155449b64a7728525098841be0",
+  "scope": "Only the31 remaining columns whose subheadings plus body total at most500 characters. Preserve all309 others, including the previously expanded52 and78.",
+  "counting_rule": "Include h2 subheadings and prose/list items, including spaces; exclude title, summary, source, author, navigation and related articles.",
+  "length_policy": "Restore independent readable source context without a uniform compression ratio, invented additions or padding.",
+  "source_evidence_note": "Original clinic blog HTML fetched and title/date-verified earlier on the same date; these31 originals and comparison tables were read for this revision. Paragraph IDs refer to the verified original extraction. Editorial comparison does not establish clinical efficacy.",
+  "columns": [
+    {
+      "slug": "electronic-and-thread-moxibustion",
+      "before": {
+        "body": 349,
+        "headings": 87,
+        "total": 436
+      },
+      "after": {
+        "body": 701,
+        "headings": 60,
+        "total": 761
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224290250855",
+      "source_title": "따뜻한 뜸 치료의 과학, 파주 봉일천 전자뜸 실뜸 오성한의원",
+      "source_published_date": "2026-06-11",
+      "source_html_sha256": "9cf50d79f0e96154ff06d951581e9b0f4edc07340fe1c0b49e5eadfb5b698b51",
+      "source_category": "현대 한의학",
+      "source_category_number": "24",
+      "additional_sources": [],
+      "method": "Source-based paraphrase with paragraph support; unverified promises and mechanisms omitted.",
+      "sections": [
+        {
+          "heading": "온열 자극을 사용하는 두 가지 뜸",
+          "paragraph_support_block_ids": [
+            [
+              3,
+              18,
+              19,
+              24,
+              25,
+              49
+            ],
+            [
+              26,
+              27,
+              28,
+              32,
+              33
+            ]
+          ]
+        },
+        {
+          "heading": "전자뜸은 온도와 치료 환경을 함께 살핍니다",
+          "paragraph_support_block_ids": [
+            [
+              18,
+              19,
+              20,
+              26,
+              28,
+              30
+            ],
+            [
+              18,
+              19,
+              26,
+              28,
+              30
+            ]
+          ]
+        },
+        {
+          "heading": "실뜸은 가늘게 만든 쑥을 사용합니다",
+          "paragraph_support_block_ids": [
+            [
+              32,
+              33,
+              34,
+              37
+            ],
+            [
+              25,
+              38,
+              39,
+              40,
+              42
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "cold-hands-and-feet",
+      "before": {
+        "body": 410,
+        "headings": 68,
+        "total": 478
+      },
+      "after": {
+        "body": 711,
+        "headings": 59,
+        "total": 770
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224392038831",
+      "source_title": "여름에도 수면 양말을 신어야 할 정도로 발끝이 시린 심한 수족냉증, 손발이 차가운 진짜 이유",
+      "source_published_date": "2026-09-01",
+      "source_html_sha256": "54dda4aeda098adee5024f19300b5fee56c8fb0eddef74c9a5abe4370f32ea19",
+      "source_category": "이런 증상 있으세요?",
+      "source_category_number": "17",
+      "additional_sources": [],
+      "method": "Source-based paraphrase with paragraph support; unverified promises and mechanisms omitted.",
+      "sections": [
+        {
+          "heading": "더운 날에도 발끝이 시릴 수 있습니다",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              1,
+              2,
+              3,
+              5
+            ]
+          ]
+        },
+        {
+          "heading": "냉방 환경과 평소 몸 상태를 함께 봅니다",
+          "paragraph_support_block_ids": [
+            [
+              17,
+              18,
+              19
+            ],
+            [
+              6,
+              7,
+              8,
+              12
+            ]
+          ]
+        },
+        {
+          "heading": "따뜻하게 하는 관리와 진료 상담",
+          "paragraph_support_block_ids": [
+            [
+              20,
+              21,
+              22,
+              23,
+              24
+            ],
+            [
+              25,
+              27,
+              29,
+              31,
+              32,
+              33
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "premenstrual-chin-breakouts",
+      "before": {
+        "body": 388,
+        "headings": 72,
+        "total": 460
+      },
+      "after": {
+        "body": 684,
+        "headings": 70,
+        "total": 754
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224417937000",
+      "source_title": "생리전 유독 턱과 입 주변에만 올라오는 아픈 뾰루지, 원인은 자궁 냉증과 어혈?",
+      "source_published_date": "2026-10-05",
+      "source_html_sha256": "78621a432a58a2d5b433825b8a84a61d04940c97a464e4477969a1d53b0ea285",
+      "source_category": "이런 증상 있으세요?",
+      "source_category_number": "17",
+      "additional_sources": [],
+      "method": "Source-based paraphrase with paragraph support; unverified promises and mechanisms omitted.",
+      "sections": [
+        {
+          "heading": "매달 비슷한 시기에 반복되는 턱 뾰루지",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              9,
+              24,
+              25,
+              26
+            ]
+          ]
+        },
+        {
+          "heading": "잘 짜지지 않는 뾰루지를 억지로 누르지 마세요",
+          "paragraph_support_block_ids": [
+            [
+              15,
+              16,
+              17,
+              18
+            ],
+            [
+              18,
+              19,
+              20,
+              22,
+              23
+            ]
+          ]
+        },
+        {
+          "heading": "생리 전후의 몸 상태도 함께 이야기해 주세요",
+          "paragraph_support_block_ids": [
+            [
+              24,
+              25,
+              26,
+              31,
+              34
+            ],
+            [
+              27,
+              28,
+              29,
+              30,
+              33,
+              34,
+              36
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "facial-flushing-and-stress",
+      "before": {
+        "body": 374,
+        "headings": 63,
+        "total": 437
+      },
+      "after": {
+        "body": 689,
+        "headings": 52,
+        "total": 741
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224392171076",
+      "source_title": "갱년기도 아닌데 얼굴로 열이 확 오르는 증상, 스트레스 상열감과 가슴 답답함의 진짜 원인",
+      "source_published_date": "2026-09-11",
+      "source_html_sha256": "bbd1732702a2a99f2d73106371f31ce1bbe40879b4af28698a587e2aab8f7d66",
+      "source_category": "이런 증상 있으세요?",
+      "source_category_number": "17",
+      "additional_sources": [],
+      "method": "Source-based paraphrase with paragraph support; unverified promises and mechanisms omitted.",
+      "sections": [
+        {
+          "heading": "긴장할 때 달아오르는 얼굴",
+          "paragraph_support_block_ids": [
+            [
+              2,
+              3,
+              4,
+              6
+            ],
+            [
+              5,
+              6,
+              7,
+              12
+            ]
+          ]
+        },
+        {
+          "heading": "업무와 생활 속 긴장을 함께 살핍니다",
+          "paragraph_support_block_ids": [
+            [
+              17,
+              18,
+              21,
+              22,
+              23
+            ],
+            [
+              12,
+              15,
+              16,
+              25,
+              26,
+              27
+            ]
+          ]
+        },
+        {
+          "heading": "열감이 올라오는 순간과 몸의 반응",
+          "paragraph_support_block_ids": [
+            [
+              29,
+              33
+            ],
+            [
+              34,
+              36,
+              37,
+              39,
+              41,
+              42
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {
+        "takeaways": [
+          "스트레스와 함께 나타나는 얼굴 열감과 가슴 답답함을 다룹니다.",
+          "업무와 인간관계의 긴장, 늦은 밤 스마트폰 사용, 자극적인 음식과 카페인 섭취를 함께 살펴봅니다."
+        ],
+        "support": [
+          2,
+          3,
+          4,
+          6,
+          17,
+          18,
+          21,
+          22,
+          23
+        ]
+      }
+    },
+    {
+      "slug": "meals-before-acupuncture",
+      "before": {
+        "body": 325,
+        "headings": 87,
+        "total": 412
+      },
+      "after": {
+        "body": 684,
+        "headings": 53,
+        "total": 737
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224222357785",
+      "source_title": "빈속에 침 맞아도 될까요? 아니면 식사하고 가야 할까요?",
+      "source_published_date": "2026-04-07",
+      "source_html_sha256": "1eb0d10c46b2bf113081434d082a57e36782ee8e89296971f77caa08fa778928",
+      "source_category": "한의학 상식",
+      "source_category_number": "11",
+      "additional_sources": [],
+      "method": "Source-based paraphrase with paragraph support; unverified promises and mechanisms omitted.",
+      "sections": [
+        {
+          "heading": "끼니를 거르고 내원해도 될까요?",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              6,
+              13,
+              41,
+              42,
+              43,
+              44,
+              45
+            ]
+          ]
+        },
+        {
+          "heading": "심한 공복과 과식은 미리 알려주세요",
+          "paragraph_support_block_ids": [
+            [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            [
+              17,
+              18,
+              19,
+              20,
+              23,
+              29,
+              30,
+              31
+            ]
+          ]
+        },
+        {
+          "heading": "그날의 컨디션에 맞춰 치료합니다",
+          "paragraph_support_block_ids": [
+            [
+              26,
+              27,
+              28,
+              32
+            ],
+            [
+              33,
+              34,
+              35,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "cupping-before-treatment-suitability",
+      "before": {
+        "body": 385,
+        "headings": 68,
+        "total": 453
+      },
+      "after": {
+        "body": 685,
+        "headings": 51,
+        "total": 736
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224201110306",
+      "source_title": "부항을 받아도 되는 경우, 피해야 하는 경우 파주 피빼주는한의원",
+      "source_published_date": "2026-03-14",
+      "source_html_sha256": "0703fe56c03a09a52a87ca65b4ccb2f79ec902a51c2f5b0d19a245a8694313e4",
+      "source_category": "한의학 상식",
+      "source_category_number": "11",
+      "additional_sources": [],
+      "method": "Source-based paraphrase with paragraph support; unverified promises and mechanisms omitted.",
+      "sections": [
+        {
+          "heading": "부항은 몸 상태에 따라 선택합니다",
+          "paragraph_support_block_ids": [
+            [
+              7,
+              8,
+              9,
+              10
+            ],
+            [
+              5,
+              6,
+              35,
+              36
+            ]
+          ]
+        },
+        {
+          "heading": "어지럼과 피부 상태를 먼저 확인합니다",
+          "paragraph_support_block_ids": [
+            [
+              18,
+              19,
+              20,
+              21,
+              22
+            ],
+            [
+              23,
+              24,
+              25,
+              35,
+              36
+            ]
+          ]
+        },
+        {
+          "heading": "치료 뒤의 자국과 피로감",
+          "paragraph_support_block_ids": [
+            [
+              28,
+              29
+            ],
+            [
+              26,
+              27,
+              30,
+              31,
+              33,
+              34,
+              35,
+              36
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "sauna-sweating-when-unwell",
+      "before": {
+        "body": 424,
+        "headings": 44,
+        "total": 468
+      },
+      "after": {
+        "body": 711,
+        "headings": 62,
+        "total": 773
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224278773692",
+      "source_title": "몸이 안 좋을 때 사우나가서 땀빼기, 파주 오성한의원",
+      "source_published_date": "2026-05-25",
+      "source_html_sha256": "59a445ed9da9b46aa84ac6c007ccb1fe43f7f75278737fbc2a306e8b0638d323",
+      "source_category": "한의학 상식",
+      "source_category_number": "11",
+      "additional_sources": [],
+      "method": "Source-based paraphrase with paragraph support; unverified promises and mechanisms omitted.",
+      "sections": [
+        {
+          "heading": "땀을 빼고 왔는데 왜 더 피곤할까요?",
+          "paragraph_support_block_ids": [
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              4,
+              6,
+              11
+            ]
+          ]
+        },
+        {
+          "heading": "잠깐의 개운함과 이후의 컨디션",
+          "paragraph_support_block_ids": [
+            [
+              14,
+              15
+            ],
+            [
+              7,
+              8,
+              11,
+              12,
+              13
+            ]
+          ]
+        },
+        {
+          "heading": "지친 몸에는 현재 상태를 살피는 일이 먼저입니다",
+          "paragraph_support_block_ids": [
+            [
+              11,
+              16,
+              17,
+              18
+            ],
+            [
+              14,
+              15,
+              19,
+              20
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "joint-popping-during-stretching",
+      "before": {
+        "body": 381,
+        "headings": 67,
+        "total": 448
+      },
+      "after": {
+        "body": 716,
+        "headings": 61,
+        "total": 777
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224221932703",
+      "source_title": "기지개 켤 때 뚝 소리, 관절에서 뚝 소리 관절음의 정체",
+      "source_published_date": "2026-03-23",
+      "source_html_sha256": "70d72709d5201b3a731a60adc34ed06e40bd015592d442777d66e01df29bd4c0",
+      "source_category": "한의학 상식",
+      "source_category_number": "11",
+      "additional_sources": [],
+      "method": "Source-based paraphrase with paragraph support; unverified promises and mechanisms omitted.",
+      "sections": [
+        {
+          "heading": "뚝 소리가 나면 뼈가 어긋난 걸까요?",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              5,
+              6,
+              7
+            ]
+          ]
+        },
+        {
+          "heading": "관절 안의 압력과 주변 조직의 움직임",
+          "paragraph_support_block_ids": [
+            [
+              12,
+              13,
+              14,
+              15
+            ],
+            [
+              18,
+              19,
+              22,
+              23,
+              28,
+              29
+            ]
+          ]
+        },
+        {
+          "heading": "소리보다 함께 나타나는 통증을 살핍니다",
+          "paragraph_support_block_ids": [
+            [
+              28,
+              29,
+              30,
+              31,
+              36,
+              42,
+              53
+            ],
+            [
+              7,
+              18,
+              19,
+              49,
+              50,
+              51,
+              52,
+              53
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "weight-loss-goals-and-maintenance-plan",
+      "before": {
+        "body": 431,
+        "headings": 68,
+        "total": 499
+      },
+      "after": {
+        "body": 680,
+        "headings": 50,
+        "total": 730
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224259633193",
+      "source_title": "파주 봉일천 다이어트 한약, 한 달에 몇 kg 빼냐보다 더 중요한 것",
+      "source_published_date": "2026-05-06",
+      "source_html_sha256": "7b5b74bc32c2f81fe0aa84194eae3af5923596630b44c8d2f01087701ab277b9",
+      "source_category": "약 잘 짓는 한의원",
+      "source_category_number": "22",
+      "additional_sources": [],
+      "method": "Source-based paraphrase with paragraph support; unverified promises and mechanisms omitted.",
+      "sections": [
+        {
+          "heading": "감량 목표 다음에 남는 질문",
+          "paragraph_support_block_ids": [
+            [
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              7,
+              8,
+              16,
+              17,
+              19
+            ]
+          ]
+        },
+        {
+          "heading": "이어갈 수 있는 습관 한 가지",
+          "paragraph_support_block_ids": [
+            [
+              16,
+              17,
+              18,
+              19
+            ],
+            [
+              20,
+              21,
+              22
+            ]
+          ]
+        },
+        {
+          "heading": "감량기와 유지기의 계획을 의논합니다",
+          "paragraph_support_block_ids": [
+            [
+              26,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              4,
+              5,
+              6,
+              7,
+              8,
+              19,
+              20,
+              21,
+              24,
+              25,
+              38,
+              39
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "weight-increase-with-morning-face-swelling",
+      "before": {
+        "body": 358,
+        "headings": 55,
+        "total": 413
+      },
+      "after": {
+        "body": 700,
+        "headings": 58,
+        "total": 758
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224394955676",
+      "source_title": "덜먹는데 살찌는 이유, 나잇살인 줄 알았는데 아침마다 얼굴 부기가 심하다면?",
+      "source_published_date": "2026-09-20",
+      "source_html_sha256": "71e5c80040e1e460d848d7964c78bfcb2c3d195c439d0ee276e8e3c24451e32b",
+      "source_category": "이런 증상 있으세요?",
+      "source_category_number": "17",
+      "additional_sources": [],
+      "method": "Source-based paraphrase with paragraph support; unverified promises and mechanisms omitted.",
+      "sections": [
+        {
+          "heading": "체중 변화에 아침 부기가 함께 있다면",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2,
+              5
+            ],
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          ]
+        },
+        {
+          "heading": "원문에서 설명하는 습담의 관점",
+          "paragraph_support_block_ids": [
+            [
+              8,
+              10,
+              11,
+              13,
+              14,
+              15
+            ],
+            [
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22
+            ]
+          ]
+        },
+        {
+          "heading": "땀을 많이 낸 뒤의 숫자만 보지 않습니다",
+          "paragraph_support_block_ids": [
+            [
+              24,
+              25,
+              26,
+              27
+            ],
+            [
+              33,
+              34,
+              35,
+              36,
+              39,
+              41,
+              42,
+              43
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "inner-elbow-pain-and-golfers-elbow",
+      "before": {
+        "body": 426,
+        "headings": 68,
+        "total": 494
+      },
+      "after": {
+        "body": 1305,
+        "headings": 82,
+        "total": 1387
+      },
+      "source_url": "https://ohsunghani.tistory.com/74",
+      "source_title": "골프엘보는 왜 팔꿈치 안쪽이 아픈가요? 파주 골프엘보한의원",
+      "source_published_date": "2026-10-30",
+      "source_html_sha256": "a24b564c41687313324a27ce43d0617a4dc36a9f44a882edf852d63efcd2d8a1",
+      "source_category": null,
+      "source_category_number": null,
+      "additional_sources": [],
+      "method": "Original passages selected and grouped after reading the source; grammar and warning lists lightly condensed without adding content.",
+      "sections": [
+        {
+          "heading": "골프를 치지 않아도 생길 수 있습니다",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2,
+              3,
+              4
+            ]
+          ]
+        },
+        {
+          "heading": "안쪽 통증과 저림은 구분해 살핍니다",
+          "paragraph_support_block_ids": [
+            [
+              32,
+              33,
+              34,
+              35
+            ],
+            [
+              49,
+              50,
+              51
+            ]
+          ]
+        },
+        {
+          "heading": "통증에 맞춰 팔의 사용량을 조절합니다",
+          "paragraph_support_block_ids": [
+            [
+              53,
+              54,
+              55,
+              56,
+              57
+            ],
+            [
+              59,
+              60,
+              62,
+              63
+            ]
+          ]
+        },
+        {
+          "heading": "부딪힌 뒤의 심한 통증도 확인이 필요합니다",
+          "paragraph_support_block_ids": [
+            [
+              68,
+              69,
+              70
+            ],
+            [
+              89
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "urinary-urgency-cystitis-testing-and-antibiotics",
+      "before": {
+        "body": 421,
+        "headings": 63,
+        "total": 484
+      },
+      "after": {
+        "body": 1364,
+        "headings": 75,
+        "total": 1439
+      },
+      "source_url": "https://ohsunghani.tistory.com/2",
+      "source_title": "과민성 방광과 방광염은 어떻게 다른가?",
+      "source_published_date": "2026-08-25",
+      "source_html_sha256": "5e15ec273b9b47e890c65a3db986d7eeccc4c312141f2334885f0b685427f16a",
+      "source_category": null,
+      "source_category_number": null,
+      "additional_sources": [],
+      "method": "Original passages selected and grouped after reading the source; grammar and warning lists lightly condensed without adding content.",
+      "sections": [
+        {
+          "heading": "소변이 잦다고 모두 방광염은 아닙니다",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              7,
+              8,
+              9,
+              10
+            ]
+          ]
+        },
+        {
+          "heading": "배뇨통과 감염 여부를 확인합니다",
+          "paragraph_support_block_ids": [
+            [
+              33,
+              49,
+              50,
+              51
+            ]
+          ]
+        },
+        {
+          "heading": "음료와 배뇨 패턴도 함께 살핍니다",
+          "paragraph_support_block_ids": [
+            [
+              45,
+              46
+            ],
+            [
+              53,
+              55
+            ]
+          ]
+        },
+        {
+          "heading": "혈뇨나 발열을 단순하게 넘기지 마세요",
+          "paragraph_support_block_ids": [
+            [
+              66,
+              67
+            ],
+            [
+              71,
+              72,
+              73
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {
+        "excerpt": "소변을 자주 보거나 갑자기 참기 어려운 느낌은 방광염과 과민성 방광에서 모두 나타날 수 있습니다. 과민성 방광은 요로감염이나 다른 뚜렷한 원인이 없는지 확인한 뒤 평가하는 증상군입니다. 비슷한 배뇨 증상이라도 감염 여부와 동반 증상을 함께 살펴야 합니다.",
+        "support": [
+          1,
+          2,
+          3,
+          18,
+          29,
+          30,
+          33,
+          67,
+          71,
+          72,
+          73
+        ]
+      }
+    },
+    {
+      "slug": "postmeal-drowsiness-and-diabetes-testing",
+      "before": {
+        "body": 348,
+        "headings": 66,
+        "total": 414
+      },
+      "after": {
+        "body": 1478,
+        "headings": 81,
+        "total": 1559
+      },
+      "source_url": "https://ohsunghani.tistory.com/59",
+      "source_title": "밥을 먹고 졸린 이유는 무엇인가요?",
+      "source_published_date": "2026-10-15",
+      "source_html_sha256": "5c06b2e7e2ed7fab70b369a2573819fb94894895bfca12849ae50af16036e5c3",
+      "source_category": null,
+      "source_category_number": null,
+      "additional_sources": [],
+      "method": "Original passages selected and grouped after reading the source; grammar and warning lists lightly condensed without adding content.",
+      "sections": [
+        {
+          "heading": "식후 졸음은 여러 요인이 함께 만듭니다",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2,
+              6,
+              7
+            ]
+          ]
+        },
+        {
+          "heading": "식사량과 수면의 질을 함께 살펴보세요",
+          "paragraph_support_block_ids": [
+            [
+              21,
+              22,
+              23,
+              53
+            ],
+            [
+              35,
+              36,
+              37
+            ]
+          ]
+        },
+        {
+          "heading": "가벼운 활동과 카페인 섭취 시간",
+          "paragraph_support_block_ids": [
+            [
+              39,
+              40,
+              41,
+              42
+            ],
+            [
+              44,
+              45,
+              46,
+              47
+            ],
+            [
+              62,
+              63
+            ]
+          ]
+        },
+        {
+          "heading": "심한 졸음과 동반 증상은 확인이 필요합니다",
+          "paragraph_support_block_ids": [
+            [
+              25,
+              26,
+              27,
+              28
+            ],
+            [
+              72
+            ],
+            [
+              81
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "accident-injury-grades-and-individual-recovery",
+      "before": {
+        "body": 411,
+        "headings": 56,
+        "total": 467
+      },
+      "after": {
+        "body": 1470,
+        "headings": 64,
+        "total": 1534
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224346238172",
+      "source_title": "교통사고 12급·13급·14급, 등급에 따라 치료가 달라질까요?",
+      "source_published_date": "2026-08-22",
+      "source_html_sha256": "85a75b2b6a22cb63b169ded9b416b3d866cb4ec40fc811c62db4bd5de95fab72",
+      "source_category": "교통사고, 자동차보험",
+      "source_category_number": "16",
+      "additional_sources": [],
+      "method": "Original passages selected and grouped after reading the source; grammar and warning lists lightly condensed without adding content.",
+      "sections": [
+        {
+          "heading": "상해등급과 몸의 회복은 같은 말이 아닙니다",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              6
+            ],
+            [
+              11,
+              12,
+              13
+            ],
+            [
+              16,
+              18
+            ]
+          ]
+        },
+        {
+          "heading": "며칠 뒤 달라지는 증상도 살펴봅니다",
+          "paragraph_support_block_ids": [
+            [
+              22,
+              23,
+              24
+            ],
+            [
+              28,
+              29,
+              30
+            ]
+          ]
+        },
+        {
+          "heading": "현재 상태와 치료 이후의 변화를 기준으로",
+          "paragraph_support_block_ids": [
+            [
+              33,
+              37
+            ],
+            [
+              40,
+              41,
+              42
+            ],
+            [
+              45,
+              46,
+              47,
+              48,
+              49
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {
+        "takeaways": [
+          "상해등급은 보험에서 손상을 구분하는 기준이며, 숫자만으로 몸의 회복 정도를 판단하기는 어렵습니다.",
+          "현재 증상과 움직임의 변화, 치료 뒤의 회복 과정을 함께 살펴 치료 방향을 결정합니다."
+        ],
+        "support": [
+          11,
+          13,
+          18,
+          28,
+          29,
+          30,
+          31,
+          33,
+          37
+        ]
+      }
+    },
+    {
+      "slug": "why-injury-mechanism-matters-in-consultation",
+      "before": {
+        "body": 397,
+        "headings": 52,
+        "total": 449
+      },
+      "after": {
+        "body": 1534,
+        "headings": 59,
+        "total": 1593
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224368638122",
+      "source_title": "오성한의원은 왜 처음 통증보다 처음 다쳤던 순간을 중요하게 물어볼까요",
+      "source_published_date": "2026-08-31",
+      "source_html_sha256": "95072c18a904c5579bed4798658cf07144745fa88787f7385f8f8d2734131235",
+      "source_category": "오성한의원은 이렇게 진료합니다",
+      "source_category_number": "25",
+      "additional_sources": [],
+      "method": "Original passages selected and grouped after reading the source; grammar and warning lists lightly condensed without adding content.",
+      "sections": [
+        {
+          "heading": "처음 아팠던 순간을 묻는 이유",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21
+            ]
+          ]
+        },
+        {
+          "heading": "시작된 상황에는 다른 단서가 있습니다",
+          "paragraph_support_block_ids": [
+            [
+              25,
+              26
+            ],
+            [
+              27,
+              28,
+              29
+            ],
+            [
+              32,
+              33,
+              35,
+              36,
+              37,
+              39
+            ]
+          ]
+        },
+        {
+          "heading": "현재의 통증까지 이어진 과정을 함께 봅니다",
+          "paragraph_support_block_ids": [
+            [
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48
+            ],
+            [
+              51,
+              52,
+              53,
+              54,
+              55,
+              56
+            ],
+            [
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {
+        "takeaways": [
+          "같은 부위가 아파도 통증이 시작된 상황에 따라 살펴볼 내용이 달라질 수 있습니다.",
+          "갑자기 다친 경우와 서서히 불편해진 경우처럼, 현재 통증까지 이어진 과정을 함께 듣습니다."
+        ],
+        "support": [
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          25,
+          26,
+          27,
+          28,
+          29,
+          48,
+          58,
+          59,
+          60,
+          61,
+          62
+        ]
+      }
+    },
+    {
+      "slug": "immediate-relief-and-recovery-over-time",
+      "before": {
+        "body": 351,
+        "headings": 66,
+        "total": 417
+      },
+      "after": {
+        "body": 1585,
+        "headings": 57,
+        "total": 1642
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224397180789",
+      "source_title": "오성한의원은 왜 치료 직후 좋아졌다고 끝난 것이 아니라고 생각할까요",
+      "source_published_date": "2026-09-21",
+      "source_html_sha256": "2bc954a675260d7a9f819372958cc05922c191d84c825b7e7de121754adc24f9",
+      "source_category": "오성한의원은 이렇게 진료합니다",
+      "source_category_number": "25",
+      "additional_sources": [],
+      "method": "Original passages selected and grouped after reading the source; grammar and warning lists lightly condensed without adding content.",
+      "sections": [
+        {
+          "heading": "치료 직후 편해졌다는 반응",
+          "paragraph_support_block_ids": [
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              9,
+              10,
+              16,
+              17,
+              18,
+              19
+            ]
+          ]
+        },
+        {
+          "heading": "집으로 돌아간 뒤에도 변화가 이어집니다",
+          "paragraph_support_block_ids": [
+            [
+              21,
+              22,
+              23,
+              24,
+              25
+            ],
+            [
+              26,
+              27,
+              28,
+              29
+            ],
+            [
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38
+            ]
+          ]
+        },
+        {
+          "heading": "덜 아픈지와 안정적으로 움직이는지를 함께",
+          "paragraph_support_block_ids": [
+            [
+              42,
+              43,
+              44,
+              45,
+              46,
+              47
+            ],
+            [
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55
+            ],
+            [
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "pain-duration-and-course-in-consultation",
+      "before": {
+        "body": 340,
+        "headings": 72,
+        "total": 412
+      },
+      "after": {
+        "body": 1458,
+        "headings": 57,
+        "total": 1515
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224346113026",
+      "source_title": "조리읍한의원은 왜 통증의 기간을 중요하게 볼까요",
+      "source_published_date": "2026-08-20",
+      "source_html_sha256": "260c99ac9cf4a7546976e6457618662b114097f071e8e88c2ddc2ca070a855c9",
+      "source_category": "오성한의원은 이렇게 진료합니다",
+      "source_category_number": "25",
+      "additional_sources": [],
+      "method": "Original passages selected and grouped after reading the source; grammar and warning lists lightly condensed without adding content.",
+      "sections": [
+        {
+          "heading": "좀 됐다는 말에 담긴 서로 다른 시간",
+          "paragraph_support_block_ids": [
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12
+            ]
+          ]
+        },
+        {
+          "heading": "갑자기 다친 허리와 오래 아픈 허리",
+          "paragraph_support_block_ids": [
+            [
+              15,
+              16,
+              17
+            ],
+            [
+              18,
+              19,
+              20
+            ],
+            [
+              23,
+              24,
+              25,
+              26,
+              27
+            ]
+          ]
+        },
+        {
+          "heading": "몸이 적응해 온 과정까지 살핍니다",
+          "paragraph_support_block_ids": [
+            [
+              29,
+              30,
+              31,
+              32,
+              33,
+              34
+            ],
+            [
+              37,
+              38,
+              39,
+              40,
+              41
+            ],
+            [
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "rest-from-aggravating-activity-as-part-of-care",
+      "before": {
+        "body": 347,
+        "headings": 68,
+        "total": 415
+      },
+      "after": {
+        "body": 1469,
+        "headings": 59,
+        "total": 1528
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224342216545",
+      "source_title": "오성한의원은 왜 때로는 쉬는 것도 치료라고 말씀드릴까요",
+      "source_published_date": "2026-07-30",
+      "source_html_sha256": "276dcfb5a3143662468da758adf51945b6fd34445ac0f481ada90021fb78ca4c",
+      "source_category": "오성한의원은 이렇게 진료합니다",
+      "source_category_number": "25",
+      "additional_sources": [],
+      "method": "Original passages selected and grouped after reading the source; grammar and warning lists lightly condensed without adding content.",
+      "sections": [
+        {
+          "heading": "좋아하는 운동을 쉬기 어려운 마음",
+          "paragraph_support_block_ids": [
+            [
+              2,
+              3,
+              4,
+              5
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              13,
+              14,
+              15
+            ],
+            [
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28
+            ]
+          ]
+        },
+        {
+          "heading": "치료 뒤에도 몸에는 회복할 시간이 필요합니다",
+          "paragraph_support_block_ids": [
+            [
+              35,
+              36,
+              37,
+              38,
+              39
+            ],
+            [
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47
+            ],
+            [
+              48,
+              49,
+              50,
+              51
+            ]
+          ]
+        },
+        {
+          "heading": "취미를 포기하라는 뜻은 아닙니다",
+          "paragraph_support_block_ids": [
+            [
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59
+            ],
+            [
+              64,
+              65,
+              66,
+              67,
+              68
+            ],
+            [
+              75,
+              76,
+              77,
+              78,
+              79,
+              80,
+              81
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "priorities-when-caring-for-accident-patients",
+      "before": {
+        "body": 377,
+        "headings": 72,
+        "total": 449
+      },
+      "after": {
+        "body": 1510,
+        "headings": 84,
+        "total": 1594
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224338050961",
+      "source_title": "오성한의원은 교통사고 환자를 볼 때 무엇을 가장 중요하게 생각할까요",
+      "source_published_date": "2026-07-20",
+      "source_html_sha256": "7d00455e9b622e41fc4c6cde22e007155c9b0f63f13b8fa699f541e151c5f1e8",
+      "source_category": "오성한의원은 이렇게 진료합니다",
+      "source_category_number": "25",
+      "additional_sources": [],
+      "method": "Original passages selected and grouped after reading the source; grammar and warning lists lightly condensed without adding content.",
+      "sections": [
+        {
+          "heading": "사고 뒤에는 몸 이외의 부담도 남습니다",
+          "paragraph_support_block_ids": [
+            [
+              2,
+              4,
+              5
+            ],
+            [
+              8,
+              9,
+              10,
+              11,
+              12,
+              13
+            ],
+            [
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22
+            ]
+          ]
+        },
+        {
+          "heading": "치료를 받는 중에도 일상은 이어집니다",
+          "paragraph_support_block_ids": [
+            [
+              24,
+              25,
+              26,
+              27
+            ],
+            [
+              29,
+              30,
+              31,
+              34,
+              35,
+              36
+            ]
+          ]
+        },
+        {
+          "heading": "사고의 크기와 현재 몸 상태를 구분합니다",
+          "paragraph_support_block_ids": [
+            [
+              38,
+              39,
+              40,
+              41,
+              42,
+              43
+            ],
+            [
+              44,
+              45,
+              46,
+              47,
+              48
+            ],
+            [
+              50,
+              51,
+              52,
+              53,
+              54,
+              55
+            ]
+          ]
+        },
+        {
+          "heading": "회복이 충분히 이루어지는지 함께 봅니다",
+          "paragraph_support_block_ids": [
+            [
+              64,
+              65,
+              66,
+              67,
+              68,
+              69
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "bruising-and-body-aches-after-traffic-accident",
+      "before": {
+        "body": 391,
+        "headings": 96,
+        "total": 487
+      },
+      "after": {
+        "body": 1473,
+        "headings": 77,
+        "total": 1550
+      },
+      "source_url": "https://ohsunghani.tistory.com/35",
+      "source_title": "교통사고 후 멍이 들고 몸이 뻐근한 이유",
+      "source_published_date": "2026-09-21",
+      "source_html_sha256": "4235892b00e605939edc0cbdf4e17bdf38daf853b4892951d2f73e2e390ea202",
+      "source_category": null,
+      "source_category_number": null,
+      "additional_sources": [],
+      "method": "Original passages selected and grouped after reading the source; grammar and warning lists lightly condensed without adding content.",
+      "sections": [
+        {
+          "heading": "사고 다음 날 드러나는 멍과 뻐근함",
+          "paragraph_support_block_ids": [
+            [
+              0,
+              1
+            ],
+            [
+              4,
+              5,
+              6
+            ]
+          ]
+        },
+        {
+          "heading": "멍이 없어도 통증은 남을 수 있습니다",
+          "paragraph_support_block_ids": [
+            [
+              22,
+              23
+            ],
+            [
+              33,
+              34,
+              35
+            ],
+            [
+              48,
+              50
+            ]
+          ]
+        },
+        {
+          "heading": "강한 마사지보다 변화를 살펴보세요",
+          "paragraph_support_block_ids": [
+            [
+              43,
+              44,
+              45,
+              46
+            ],
+            [
+              52,
+              53
+            ]
+          ]
+        },
+        {
+          "heading": "가슴과 복부의 충격도 함께 확인합니다",
+          "paragraph_support_block_ids": [
+            [
+              39,
+              40,
+              41
+            ],
+            [
+              62
+            ],
+            [
+              66,
+              67
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "persistent-pain-after-accident-despite-normal-mri",
+      "before": {
+        "body": 342,
+        "headings": 70,
+        "total": 412
+      },
+      "after": {
+        "body": 696,
+        "headings": 57,
+        "total": 753
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224329578401",
+      "source_title": "파주 조리읍 교통사고한의원, MRI 정상인데 계속 아픈 이유 알려드립니다",
+      "source_published_date": "2026-07-08",
+      "source_html_sha256": "44af45344fcd40d7c91ed3a8d40d20686924963081ae8f816c6f10eb8c48d73d",
+      "source_category": "교통사고, 자동차보험",
+      "source_category_number": "16",
+      "additional_sources": [],
+      "method": "Source-based paraphrase with paragraph support; unverified promises and mechanisms omitted.",
+      "sections": [
+        {
+          "heading": "검사는 정상인데 불편함이 남아 있다면",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            [
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              29
+            ]
+          ]
+        },
+        {
+          "heading": "사고 충격 이후의 긴장과 증상 변화",
+          "paragraph_support_block_ids": [
+            [
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ],
+            [
+              20,
+              21,
+              22,
+              23,
+              24
+            ]
+          ]
+        },
+        {
+          "heading": "남아 있는 증상을 함께 확인합니다",
+          "paragraph_support_block_ids": [
+            [
+              25,
+              26,
+              27,
+              28,
+              29,
+              30
+            ],
+            [
+              31,
+              32,
+              33,
+              34,
+              35,
+              36
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "chronic-low-back-pain-management-while-working",
+      "before": {
+        "body": 353,
+        "headings": 73,
+        "total": 426
+      },
+      "after": {
+        "body": 713,
+        "headings": 52,
+        "total": 765
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224392227568",
+      "source_title": "파주 봉일천 만성 허리통증, 수술 없이 한의원에서 관리하는 현실적인 방법",
+      "source_published_date": "2026-09-14",
+      "source_html_sha256": "1e298f198d01147a1a7a15c713fe8ae6983171f8f98e77fa7f9d9bc25a2c4ab0",
+      "source_category": "이런 증상 있으세요?",
+      "source_category_number": "17",
+      "additional_sources": [],
+      "method": "Source-based paraphrase with paragraph support; unverified promises and mechanisms omitted.",
+      "sections": [
+        {
+          "heading": "출근하면 다시 무거워지는 허리",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2,
+              9,
+              10,
+              11,
+              12
+            ],
+            [
+              10,
+              11,
+              12,
+              14
+            ]
+          ]
+        },
+        {
+          "heading": "일과 돌봄을 이어가야 하는 현실",
+          "paragraph_support_block_ids": [
+            [
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              14,
+              30,
+              40,
+              41,
+              42
+            ]
+          ]
+        },
+        {
+          "heading": "현재 상태에 맞는 치료와 관리 방향",
+          "paragraph_support_block_ids": [
+            [
+              13,
+              14,
+              15,
+              17,
+              18,
+              21,
+              24,
+              27,
+              30
+            ],
+            [
+              38,
+              39,
+              40,
+              41,
+              42
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {
+        "excerpt": "아침부터 허리가 뻐근하고 오래 앉아 일할수록 무거워지는 직장인의 만성 허리통증을 다룹니다. 현재 몸 상태와 생활 패턴을 확인하고, 일과 병행할 수 있는 관리 방법을 의논합니다.",
+        "takeaways": [
+          "오래 앉아 있는 자세와 반복되는 생활 부담이 허리통증에 영향을 줄 수 있습니다.",
+          "오성한의원은 현재 몸 상태와 생활 패턴을 듣고 무리 없이 이어갈 수 있는 관리 방법을 찾는다고 설명합니다."
+        ],
+        "support": [
+          1,
+          2,
+          5,
+          6,
+          10,
+          11,
+          12,
+          14,
+          30,
+          39,
+          40,
+          42
+        ]
+      }
+    },
+    {
+      "slug": "pain-after-a-minor-traffic-collision",
+      "before": {
+        "body": 371,
+        "headings": 57,
+        "total": 428
+      },
+      "after": {
+        "body": 683,
+        "headings": 64,
+        "total": 747
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224145036514",
+      "source_title": "접촉사고인데 통증이 심한 이유, 파주교통사고 오성 한의원",
+      "source_published_date": "2026-02-17",
+      "source_html_sha256": "f30f126d4cebb75396d62c09a41d05cc4d648fec6b8eae2f6e485fdab8b50a4e",
+      "source_category": "교통사고, 자동차보험",
+      "source_category_number": "16",
+      "additional_sources": [],
+      "method": "Source-based paraphrase with paragraph support; unverified promises and mechanisms omitted.",
+      "sections": [
+        {
+          "heading": "차량 손상이 작아도 몸은 불편할 수 있습니다",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11
+            ],
+            [
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19
+            ]
+          ]
+        },
+        {
+          "heading": "집에 돌아온 뒤부터 아프기도 합니다",
+          "paragraph_support_block_ids": [
+            [
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29
+            ],
+            [
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37
+            ]
+          ]
+        },
+        {
+          "heading": "계속되는 통증은 현재 상태를 확인하세요",
+          "paragraph_support_block_ids": [
+            [
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              54,
+              55
+            ],
+            [
+              48,
+              49,
+              50,
+              51,
+              57,
+              58
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {
+        "excerpt": "접촉사고 당시 몸이 갑자기 흔들리면 목과 어깨, 허리에 부담이 갈 수 있습니다. 사고 당시 자세와 안전벨트 착용 상태, 평소 목과 허리 상태에 따라서도 불편함이 다를 수 있습니다.",
+        "support": [
+          8,
+          9,
+          10,
+          11,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          30,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37
+        ]
+      }
+    },
+    {
+      "slug": "neck-and-shoulder-aching-together",
+      "before": {
+        "body": 424,
+        "headings": 50,
+        "total": 474
+      },
+      "after": {
+        "body": 1408,
+        "headings": 80,
+        "total": 1488
+      },
+      "source_url": "https://ohsunghani.tistory.com/51",
+      "source_title": "목과 어깨가 함께 아픈 이유는 무엇인가? 봉일천한의원이 알려드립니다",
+      "source_published_date": "2026-10-07",
+      "source_html_sha256": "c259ae8a9080eaaef6817f3fc3affae53bdfa98d15ed365430cbccc7fd4da742",
+      "source_category": null,
+      "source_category_number": null,
+      "additional_sources": [],
+      "method": "Original passages selected and grouped after reading the source; grammar and warning lists lightly condensed without adding content.",
+      "sections": [
+        {
+          "heading": "목과 어깨의 움직임을 함께 살펴봅니다",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2,
+              4,
+              5
+            ]
+          ]
+        },
+        {
+          "heading": "같은 자세를 유지하는 시간과 긴장",
+          "paragraph_support_block_ids": [
+            [
+              12,
+              13,
+              15
+            ],
+            [
+              39,
+              41
+            ],
+            [
+              44,
+              45,
+              46,
+              47
+            ]
+          ]
+        },
+        {
+          "heading": "강하게 늘리기보다 가벼운 움직임부터",
+          "paragraph_support_block_ids": [
+            [
+              58,
+              59,
+              60
+            ],
+            [
+              62,
+              63
+            ],
+            [
+              73,
+              75,
+              76
+            ]
+          ]
+        },
+        {
+          "heading": "팔 저림과 외상 뒤 통증도 함께 확인합니다",
+          "paragraph_support_block_ids": [
+            [
+              49,
+              56
+            ],
+            [
+              98
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {
+        "excerpt": "목과 어깨는 움직일 때 서로 영향을 주는 부위입니다. 컴퓨터나 스마트폰을 보며 같은 자세를 오래 유지하면 두 부위가 함께 뻐근해질 수 있습니다. 움직임과 생활 속 부담을 함께 살펴봅니다.",
+        "takeaways": [
+          "목을 움직일 때 어깨 주변 근육이 함께 작용하고, 어깨와 팔의 움직임도 목 주변에 영향을 줄 수 있습니다.",
+          "통증이 오래가거나 점점 심해지고 팔이나 손까지 이어진다면 현재 상태를 확인하는 것이 좋습니다."
+        ],
+        "support": [
+          1,
+          2,
+          4,
+          5,
+          7,
+          8,
+          9,
+          10,
+          12,
+          13,
+          14,
+          15,
+          17,
+          18,
+          19,
+          89,
+          90,
+          91,
+          92,
+          93
+        ]
+      }
+    },
+    {
+      "slug": "neck-and-arm-tingling-after-traffic-accident",
+      "before": {
+        "body": 357,
+        "headings": 55,
+        "total": 412
+      },
+      "after": {
+        "body": 1556,
+        "headings": 65,
+        "total": 1621
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224436167834",
+      "source_title": "교통사고 후 팔이 저리고 손까지 찌릿한데 목 때문일까요? 파주 뇌조리 교통사고 한의원",
+      "source_published_date": "2026-11-04",
+      "source_html_sha256": "e5c72e258c075d32f61e92128577e87b2e235cea956522ae006579f2bafa7523",
+      "source_category": "교통사고, 자동차보험",
+      "source_category_number": "16",
+      "additional_sources": [],
+      "method": "Original passages selected and grouped after reading the source; grammar and warning lists lightly condensed without adding content.",
+      "sections": [
+        {
+          "heading": "목의 뻣뻣함과 함께 팔이 저린다면",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2
+            ],
+            [
+              4,
+              5,
+              7,
+              8
+            ],
+            [
+              17,
+              18
+            ]
+          ]
+        },
+        {
+          "heading": "저림의 위치와 움직임에 따른 변화를 봅니다",
+          "paragraph_support_block_ids": [
+            [
+              20,
+              21,
+              22
+            ],
+            [
+              24,
+              25,
+              26,
+              27
+            ],
+            [
+              29,
+              31,
+              32
+            ]
+          ]
+        },
+        {
+          "heading": "같은 팔 저림에도 치료는 달라질 수 있습니다",
+          "paragraph_support_block_ids": [
+            [
+              34,
+              35,
+              36,
+              38,
+              39
+            ],
+            [
+              41,
+              43
+            ],
+            [
+              49,
+              50
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {
+        "excerpt": "목 주변에는 팔로 이어지는 신경 구조가 지나갑니다. 사고 뒤 목과 어깨가 불편하면서 팔이나 손까지 저릴 수 있지만, 원인이 모두 같은 것은 아니므로 저림의 위치와 움직임에 따른 변화를 함께 살펴야 합니다.",
+        "takeaways": [
+          "목 주변의 상태와 팔의 감각이나 통증이 함께 나타날 수 있지만, 팔 저림의 원인을 목으로 단정할 수는 없습니다.",
+          "사고 뒤 새롭게 시작된 팔 저림이 계속되거나 점점 심해진다면 증상의 양상을 살펴보는 것이 좋습니다."
+        ],
+        "support": [
+          1,
+          2,
+          5,
+          7,
+          8,
+          20,
+          21,
+          22,
+          29,
+          30,
+          31,
+          41,
+          42,
+          43
+        ]
+      }
+    },
+    {
+      "slug": "leg-care-during-long-standing-workdays",
+      "before": {
+        "body": 350,
+        "headings": 77,
+        "total": 427
+      },
+      "after": {
+        "body": 1502,
+        "headings": 80,
+        "total": 1582
+      },
+      "source_url": "https://ohsunghani.tistory.com/61",
+      "source_title": "오래 서 있으면 다리가 붓는 이유는 무엇인가요?",
+      "source_published_date": "2026-10-17",
+      "source_html_sha256": "68c42f0ee1a63ce9688471c72affc87f1fc4c40b2ec34944198790d7f0314482",
+      "source_category": null,
+      "source_category_number": null,
+      "additional_sources": [],
+      "method": "Original passages selected and grouped after reading the source; grammar and warning lists lightly condensed without adding content.",
+      "sections": [
+        {
+          "heading": "저녁이면 신발과 양말이 조이는 느낌",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2,
+              5,
+              6
+            ],
+            [
+              10,
+              11
+            ],
+            [
+              19
+            ]
+          ]
+        },
+        {
+          "heading": "가만히 서 있는 것과 걷는 것은 다릅니다",
+          "paragraph_support_block_ids": [
+            [
+              31,
+              32,
+              33
+            ],
+            [
+              46,
+              48
+            ],
+            [
+              52
+            ]
+          ]
+        },
+        {
+          "heading": "일하는 중과 퇴근 뒤의 작은 조절",
+          "paragraph_support_block_ids": [
+            [
+              79,
+              80,
+              81
+            ],
+            [
+              82,
+              83,
+              84,
+              85,
+              86,
+              87
+            ],
+            [
+              54,
+              56,
+              57
+            ]
+          ]
+        },
+        {
+          "heading": "갑작스러운 한쪽 부종은 구분해야 합니다",
+          "paragraph_support_block_ids": [
+            [
+              59,
+              65
+            ],
+            [
+              77
+            ],
+            [
+              97
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "footwear-choices-for-forefoot-nerve-pain",
+      "before": {
+        "body": 388,
+        "headings": 52,
+        "total": 440
+      },
+      "after": {
+        "body": 1363,
+        "headings": 71,
+        "total": 1434
+      },
+      "source_url": "https://ohsunghani.tistory.com/88",
+      "source_title": "파주 지간신경종 한의원 증상과 원인, 발바닥 앞쪽이 아픈 이유",
+      "source_published_date": "2026-11-14",
+      "source_html_sha256": "c09844bca9f509b738fe3b39dd19edc4dc541fd1d96512312510cdc160bd776d",
+      "source_category": null,
+      "source_category_number": null,
+      "additional_sources": [],
+      "method": "Original passages selected and grouped after reading the source; grammar and warning lists lightly condensed without adding content.",
+      "sections": [
+        {
+          "heading": "발 앞쪽과 발가락 사이의 통증",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2,
+              3
+            ]
+          ]
+        },
+        {
+          "heading": "신발과 증상의 관계를 살펴봅니다",
+          "paragraph_support_block_ids": [
+            [
+              38
+            ],
+            [
+              40,
+              41,
+              42,
+              43,
+              44
+            ],
+            [
+              48
+            ]
+          ]
+        },
+        {
+          "heading": "발의 압박과 활동량을 조절합니다",
+          "paragraph_support_block_ids": [
+            [
+              65,
+              66,
+              67,
+              68,
+              69
+            ],
+            [
+              71,
+              84
+            ],
+            [
+              98,
+              101,
+              103
+            ]
+          ]
+        },
+        {
+          "heading": "감각 저하가 이어지면 확인이 필요합니다",
+          "paragraph_support_block_ids": [
+            [
+              88
+            ],
+            [
+              117
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {
+        "takeaways": [
+          "지간신경종에서는 발 앞쪽이나 발가락 사이가 찌릿하고 화끈거릴 수 있습니다.",
+          "발의 감각 저하가 지속되거나 통증이 점점 심해지면 다른 신경 질환이나 발 질환도 함께 확인해야 합니다."
+        ],
+        "support": [
+          1,
+          2,
+          11,
+          22,
+          117
+        ]
+      }
+    },
+    {
+      "slug": "rib-pain-after-accident-and-tight-wrapping",
+      "before": {
+        "body": 392,
+        "headings": 59,
+        "total": 451
+      },
+      "after": {
+        "body": 1403,
+        "headings": 71,
+        "total": 1474
+      },
+      "source_url": "https://ohsunghani.tistory.com/33",
+      "source_title": "교통사고 후 갈비뼈와 가슴 주변이 아픈 이유",
+      "source_published_date": "2026-09-19",
+      "source_html_sha256": "3d3c1429055f28be2dd018196f65ccc0dfcb479b9da862d2705a70c836a9a9e0",
+      "source_category": null,
+      "source_category_number": null,
+      "additional_sources": [],
+      "method": "Original passages selected and grouped after reading the source; grammar and warning lists lightly condensed without adding content.",
+      "sections": [
+        {
+          "heading": "사고 뒤 가슴 통증을 근육통으로 단정하지 않습니다",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              5,
+              6
+            ],
+            [
+              21,
+              22,
+              23,
+              24
+            ]
+          ]
+        },
+        {
+          "heading": "심한 통증과 호흡곤란은 우선 평가가 필요합니다",
+          "paragraph_support_block_ids": [
+            [
+              28,
+              29
+            ],
+            [
+              31,
+              32
+            ],
+            [
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40
+            ]
+          ]
+        },
+        {
+          "heading": "시간이 지난 뒤의 변화도 살펴봅니다",
+          "paragraph_support_block_ids": [
+            [
+              16,
+              17,
+              19
+            ],
+            [
+              48,
+              49,
+              50
+            ],
+            [
+              52,
+              53
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {
+        "excerpt": "사고 뒤 갈비뼈와 가슴 주변 통증은 근육과 연부조직의 부담, 갈비뼈 손상 등 원인이 다양합니다. 눌렀을 때 아프다는 사실만으로 원인을 구분하기는 어렵습니다.",
+        "takeaways": [
+          "사고 뒤 가슴과 갈비뼈 주변 통증을 단순한 근육통으로 단정하지 않고 현재 상태를 확인합니다.",
+          "가슴이 심하게 조이거나 갑자기 매우 아프고, 호흡곤란과 식은땀, 심한 어지럼증이나 실신이 나타난다면 먼저 필요한 응급 평가를 받아야 합니다."
+        ],
+        "support": [
+          1,
+          2,
+          3,
+          5,
+          6,
+          24,
+          26,
+          27,
+          28,
+          31,
+          32,
+          33,
+          34,
+          35,
+          36,
+          37,
+          38,
+          39,
+          40
+        ]
+      }
+    },
+    {
+      "slug": "lumbar-mri-findings-and-treatment-decisions",
+      "before": {
+        "body": 400,
+        "headings": 57,
+        "total": 457
+      },
+      "after": {
+        "body": 1501,
+        "headings": 90,
+        "total": 1591
+      },
+      "source_url": "https://ohsunghani.tistory.com/5",
+      "source_title": "허리디스크와 단순 허리통증은 어떻게 다른가?",
+      "source_published_date": "2026-08-28",
+      "source_html_sha256": "4103ca8ed39aa05cb7f1085b1ed0f06b972e8f8628a378207386537017feb0bd",
+      "source_category": null,
+      "source_category_number": null,
+      "additional_sources": [],
+      "method": "Original passages selected and grouped after reading the source; grammar and warning lists lightly condensed without adding content.",
+      "sections": [
+        {
+          "heading": "허리통증만으로 디스크를 판단하지 않습니다",
+          "paragraph_support_block_ids": [
+            [
+              1,
+              2,
+              3,
+              4
+            ],
+            [
+              8,
+              9,
+              10
+            ]
+          ]
+        },
+        {
+          "heading": "영상 검사와 실제 증상을 함께 살펴봅니다",
+          "paragraph_support_block_ids": [
+            [
+              51
+            ],
+            [
+              86,
+              87,
+              96
+            ],
+            [
+              99,
+              100,
+              101
+            ]
+          ]
+        },
+        {
+          "heading": "움직임은 통증을 악화시키지 않는 범위에서",
+          "paragraph_support_block_ids": [
+            [
+              64,
+              65,
+              66,
+              67
+            ],
+            [
+              70,
+              71,
+              72
+            ]
+          ]
+        },
+        {
+          "heading": "신경 증상이 빠르게 진행되면 지체하지 마세요",
+          "paragraph_support_block_ids": [
+            [
+              83
+            ],
+            [
+              84
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "racing-thoughts-when-trying-to-sleep",
+      "before": {
+        "body": 391,
+        "headings": 64,
+        "total": 455
+      },
+      "after": {
+        "body": 695,
+        "headings": 57,
+        "total": 752
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224172488606",
+      "source_title": "파주 약잘짓는 한의원, 불면증 해결",
+      "source_published_date": "2026-02-21",
+      "source_html_sha256": "97c172a8f0e4b28f60d953787ac7efbfc1cea8f7ea1ddd5ed2f392415f5114bb",
+      "source_category": "약 잘 짓는 한의원",
+      "source_category_number": "22",
+      "additional_sources": [],
+      "method": "Source-based paraphrase with paragraph support; unverified promises and mechanisms omitted.",
+      "sections": [
+        {
+          "heading": "밤의 휴식이 부담으로 느껴질 때",
+          "paragraph_support_block_ids": [
+            [
+              0,
+              2,
+              3
+            ],
+            [
+              4,
+              5,
+              11,
+              14,
+              15,
+              19,
+              20,
+              21
+            ]
+          ]
+        },
+        {
+          "heading": "잠을 방해하는 양상은 서로 다릅니다",
+          "paragraph_support_block_ids": [
+            [
+              23,
+              24,
+              27,
+              28,
+              29
+            ],
+            [
+              27,
+              28,
+              29,
+              30
+            ]
+          ]
+        },
+        {
+          "heading": "혼자 버티기보다 불편함을 의논해 주세요",
+          "paragraph_support_block_ids": [
+            [
+              22,
+              23,
+              24,
+              25,
+              27,
+              28,
+              29,
+              30,
+              31
+            ],
+            [
+              3,
+              34,
+              35,
+              36,
+              37
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    },
+    {
+      "slug": "why-ohsung-does-not-promise-one-visit-cure",
+      "before": {
+        "body": 391,
+        "headings": 63,
+        "total": 454
+      },
+      "after": {
+        "body": 1533,
+        "headings": 62,
+        "total": 1595
+      },
+      "source_url": "https://blog.naver.com/ohsunghani/224338031974",
+      "source_title": "오성한의원은 왜 한 번에 낫는 치료를 약속하지 않을까요",
+      "source_published_date": "2026-07-13",
+      "source_html_sha256": "a1d319ca0ed997f17ce51934e84ba634ddf2f1dee6c8b95d0e23f6f426a4c611",
+      "source_category": "오성한의원은 이렇게 진료합니다",
+      "source_category_number": "25",
+      "additional_sources": [],
+      "method": "Original passages selected and grouped after reading the source; grammar and warning lists lightly condensed without adding content.",
+      "sections": [
+        {
+          "heading": "빨리 낫고 싶은 마음을 이해합니다",
+          "paragraph_support_block_ids": [
+            [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            [
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18
+            ]
+          ]
+        },
+        {
+          "heading": "치료 뒤에도 회복에 필요한 시간이 있습니다",
+          "paragraph_support_block_ids": [
+            [
+              20,
+              21,
+              22,
+              23,
+              24,
+              25
+            ],
+            [
+              26,
+              27,
+              28
+            ],
+            [
+              32,
+              33,
+              34,
+              35,
+              36,
+              37
+            ]
+          ]
+        },
+        {
+          "heading": "현재 상태와 예상되는 과정을 설명합니다",
+          "paragraph_support_block_ids": [
+            [
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46
+            ],
+            [
+              47,
+              48,
+              49
+            ],
+            [
+              52,
+              53,
+              55,
+              56,
+              57
+            ],
+            [
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66
+            ]
+          ]
+        }
+      ],
+      "summary_adjustments": {}
+    }
+  ]
+}
