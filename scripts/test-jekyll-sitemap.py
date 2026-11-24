@@ -50,10 +50,13 @@ class PluginDiscoveryTests(unittest.TestCase):
         builder.build_search()
         expected = plugin.sitemap_entries((self.root/'sitemap.xml').read_bytes())
         feed = (self.root/'rss.xml').read_bytes()
+        text_sitemap = (self.root/'sitemap.txt').read_bytes()
         plugin.build_sitemap(self.root)
         actual = plugin.sitemap_entries((self.root/'sitemap.xml').read_bytes())
         self.assertEqual(actual, expected)
         self.assertEqual((self.root/'rss.xml').read_bytes(), feed)
+        self.assertEqual((self.root/'sitemap.txt').read_bytes(), text_sitemap)
+        self.assertEqual(set(text_sitemap.decode('utf-8').splitlines()), set(actual))
         self.assertEqual({p: hashlib.sha256(p.read_bytes()).hexdigest() for p in before}, before)
         self.assertEqual({item.findtext('link') for item in ET.fromstring(feed).findall('channel/item')}, set(actual))
         return actual

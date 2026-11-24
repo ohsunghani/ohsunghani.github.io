@@ -229,9 +229,11 @@ def build_search():
     assert seen, 'No indexable site pages found'
     ET.indent(sitemap, space='  ')
     (ROOT/'sitemap.xml').write_bytes(ET.tostring(sitemap, encoding='utf-8', xml_declaration=True)+b'\n')
+    urls = [node.find('{'+ns+'}loc').text for node in sitemap]
+    (ROOT/'sitemap.txt').write_text('\n'.join(urls)+'\n', encoding='utf-8')
     last_changed = max(node.find('{'+ns+'}lastmod').text for node in sitemap)
     write_rss(data['articles'], sitemap, last_changed)
-    print(f'Built sitemap and sitewide RSS for {len(seen)} indexable pages.')
+    print(f'Built XML/text sitemaps and sitewide RSS for {len(seen)} indexable pages.')
 
 def write_rss(catalog, sitemap, updated):
     """Publish the complete, rendered content of every page in the sitemap."""

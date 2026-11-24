@@ -16,7 +16,9 @@
 
 ## 검색엔진 수집 설정
 
-`sitemap.xml`과 전체 사이트 RSS인 `rss.xml`은 실제 HTML 파일을 바탕으로 생성합니다. 페이지 파일을 추가·삭제하면 다음 자동 배포에 반영됩니다. 소유확인 HTML, 404 페이지, `noindex` 페이지, 리다이렉트 페이지, 다른 페이지를 canonical로 지정한 중복 페이지는 제외합니다. 칼럼의 사이트맵 `lastmod`와 Article `dateModified`에는 글별 `website_modified`를 사용합니다. 나머지 페이지의 사이트맵 `lastmod`는 해당 HTML 파일의 Git 수정일을 한국 날짜로 변환합니다.
+`sitemap.xml`, `sitemap.txt`와 전체 사이트 RSS인 `rss.xml`은 실제 HTML 파일을 바탕으로 생성합니다. 세 파일은 같은 색인 대상 URL을 사용하며, 페이지 파일을 추가·삭제하면 다음 자동 배포에 함께 반영됩니다. 소유확인 HTML, 404 페이지, `noindex` 페이지, 리다이렉트 페이지, 다른 페이지를 canonical로 지정한 중복 페이지는 제외합니다. 칼럼의 XML 사이트맵 `lastmod`와 Article `dateModified`에는 글별 `website_modified`를 사용합니다. 나머지 페이지의 XML 사이트맵 `lastmod`는 해당 HTML 파일의 Git 수정일을 한국 날짜로 변환합니다.
+
+`sitemap.txt`는 Google이 공식 지원하는 텍스트 형식으로, UTF-8 파일에 절대 URL을 한 줄씩 기록합니다. XML 사이트맵의 가져오기 오류를 조사할 때 별도 주소로 제출할 수 있도록 제공하며, 기존 XML 사이트맵과 RSS도 계속 유지합니다. 형식이나 주소를 추가하는 것만으로 Google의 가져오기·처리 성공이 보장되지는 않습니다. 공식 형식 안내: https://developers.google.com/search/docs/crawling-indexing/sitemaps/build-sitemap?hl=ko#text
 
 배포 시 최종 사이트맵 XML은 GitHub Pages가 지원하는 `jekyll-sitemap` 1.4.0(Jekyll 3.10.0)으로 생성합니다. 기존 Python 빌드에서 확인한 색인 대상 URL과 수정일을 임시 Jekyll 페이지의 메타데이터로 전달하고, 플러그인의 결과가 그 URL·수정일과 모두 일치할 때만 `sitemap.xml`로 사용합니다. Jekyll이 만든 HTML과 robots.txt는 사용하지 않으므로 홈페이지 화면과 수집 허용 설정은 기존 파일을 그대로 배포합니다. 플러그인은 사이트맵 생성 도구이며 Google의 수집·처리 성공을 보장하는 기능은 아닙니다.
 
@@ -37,7 +39,7 @@ bundle install
 python3 scripts/build-jekyll-sitemap.py
 ```
 
-정식 주소는 `https://ohsunghani.github.io/`입니다. Google Search Console과 네이버 서치어드바이저에도 같은 HTTPS 주소로 등록하고 `https://ohsunghani.github.io/sitemap.xml`을 제출합니다. 네이버 RSS 제출 주소는 `https://ohsunghani.github.io/rss.xml`입니다. `robots.txt`는 전체 수집을 허용하며 사이트맵 주소를 안내합니다. Google·네이버 소유확인 파일은 삭제하지 않습니다.
+정식 주소는 `https://ohsunghani.github.io/`입니다. Google Search Console과 네이버 서치어드바이저에도 같은 HTTPS 주소로 등록하고 `https://ohsunghani.github.io/sitemap.xml`을 제출합니다. Google Search Console에서는 추가로 `https://ohsunghani.github.io/sitemap.txt`를 제출할 수 있습니다. 네이버 RSS 제출 주소는 `https://ohsunghani.github.io/rss.xml`입니다. `robots.txt`는 전체 수집을 허용하며 XML·텍스트 사이트맵 주소를 안내합니다. Google·네이버 소유확인 파일은 삭제하지 않습니다.
 
 ## 건강칼럼 추가·수정
 

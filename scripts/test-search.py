@@ -50,13 +50,25 @@ class DiscoveryTests(unittest.TestCase):
     def items(self):
         return ET.parse(self.root/'rss.xml').findall('channel/item')
 
-    def test_addition_and_deletion_update_both_feeds(self):
+    def text_urls(self):
+        content = (self.root/'sitemap.txt').read_bytes()
+        self.assertFalse(content.startswith(b'\xef\xbb\xbf'))
+        self.assertTrue(content.endswith(b'\n'))
+        lines = content.decode('utf-8').splitlines()
+        self.assertEqual(len(lines), len(set(lines)))
+        self.assertTrue(all(line.startswith(builder.SITE) and not re.search(r'\s|[<>]', line) for line in lines))
+        return set(lines)
+
+    def test_addition_and_deletion_update_all_discovery_files(self):
         page = self.page('new.html')
         builder.build_search()
         self.assertIn(builder.SITE+'new.html', self.urls())
+        self.assertEqual(self.text_urls(), self.urls())
+        self.assertEqual({i.findtext('link') for i in self.items()}, self.urls())
         page.unlink()
         builder.build_search()
         self.assertEqual(self.urls(), {builder.SITE})
+        self.assertEqual(self.text_urls(), self.urls())
         self.assertEqual({i.findtext('link') for i in self.items()}, self.urls())
 
     def test_non_index_targets_are_excluded(self):
@@ -69,6 +81,7 @@ class DiscoveryTests(unittest.TestCase):
             self.page(path)
         builder.build_search()
         self.assertEqual(self.urls(), {builder.SITE})
+        self.assertEqual(self.text_urls(), self.urls())
 
     def test_encoded_paths_uppercase_tags_and_directory_canonical(self):
         path = self.page('new page.html', canonical=builder.SITE+'new%20page.html', body='<main><p>Full text.</p><a href="index.html">Home</a></main>')
@@ -76,6 +89,7 @@ class DiscoveryTests(unittest.TestCase):
         self.page('visit/index.html', canonical=builder.SITE+'visit/')
         builder.build_search()
         self.assertEqual(self.urls(), {builder.SITE, builder.SITE+'new%20page.html', builder.SITE+'visit/'})
+        self.assertEqual(self.text_urls(), self.urls())
         item = next(i for i in self.items() if i.findtext('link').endswith('new%20page.html'))
         self.assertIn('Full text.', item.findtext('description'))
         self.assertIn('href="'+builder.SITE+'index.html"', item.findtext('description'))
