@@ -32,6 +32,7 @@ https://ohsunghani.github.io/health/analgesic-patches-heat-and-covering-precauti
 https://ohsunghani.github.io/health/ankle-pain-after-normal-xray.html
 https://ohsunghani.github.io/health/ankle-sprain-swelling-and-walking-after-injury.html
 https://ohsunghani.github.io/health/ankle-swelling-walking-after-accident.html
+https://ohsunghani.github.io/health/arm-tingling-after-an-accident-and-changes-in-strength.html
 https://ohsunghani.github.io/health/asking-about-sleep-during-pain-treatment.html
 https://ohsunghani.github.io/health/back-and-buttock-care-on-long-sitting-days.html
 https://ohsunghani.github.io/health/back-pain-after-sitting.html
@@ -58,6 +59,7 @@ https://ohsunghani.github.io/health/child-growth-herbal-consultation-records.htm
 https://ohsunghani.github.io/health/children-acupuncture-preparation.html
 https://ohsunghani.github.io/health/children-herbal-medicine-taste.html
 https://ohsunghani.github.io/health/choosing-a-wrist-splint-for-carpal-tunnel.html
+https://ohsunghani.github.io/health/choosing-between-acupuncture-and-pharmacopuncture.html
 https://ohsunghani.github.io/health/choosing-treatments-with-explanation.html
 https://ohsunghani.github.io/health/chronic-low-back-pain-management-while-working.html
 https://ohsunghani.github.io/health/chronic-pain-irritability-and-daily-relationships.html
@@ -73,6 +75,7 @@ https://ohsunghani.github.io/health/cold-hands-and-feet.html
 https://ohsunghani.github.io/health/cold-hands-feet-and-core-body-temperature.html
 https://ohsunghani.github.io/health/cold-herbal-medicine.html
 https://ohsunghani.github.io/health/combining-digestive-medicines-and-ingredient-review.html
+https://ohsunghani.github.io/health/coming-to-clinic-after-relying-on-pain-patches.html
 https://ohsunghani.github.io/health/complexion-changes-during-herbal-treatment.html
 https://ohsunghani.github.io/health/considering-herbal-tonics-for-the-first-time.html
 https://ohsunghani.github.io/health/constipation-herbal-medicine-duration-and-reassessment.html
@@ -151,11 +154,13 @@ https://ohsunghani.github.io/health/heating-environment-and-headache.html
 https://ohsunghani.github.io/health/heavy-shoulders-described-as-weight-on-the-back.html
 https://ohsunghani.github.io/health/herbal-medicine-consultation-after-traffic-accident.html
 https://ohsunghani.github.io/health/herbal-medicine-storage-guide.html
+https://ohsunghani.github.io/health/herbal-medicine-temperature-and-taking-it-away-from-home.html
 https://ohsunghani.github.io/health/how-acupuncture-may-affect-pain-processing.html
 https://ohsunghani.github.io/health/how-acupuncture-may-modulate-pain.html
 https://ohsunghani.github.io/health/immediate-relief-and-recovery-over-time.html
 https://ohsunghani.github.io/health/in-house-herbal-decoction-process.html
 https://ohsunghani.github.io/health/
+https://ohsunghani.github.io/health/individual-herbal-prescriptions-and-in-house-preparation.html
 https://ohsunghani.github.io/health/inner-elbow-pain-and-golfers-elbow.html
 https://ohsunghani.github.io/health/inner-scapular-pain-and-prolonged-sitting-posture.html
 https://ohsunghani.github.io/health/insurance-reporting-versus-medical-assessment-after-accident.html
@@ -217,6 +222,7 @@ https://ohsunghani.github.io/health/neck-collar-use-after-a-traffic-accident.htm
 https://ohsunghani.github.io/health/neck-muscle-pain-versus-cervical-disc-symptoms.html
 https://ohsunghani.github.io/health/neck-pain-when-turning.html
 https://ohsunghani.github.io/health/neck-related-headache-and-cervical-imaging.html
+https://ohsunghani.github.io/health/neck-stiffness-after-a-collision-and-symptom-changes.html
 https://ohsunghani.github.io/health/neck-stiffness-and-pain-around-the-eyes.html
 https://ohsunghani.github.io/health/neutral-eohyeol-pharmacopuncture-ingredients.html
 https://ohsunghani.github.io/health/new-facial-weakness-bells-palsy-and-eye-care.html
@@ -235,7 +241,9 @@ https://ohsunghani.github.io/health/outer-knee-pain-and-iliotibial-band.html
 https://ohsunghani.github.io/health/pain-after-a-minor-traffic-collision.html
 https://ohsunghani.github.io/health/pain-despite-apparently-good-posture.html
 https://ohsunghani.github.io/health/pain-duration-and-course-in-consultation.html
+https://ohsunghani.github.io/health/pain-recognised-days-after-a-traffic-accident.html
 https://ohsunghani.github.io/health/pain-relief-and-readiness-to-end-treatment.html
+https://ohsunghani.github.io/health/pain-returning-after-initial-treatment-relief.html
 https://ohsunghani.github.io/health/pain-that-changes-location.html
 https://ohsunghani.github.io/health/pain-that-persists-despite-rest.html
 https://ohsunghani.github.io/health/pain-worsening-by-evening-and-daily-workload.html
@@ -273,6 +281,7 @@ https://ohsunghani.github.io/health/putting-off-own-care-while-caring-for-family
 https://ohsunghani.github.io/health/questions-before-choosing-a-treatment.html
 https://ohsunghani.github.io/health/racing-thoughts-when-trying-to-sleep.html
 https://ohsunghani.github.io/health/rainy-weather-and-knee-pain-patterns.html
+https://ohsunghani.github.io/health/rear-end-collision-and-neck-low-back-strain.html
 https://ohsunghani.github.io/health/recording-delayed-symptoms-after-an-accident.html
 https://ohsunghani.github.io/health/recurrent-ankle-sprains.html
 https://ohsunghani.github.io/health/recurrent-muscle-knots-and-myofascial-pain.html
@@ -334,6 +343,7 @@ https://ohsunghani.github.io/health/tennis-elbow-versus-golfers-elbow.html
 https://ohsunghani.github.io/health/thumb-side-wrist-pain.html
 https://ohsunghani.github.io/health/tinnitus-and-fatigue.html
 https://ohsunghani.github.io/health/tired-but-unable-to-fall-asleep.html
+https://ohsunghani.github.io/health/tolerable-pain-and-getting-used-to-discomfort.html
 https://ohsunghani.github.io/health/topical-cooling-gel-consultation.html
 https://ohsunghani.github.io/health/trigger-finger-catching-and-locking.html
 https://ohsunghani.github.io/health/ulnar-sided-wrist-pain-and-tfcc-assessment.html
