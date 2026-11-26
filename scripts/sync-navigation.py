@@ -6,9 +6,9 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 NAV_ITEMS = (
-    ('gongjindan.html', '공진단·한약'),
+    ('pain-pharmacopuncture.html', '통증·약침'),
     ('traffic-accident.html', '교통사고'),
-    ('index.html#care', '진료 분야'),
+    ('gongjindan.html', '공진단·한약'),
     ('about.html', '의료진 소개'),
     ('health/', '건강칼럼'),
     ('info.html', '진료 안내'),

@@ -1,0 +1,396 @@
+{
+  "date": "2026-11-26",
+  "page": "pain-pharmacopuncture.html",
+  "scope": "New on-site pain/pharmacopuncture explanation, primary navigation and 3 homepage banners. Existing hero retained.",
+  "sources": [
+    {
+      "id": "naver-224108084104",
+      "url": "https://blog.naver.com/ohsunghani/224108084104",
+      "title": "중성어혈 약침, 파주 봉일천 오성한의원",
+      "published_date": "2025-12-27",
+      "sha256": "235df1fa0c3a9ba1d2d2ad4e20496e8ac906c797e4e0f9674aaafa25bc6ae91e"
+    },
+    {
+      "id": "naver-224150744765",
+      "url": "https://blog.naver.com/ohsunghani/224150744765",
+      "title": "파주 약침이 침보다 좋은 이유, 봉일천 오성 한의원",
+      "published_date": "2026-01-25",
+      "sha256": "17f5c847b832db20178d8f807520cadf461d3586b455453d1b231432fe8a0240"
+    },
+    {
+      "id": "naver-224249869354",
+      "url": "https://blog.naver.com/ohsunghani/224249869354",
+      "title": "약침은 한약인가요, 주사인가요? 파주 약침 잘놓는 오성한의원",
+      "published_date": "2026-04-13",
+      "sha256": "f4b84afe4751cf1fb882f238560de6aa45f45da46cfaa62a1ab0cae204067c47"
+    },
+    {
+      "id": "naver-224307583516",
+      "url": "https://blog.naver.com/ohsunghani/224307583516",
+      "title": "약침은 스테로이드인가요, 부작용은 없나요 파주 약침 한의원",
+      "published_date": "2026-06-16",
+      "sha256": "2153e3277f1b2adead6f8f5943be38d5e81866e38b72586a6e079bc02666ebba"
+    },
+    {
+      "id": "naver-224436217633",
+      "url": "https://blog.naver.com/ohsunghani/224436217633",
+      "title": "약침 맞고 뻐근한데 괜찮을까요? 약침 후 통증이 생기는 이유",
+      "published_date": "2026-11-08",
+      "sha256": "815e5563a46037b8cbe27c2522befe4e0bc3bf797a777bb362f467e54a1b9dfb"
+    }
+  ],
+  "paragraph_support": [
+    {
+      "page": "pain-pharmacopuncture.html",
+      "text": "약침은 한약재에서 추출·정제한 성분의 약침액을 필요한 경혈이나 통증 부위에 주입하는 한의학적 치료입니다. 일반적인 침 치료가 침으로 부위를 자극하는 방식이라면, 약침은 약침액을 주입하는 과정이 더해진다는 차이가 있습니다.",
+      "support": [
+        {
+          "source_id": "naver-224249869354",
+          "blocks": [
+            1,
+            2,
+            3,
+            4,
+            9
+          ]
+        },
+        {
+          "source_id": "naver-224436217633",
+          "blocks": [
+            7,
+            9,
+            20,
+            21
+          ]
+        }
+      ]
+    },
+    {
+      "page": "pain-pharmacopuncture.html",
+      "text": "오성한의원은 통증 부위와 근육의 긴장, 현재 몸 상태를 살펴 침과 약침의 활용을 의논합니다. 같은 목·어깨 통증이라도 목을 움직이는 양상과 주변 근육의 상태, 통증이 퍼지는 방향을 함께 보며 시술 부위를 정합니다.",
+      "support": [
+        {
+          "source_id": "naver-224150744765",
+          "blocks": [
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            54
+          ]
+        },
+        {
+          "source_id": "naver-224436217633",
+          "blocks": [
+            32,
+            44,
+            45,
+            53
+          ]
+        }
+      ]
+    },
+    {
+      "page": "pain-pharmacopuncture.html",
+      "text": "주사기를 사용하는 모습 때문에 스테로이드 주사나 진통제 주사와 같은 것으로 생각하기도 합니다. 약침은 한약재에서 추출·정제한 성분을 사용한다는 점에서 구분됩니다. 도구의 모양보다 어떤 성분과 방식의 치료인지 이해하는 것이 중요합니다.",
+      "support": [
+        {
+          "source_id": "naver-224307583516",
+          "blocks": [
+            2,
+            3,
+            6,
+            8,
+            9,
+            10,
+            11,
+            20
+          ]
+        }
+      ]
+    },
+    {
+      "page": "pain-pharmacopuncture.html",
+      "text": "뻐근하고 단단하게 굳은 느낌, 목의 움직임이나 통증이 퍼지는 방향을 함께 살핍니다.",
+      "support": [
+        {
+          "source_id": "naver-224436217633",
+          "blocks": [
+            23,
+            32,
+            44,
+            45,
+            53
+          ]
+        }
+      ]
+    },
+    {
+      "page": "pain-pharmacopuncture.html",
+      "text": "급성·만성 허리 통증과 불편함을 듣고 현재 상태를 확인합니다.",
+      "support": [
+        {
+          "source_id": "naver-224108084104",
+          "blocks": [
+            9,
+            30,
+            31,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "page": "pain-pharmacopuncture.html",
+      "text": "어깨와 무릎, 팔꿈치 등 관절·근육 부위의 통증을 상담합니다.",
+      "support": [
+        {
+          "source_id": "naver-224108084104",
+          "blocks": [
+            9,
+            30,
+            31,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "page": "pain-pharmacopuncture.html",
+      "text": "통증이 되풀이되거나 근육이 쉽게 풀리지 않는 느낌, 회복이 더디게 느껴지는 상황을 이야기합니다.",
+      "support": [
+        {
+          "source_id": "naver-224150744765",
+          "blocks": [
+            29,
+            30,
+            31,
+            32,
+            48,
+            49,
+            50
+          ]
+        }
+      ]
+    },
+    {
+      "page": "pain-pharmacopuncture.html",
+      "text": "일반적인 침 치료는 침을 이용해 경혈이나 통증 부위를 자극합니다. 진료에서는 현재의 통증과 근육 긴장, 몸 상태를 살펴 필요한 치료를 의논합니다. 침을 받아 본 분도 약침은 무엇이 다른지, 꼭 함께 받아야 하는지 궁금해하곤 합니다.",
+      "support": [
+        {
+          "source_id": "naver-224436217633",
+          "blocks": [
+            20,
+            21,
+            32,
+            53
+          ]
+        },
+        {
+          "source_id": "naver-224150744765",
+          "blocks": [
+            3,
+            4,
+            5,
+            6,
+            7,
+            8,
+            9,
+            42,
+            43,
+            44,
+            45
+          ]
+        }
+      ]
+    },
+    {
+      "page": "pain-pharmacopuncture.html",
+      "text": "약침은 약침액을 주입하는 과정이 더해지는 치료입니다. 약침이라는 이름 안에도 여러 종류가 있으며, 치료 목적과 시술 부위에 따라 활용 방법이 달라질 수 있습니다. 침보다 무조건 더 좋은 치료로 비교하기보다, 현재 상태에 맞춰 선택합니다.",
+      "support": [
+        {
+          "source_id": "naver-224436217633",
+          "blocks": [
+            7,
+            9,
+            21,
+            32,
+            42,
+            43,
+            44
+          ]
+        },
+        {
+          "source_id": "naver-224150744765",
+          "blocks": [
+            40,
+            41,
+            42,
+            43,
+            44,
+            45,
+            46,
+            47
+          ]
+        }
+      ]
+    },
+    {
+      "page": "pain-pharmacopuncture.html",
+      "text": "오성한의원은 원외탕전실에서 조제한 약침을 사용한다고 안내합니다. 블로그에는 중성어혈 약침을 비롯해 약침의 원료와 종류를 소개한 글이 있습니다. 사용하는 약침은 증상과 치료 목적을 살펴 정하며, 이름만으로 같은 방식의 치료라고 판단하지는 않습니다.",
+      "support": [
+        {
+          "source_id": "naver-224249869354",
+          "blocks": [
+            26,
+            27
+          ]
+        },
+        {
+          "source_id": "naver-224436217633",
+          "blocks": [
+            32,
+            42,
+            43,
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "page": "pain-pharmacopuncture.html",
+      "text": "약침을 맞은 직후나 시간이 조금 지난 뒤 해당 부위가 묵직하거나 뻐근하고, 눌렀을 때 불편하게 느껴질 수 있습니다. 바늘과 약침액 주입으로 조직이 자극되는 과정에서 나타날 수 있는 느낌입니다. 반응은 사람마다 다르게 나타납니다.",
+      "support": [
+        {
+          "source_id": "naver-224436217633",
+          "blocks": [
+            1,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            15,
+            16,
+            22,
+            23,
+            24
+          ]
+        }
+      ]
+    },
+    {
+      "page": "pain-pharmacopuncture.html",
+      "text": "뻐근하다는 느낌만으로 치료가 더 잘됐다고 판단하지는 않습니다. 반대로 그런 느낌이 없다고 치료가 제대로 되지 않은 것도 아닙니다. 어떤 약침을 어느 부위에 받았는지, 통증의 정도와 시간에 따른 변화가 어떤지 함께 보는 것이 중요합니다.",
+      "support": [
+        {
+          "source_id": "naver-224436217633",
+          "blocks": [
+            25,
+            27,
+            28,
+            29,
+            30,
+            31,
+            32,
+            48,
+            53,
+            54
+          ]
+        }
+      ]
+    },
+    {
+      "page": "pain-pharmacopuncture.html",
+      "text": "맞은 부위가 불편하다고 강하게 마사지하거나 반복해서 눌러볼 필요는 없습니다. 시술 직후에는 계속 자극하기보다 편안하게 두고 변화를 살펴보는 것이 좋습니다.",
+      "support": [
+        {
+          "source_id": "naver-224436217633",
+          "blocks": [
+            37,
+            38,
+            39,
+            40,
+            41
+          ]
+        }
+      ]
+    },
+    {
+      "page": "pain-pharmacopuncture.html",
+      "text": "시간이 지나며 줄어드는 가벼운 불편함과 통증·붓기·열감이 계속 증가하는 상황은 구분해 살펴봅니다. 불편이 점점 심해진다면 단순한 시술 후 반응인지 확인할 필요가 있습니다.",
+      "support": [
+        {
+          "source_id": "naver-224436217633",
+          "blocks": [
+            33,
+            34,
+            35,
+            36,
+            48,
+            50,
+            51,
+            52,
+            54
+          ]
+        }
+      ]
+    }
+  ],
+  "additional_support": {
+    "hero_and_pain_panel": [
+      {
+        "source_id": "naver-224436217633",
+        "blocks": [
+          32,
+          45,
+          48,
+          53,
+          54
+        ]
+      },
+      {
+        "source_id": "naver-224108084104",
+        "blocks": [
+          9,
+          32,
+          33
+        ]
+      }
+    ],
+    "ingredient_list": {
+      "source_id": "naver-224108084104",
+      "blocks": [
+        20,
+        22,
+        23,
+        24,
+        25,
+        27,
+        28,
+        29
+      ]
+    },
+    "treatment_choice_note": {
+      "source_id": "naver-224150744765",
+      "blocks": [
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47
+      ]
+    }
+  },
+  "editorial_review": "Original blog bodies read; title, summary, subheadings and paragraphs compared with actual source passages. Omit superiority, guaranteed recovery, zero-risk, manufacturing certification and fixed-duration claims. No invented advice or new clinical case.",
+  "user_clarification": "Do not promote chuna as an independent primary menu or homepage banner. Do not add exclusive automobile-insurance eligibility statements. Existing chuna explanations retained.",
+  "images": "No new images or human-character illustrations used.",
+  "clinical_validation_claim": false
+}
