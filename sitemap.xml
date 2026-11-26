@@ -2,15 +2,19 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>https://ohsunghani.github.io/</loc>
-<lastmod>2026-11-24T00:00:00+09:00</lastmod>
+<lastmod>2026-11-26T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>https://ohsunghani.github.io/about.html</loc>
-<lastmod>2026-11-16T00:00:00+09:00</lastmod>
+<lastmod>2026-11-26T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>https://ohsunghani.github.io/faq.html</loc>
-<lastmod>2026-11-16T00:00:00+09:00</lastmod>
+<lastmod>2026-11-26T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>https://ohsunghani.github.io/gongjindan.html</loc>
+<lastmod>2026-11-26T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>https://ohsunghani.github.io/health/a-new-pattern-in-recurrent-low-back-pain.html</loc>
@@ -646,7 +650,7 @@
 </url>
 <url>
 <loc>https://ohsunghani.github.io/health/</loc>
-<lastmod>2026-11-24T00:00:00+09:00</lastmod>
+<lastmod>2026-11-26T00:00:00+09:00</lastmod>
 </url>
 <url>
 <loc>https://ohsunghani.github.io/health/individual-herbal-prescriptions-and-in-house-preparation.html</loc>
@@ -1498,6 +1502,10 @@
 </url>
 <url>
 <loc>https://ohsunghani.github.io/info.html</loc>
-<lastmod>2026-11-16T00:00:00+09:00</lastmod>
+<lastmod>2026-11-26T00:00:00+09:00</lastmod>
+</url>
+<url>
+<loc>https://ohsunghani.github.io/traffic-accident.html</loc>
+<lastmod>2026-11-26T00:00:00+09:00</lastmod>
 </url>
 </urlset>

@@ -1,0 +1,661 @@
+{
+  "date": "2026-11-26",
+  "scope": [
+    "gongjindan.html",
+    "traffic-accident.html",
+    "homepage service introductions"
+  ],
+  "method": "Original clinic blog bodies read. Source blocks document the support for each service-description paragraph; no competitor clinic copy, products, prices or treatment guarantees reused.",
+  "reference": {
+    "url": "https://www.khdrkwon.com/p/blog-page_13.html?m=1",
+    "use": "Reference for an on-site explanatory service page, not a link directory. No text or images copied."
+  },
+  "sources": [
+    {
+      "id": "naver-224104784137",
+      "url": "https://blog.naver.com/ohsunghani/224104784137",
+      "title": "봉일천 공진단, 조리읍 오성한의원에서 진맥 후 처방받으세요",
+      "published_date": "2025-12-15",
+      "sha256": "b0067ad7f29b9292cf2f4ee36dfe2e2d33dc5e705f60face8fe451fbf113fb4e"
+    },
+    {
+      "id": "naver-224133851165",
+      "url": "https://blog.naver.com/ohsunghani/224133851165",
+      "title": "파주 침향 공진단한의원, 봉일천 오성한의원",
+      "published_date": "2026-01-05",
+      "sha256": "2c1016b3cda931061ef535508e8e3aba1320cab445e5d011d37f38df39b31321"
+    },
+    {
+      "id": "naver-224392147279",
+      "url": "https://blog.naver.com/ohsunghani/224392147279",
+      "title": "파주 조리읍 교통사고 후 목·허리 통증이 있으시다면 오성한의원 진료 과정과 보험 처리 방법",
+      "published_date": "2026-09-09",
+      "sha256": "47f48123a7a7c788aadb2ddad4d6b0f02254d77ad63ca497ebd7007bd4800655"
+    },
+    {
+      "id": "naver-224464539786",
+      "url": "https://blog.naver.com/ohsunghani/224464539786",
+      "title": "사향공진단과 침향공진단 차이점, 파주 공진단한의원",
+      "published_date": "2026-11-09",
+      "sha256": "3911b40a398e55abfd458e851c098a2558d7cfe398df5b0c3ba0a8626e64166f"
+    },
+    {
+      "id": "naver-224469065820",
+      "url": "https://blog.naver.com/ohsunghani/224469065820",
+      "title": "공진단은 어떤 사람이 먹으면 좋을까요? 파주 봉일천 공진단한의원",
+      "published_date": "2026-11-20",
+      "sha256": "4eb0d60dab5f6765a15e0ea47bbd941999c173bf8e3e5ef7247b36e00d0da83e"
+    },
+    {
+      "id": "naver-224469163160",
+      "url": "https://blog.naver.com/ohsunghani/224469163160",
+      "title": "파주 금촌 교통사고 후 목이 뻣뻣하고 아픈데, 며칠 지나면 괜찮아질까요?",
+      "published_date": "2026-11-23",
+      "sha256": "6171c1f428b9c69c063de16b46833a7adbcb890c1b65863f60af24c4f6819da9"
+    },
+    {
+      "id": "tistory-44",
+      "url": "https://ohsunghani.tistory.com/44",
+      "title": "봉일천 교통사고 한의원 치료, 침·약침·추나는 어떻게 다를까?",
+      "published_date": "2026-09-30",
+      "sha256": "18e49b3b1ecb55d1352484b7be2d434e6287d97de17e22ab8dfaae9d43a5dd9e"
+    }
+  ],
+  "paragraph_support": [
+    {
+      "page": "gongjindan.html",
+      "text": "공진단은 전통적으로 체력이 떨어지거나 허약한 상태를 살펴 보약으로 활용해 온 한약 처방입니다. 충분히 쉬어도 피로가 남거나 과로가 반복되고, 예전보다 회복이 더디다고 느낄 때 공진단 상담을 찾는 분들이 있습니다.",
+      "support": [
+        {
+          "source_id": "naver-224469065820",
+          "blocks": [
+            10,
+            15,
+            20,
+            26,
+            29,
+            31,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "page": "gongjindan.html",
+      "text": "전통적인 공진단은 녹용·당귀·산수유와 함께 사향을 사용하는 처방으로 알려져 있습니다. 침향을 활용한 공진단은 주요 약재가 달라집니다. 같은 이름만 보고 고르기보다 어떤 구성이며 무엇을 위해 복용하려는지 확인하는 것이 중요합니다.",
+      "support": [
+        {
+          "source_id": "naver-224464539786",
+          "blocks": [
+            2,
+            5,
+            6,
+            7,
+            8,
+            20,
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "page": "gongjindan.html",
+      "text": "오성한의원은 공진단을 찾게 된 이유와 현재의 몸 상태를 먼저 듣습니다. 피로가 얼마나 이어졌는지, 수면과 식사는 어떤지, 평소 생활 패턴은 어떤지를 살피고 문진과 진맥을 함께 진행합니다. 공진단이 적합한지부터 확인하는 과정입니다.",
+      "support": [
+        {
+          "source_id": "naver-224464539786",
+          "blocks": [
+            33,
+            34,
+            35,
+            36,
+            39,
+            40
+          ]
+        },
+        {
+          "source_id": "naver-224469065820",
+          "blocks": [
+            11,
+            12,
+            42,
+            43
+          ]
+        }
+      ]
+    },
+    {
+      "page": "gongjindan.html",
+      "text": "사향은 사향노루 수컷의 향낭에서 얻는 동물성 생약입니다. 특유의 향을 지니며 전통적으로 공진단의 중요한 약재로 사용되어 왔습니다. 사향 사용 여부와 함량, 전체 원료 구성에 따라 차이가 있을 수 있습니다.",
+      "support": [
+        {
+          "source_id": "naver-224464539786",
+          "blocks": [
+            10,
+            11,
+            12,
+            13
+          ]
+        }
+      ]
+    },
+    {
+      "page": "gongjindan.html",
+      "text": "사향이 들어갔다는 사실만으로 모든 사람에게 더 적합하다고 정하지는 않습니다. 복용하려는 목적과 지금의 몸 상태를 함께 살펴 처방 방향을 의논합니다.",
+      "support": [
+        {
+          "source_id": "naver-224464539786",
+          "blocks": [
+            21,
+            22,
+            23,
+            25,
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "page": "gongjindan.html",
+      "text": "침향은 침향나무에서 만들어지는 향기로운 수지를 포함한 식물성 약재입니다. 나무에 수지가 오랜 시간 축적되며 만들어집니다. 사향과는 기원부터 다른 약재이며, 침향공진단은 사향 대신 침향을 주요 약재로 구성한 형태입니다.",
+      "support": [
+        {
+          "source_id": "naver-224464539786",
+          "blocks": [
+            7,
+            16,
+            17,
+            18,
+            19
+          ]
+        }
+      ]
+    },
+    {
+      "page": "gongjindan.html",
+      "text": "침향공진단도 단순히 가격만으로 고르기보다 어떤 구성인지, 어떤 목적으로 복용하려는지 살펴봅니다. 오성한의원에서는 현재 상태를 확인한 뒤 침향을 활용한 구성을 상담하고 처방합니다.",
+      "support": [
+        {
+          "source_id": "naver-224464539786",
+          "blocks": [
+            20,
+            23,
+            25,
+            39,
+            40,
+            41,
+            44
+          ]
+        }
+      ]
+    },
+    {
+      "page": "gongjindan.html",
+      "text": "오성한의원 블로그에서는 스틱형 침향공진단을 소개하고 있습니다. 복용에 대한 부담과 피로의 양상, 소화 상태 등을 진맥과 상담에서 함께 살펴 안내합니다.",
+      "support": [
+        {
+          "source_id": "naver-224133851165",
+          "blocks": [
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            22,
+            23,
+            29,
+            30,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "page": "gongjindan.html",
+      "text": "잠을 자고 휴식을 취해도 아침부터 몸이 무겁고 개운하지 않은 경우입니다.",
+      "support": [
+        {
+          "source_id": "naver-224469065820",
+          "blocks": [
+            7,
+            10,
+            16,
+            26,
+            27
+          ]
+        }
+      ]
+    },
+    {
+      "page": "gongjindan.html",
+      "text": "업무와 육아 등 정신적·육체적 활동이 계속되며 체력이 떨어졌다고 느끼는 경우입니다.",
+      "support": [
+        {
+          "source_id": "naver-224469065820",
+          "blocks": [
+            15,
+            28,
+            29
+          ]
+        }
+      ]
+    },
+    {
+      "page": "gongjindan.html",
+      "text": "하루 무리한 뒤 컨디션을 되찾는 데 며칠이 걸리고, 피로가 오래 남는 경우입니다.",
+      "support": [
+        {
+          "source_id": "naver-224469065820",
+          "blocks": [
+            8,
+            16,
+            30,
+            31
+          ]
+        }
+      ]
+    },
+    {
+      "page": "gongjindan.html",
+      "text": "이전과 같은 생활에도 더 쉽게 지치면서 자신에게 맞는 보약을 알아보는 경우입니다.",
+      "support": [
+        {
+          "source_id": "naver-224469065820",
+          "blocks": [
+            1,
+            9,
+            14,
+            32,
+            33
+          ]
+        }
+      ]
+    },
+    {
+      "page": "gongjindan.html",
+      "text": "피로가 이어진 기간과 수면·식사 상태, 평소의 체력과 생활 패턴, 공진단을 찾게 된 이유를 확인합니다.",
+      "support": [
+        {
+          "source_id": "naver-224464539786",
+          "blocks": [
+            33,
+            34,
+            39,
+            40
+          ]
+        }
+      ]
+    },
+    {
+      "page": "gongjindan.html",
+      "text": "진맥은 문진과 함께 전반적인 상태를 파악하는 과정 중 하나입니다. 한 가지 정보만으로 판단하지 않고 현재의 상태를 함께 이해합니다.",
+      "support": [
+        {
+          "source_id": "naver-224464539786",
+          "blocks": [
+            34,
+            35,
+            36,
+            39
+          ]
+        }
+      ]
+    },
+    {
+      "page": "gongjindan.html",
+      "text": "사향·침향을 활용한 구성이나 다른 맞춤 한약의 필요성을 살펴봅니다. 복용 목적과 현재 상태에 맞는 방향을 안내합니다.",
+      "support": [
+        {
+          "source_id": "naver-224464539786",
+          "blocks": [
+            37,
+            39,
+            40,
+            41,
+            42,
+            43
+          ]
+        }
+      ]
+    },
+    {
+      "page": "gongjindan.html",
+      "text": "기존 질환이나 복용 중인 약이 있다면 상담할 때 알려주세요. 몸 상태와 현재 컨디션을 고려해 복용 시기와 기간을 개인별로 의논합니다.",
+      "support": [
+        {
+          "source_id": "naver-224104784137",
+          "blocks": [
+            29,
+            32,
+            33,
+            34,
+            35,
+            37
+          ]
+        }
+      ]
+    },
+    {
+      "page": "gongjindan.html",
+      "text": "몇 환을 먹으면 피로가 완전히 사라진다고 획일적으로 정하지는 않습니다. 수개월 동안 피로가 계속되거나 체중·식욕 변화, 심한 어지럼이나 숨참·두근거림 등이 함께 있다면 보약만 생각하기보다 다른 원인도 확인할 필요가 있습니다.",
+      "support": [
+        {
+          "source_id": "naver-224469065820",
+          "blocks": [
+            37,
+            38,
+            39,
+            40,
+            46,
+            47,
+            48
+          ]
+        }
+      ]
+    },
+    {
+      "page": "traffic-accident.html",
+      "text": "사고 접수번호와 상대방 보험사 이름을 데스크에 알려주세요. 한의원에서 보험사와 지불보증 확인 등 접수에 필요한 절차를 안내합니다.",
+      "support": [
+        {
+          "source_id": "naver-224392147279",
+          "blocks": [
+            15,
+            16,
+            17,
+            18,
+            19
+          ]
+        }
+      ]
+    },
+    {
+      "page": "traffic-accident.html",
+      "text": "교통사고 직후에는 괜찮다가 다음 날부터 목이 뻣뻣하거나 허리가 아파질 수 있습니다. 충돌로 몸이 갑자기 움직이며 주변 조직에 부담이 생기고, 당시의 놀람과 긴장이 지나면서 불편함을 느끼기도 합니다. 사고 전과 지금의 상태가 어떻게 달라졌는지 살펴보는 것이 중요합니다.",
+      "support": [
+        {
+          "source_id": "naver-224469163160",
+          "blocks": [
+            1,
+            2,
+            4,
+            5,
+            6,
+            16,
+            33,
+            34
+          ]
+        }
+      ]
+    },
+    {
+      "page": "traffic-accident.html",
+      "text": "겉으로 보이는 외상이 없거나 검사에서 뼈에 이상이 없다는 설명을 들었어도 목·허리의 뻣뻣함, 두통이나 수면의 불편을 호소하는 경우가 있습니다. 아픈 부위만 짚기보다 어떤 동작이 불편한지, 증상이 언제부터 어떻게 이어졌는지 함께 이야기해 주세요.",
+      "support": [
+        {
+          "source_id": "naver-224392147279",
+          "blocks": [
+            7,
+            8,
+            22,
+            23,
+            42
+          ]
+        },
+        {
+          "source_id": "tistory-44",
+          "blocks": [
+            53,
+            55,
+            56,
+            57,
+            58,
+            59,
+            60,
+            61,
+            62
+          ]
+        }
+      ]
+    },
+    {
+      "page": "traffic-accident.html",
+      "text": "고개를 돌리기 어렵거나 목 뒤가 굳은 느낌, 어깨까지 이어지는 결림을 살펴봅니다.",
+      "support": [
+        {
+          "source_id": "naver-224469163160",
+          "blocks": [
+            8,
+            9,
+            10,
+            12,
+            13,
+            14,
+            24,
+            28
+          ]
+        }
+      ]
+    },
+    {
+      "page": "traffic-accident.html",
+      "text": "허리가 뻐근하고 움직이기 힘들거나 등·골반 주변이 불편한지 확인합니다.",
+      "support": [
+        {
+          "source_id": "tistory-44",
+          "blocks": [
+            7,
+            11,
+            12,
+            34,
+            55,
+            57,
+            59
+          ]
+        }
+      ]
+    },
+    {
+      "page": "traffic-accident.html",
+      "text": "사고 이후 생긴 머리의 불편함과 어지럼 등 현재 느끼는 증상을 함께 듣습니다.",
+      "support": [
+        {
+          "source_id": "naver-224392147279",
+          "blocks": [
+            8,
+            22,
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "page": "traffic-accident.html",
+      "text": "잠을 잘 못 자게 됐는지 등 사고 뒤 일상에서 달라진 불편함도 이야기합니다.",
+      "support": [
+        {
+          "source_id": "naver-224392147279",
+          "blocks": [
+            8,
+            21,
+            22,
+            23
+          ]
+        }
+      ]
+    },
+    {
+      "page": "traffic-accident.html",
+      "text": "침을 이용해 필요한 부위와 경혈을 자극하는 치료입니다. 사고 뒤 목·어깨·허리 등의 긴장과 통증, 움직일 때의 불편함을 살펴 활용합니다.",
+      "support": [
+        {
+          "source_id": "tistory-44",
+          "blocks": [
+            5,
+            6,
+            7,
+            9,
+            10,
+            11,
+            12,
+            13,
+            14,
+            45
+          ]
+        }
+      ]
+    },
+    {
+      "page": "traffic-accident.html",
+      "text": "한약재 등을 이용해 조제한 약침액을 필요한 부위에 주입하는 치료입니다. 국소적인 통증과 근육 긴장 등을 살피며 종류와 부위를 정합니다.",
+      "support": [
+        {
+          "source_id": "tistory-44",
+          "blocks": [
+            16,
+            17,
+            18,
+            19,
+            21,
+            22,
+            23,
+            24,
+            25,
+            26
+          ]
+        }
+      ]
+    },
+    {
+      "page": "traffic-accident.html",
+      "text": "한의사가 손과 신체를 이용해 관절·근육과 주변 조직을 밀고 당기며 시행하는 수기 치료입니다. 움직임이 제한되거나 특정 자세가 불편한지 확인하고 상태에 맞춰 적용합니다.",
+      "support": [
+        {
+          "source_id": "tistory-44",
+          "blocks": [
+            27,
+            28,
+            29,
+            30,
+            31,
+            33,
+            34,
+            35,
+            36,
+            37,
+            38
+          ]
+        }
+      ]
+    },
+    {
+      "page": "traffic-accident.html",
+      "text": "침·약침·추나는 서로 다른 방식으로 활용하는 치료이며, 어느 하나가 모든 환자에게 가장 좋은 것은 아닙니다. 현재 상태에 따라 함께 시행하거나 다른 방법을 중심으로 진행할 수 있습니다. 부항·뜸·한약 등의 활용도 증상을 살펴 의논합니다.",
+      "support": [
+        {
+          "source_id": "tistory-44",
+          "blocks": [
+            3,
+            38,
+            42,
+            43,
+            45,
+            46,
+            47,
+            48,
+            49,
+            50,
+            51,
+            52,
+            67,
+            68,
+            69
+          ]
+        },
+        {
+          "source_id": "naver-224392147279",
+          "blocks": [
+            26,
+            28,
+            29,
+            30,
+            31,
+            32
+          ]
+        }
+      ]
+    },
+    {
+      "page": "traffic-accident.html",
+      "text": "사고 접수번호와 보험사 이름을 말씀해 주세요. 접수와 지불보증 확인에 필요한 사항을 한의원에서 안내합니다.",
+      "support": [
+        {
+          "source_id": "naver-224392147279",
+          "blocks": [
+            15,
+            16,
+            17,
+            18,
+            19
+          ]
+        }
+      ]
+    },
+    {
+      "page": "traffic-accident.html",
+      "text": "목·허리 통증과 두통, 어지럼, 수면 상태 등을 듣고 필요한 치료를 결정합니다. 현재 증상을 파악하고 설명하는 과정이 이어집니다.",
+      "support": [
+        {
+          "source_id": "naver-224392147279",
+          "blocks": [
+            21,
+            22,
+            23,
+            24,
+            25
+          ]
+        }
+      ]
+    },
+    {
+      "page": "traffic-accident.html",
+      "text": "진료 이후의 증상과 회복 속도를 보며 치료와 내원 계획을 의논합니다. 고정된 횟수보다 현재 상태를 함께 살피는 과정입니다.",
+      "support": [
+        {
+          "source_id": "naver-224392147279",
+          "blocks": [
+            22,
+            23,
+            34,
+            39
+          ]
+        }
+      ]
+    }
+  ],
+  "insurance_wording": "Qualified insurance paragraphs use the clinic current visible FAQ answers; all20 FAQ answers preserved. Do not assert blanket zero copay, universal treatment schedules or coverage duration.",
+  "photos": [
+    {
+      "name": "naver-224104784137-0",
+      "source": "naver-224104784137.html",
+      "url": "https://mblogthumb-phinf.pstatic.net/MjAyNTEyMTBfMjIy/MDAxNzY1MzQ0MDkzMTg1.EvVb2WAN9eoufxp29brBv1jgCU_eJS7-5yCqIzzzNn8g.KftIAfemJXM5qPHs5MQAAYTjQUpEHcTWQQRP92WVmswg.JPEG/1765344092655.jpg?type=w800",
+      "bytes": 38369
+    },
+    {
+      "name": "naver-224104784137-2",
+      "source": "naver-224104784137.html",
+      "url": "https://mblogthumb-phinf.pstatic.net/MjAyNTEyMTBfMTE0/MDAxNzY1MzQ0MTMxNjkx.NtDxSAO32nHjJf-04rSUn9JXWOMaSVWjuOE_TfIOoY0g.UpnAlg1khYhKDkVnI54fseoqctnW5CtPrXgXOMdznv0g.JPEG/1765344131182.jpg?type=w800",
+      "bytes": 42480
+    },
+    {
+      "name": "naver-224133851165-1",
+      "source": "naver-224133851165.html",
+      "url": "https://mblogthumb-phinf.pstatic.net/MjAyNjAxMDRfMjk2/MDAxNzY3NTA4MTY2OTI2.QyZTaacPTIAg_H44HoheGhZkGbyknCO26itNFOnsLk0g.l5-PR9LLpoelgQlcTV42i2Za6Wt__F2_u1U8Q5SublUg.JPEG/900%EF%BC%BF1767508165969.jpg?type=w800",
+      "bytes": 74745
+    }
+  ],
+  "photo_use": "Existing clinic blog images downloaded unchanged. No competitor images, synthetic product photograph or invented product label.",
+  "visual_preference": "User explicitly prohibited human-character illustrations. Only the3 selected clinic product images are used; the source cartoon is excluded.",
+  "clinical_review_claim": false
+}
