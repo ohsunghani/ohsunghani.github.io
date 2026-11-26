@@ -13,11 +13,22 @@
       <guid isPermaLink="true">https://ohsunghani.github.io/</guid>
       <description>
 
-&lt;section class="priority-home" aria-labelledby="priority-title"&gt;&lt;div class="container"&gt;
-&lt;div class="priority-heading"&gt;&lt;div&gt;&lt;span class="eyebrow"&gt;파주 봉일천 오성한의원&lt;/span&gt;&lt;h1 id="priority-title"&gt;공진단 상담부터&lt;br&gt;교통사고 진료까지.&lt;/h1&gt;&lt;/div&gt;&lt;p&gt;지금의 몸 상태를 살피고,&lt;br&gt;한 사람에게 필요한 진료를 함께 의논합니다.&lt;br&gt;파주 봉일천 올리브영 2층 · 한의사 김태환&lt;/p&gt;&lt;/div&gt;
+&lt;section class="home-hero"&gt;
+&lt;div class="container hero-layout"&gt;
+&lt;div class="hero-copy"&gt;&lt;span class="eyebrow"&gt;OHSUNG KOREAN MEDICINE CLINIC&lt;/span&gt;
+&lt;h1&gt;한 사람을 위한,&lt;br&gt;&lt;span&gt;꼼꼼한 진료.&lt;/span&gt;&lt;/h1&gt;
+&lt;p class="hero-description"&gt;교통사고 후유증부터 일상 속 통증까지,&lt;br&gt;현재의 상태를 함께 살핍니다.&lt;/p&gt;
+&lt;div class="button-group"&gt;&lt;a class="btn btn-primary" href="https://ohsunghani.github.io/info.html"&gt;진료시간 · 오시는 길 &lt;/a&gt;&lt;a class="btn btn-outline" href="tel:0319467510"&gt; 전화 문의&lt;/a&gt;&lt;/div&gt;
+&lt;div class="hero-location"&gt; 파주 봉일천 · 올리브영 2층&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="hero-art" aria-hidden="true"&gt;&lt;div class="art-frame"&gt;&lt;/div&gt;&lt;div class="art-orbit orbit-one"&gt;&lt;/div&gt;&lt;div class="art-orbit orbit-two"&gt;&lt;/div&gt;&lt;div class="art-orbit orbit-three"&gt;&lt;/div&gt;&lt;span class="art-topline"&gt;ATTENTIVE CARE, EVERY DAY.&lt;/span&gt;&lt;span class="art-word"&gt;오&lt;span&gt;성&lt;/span&gt;&lt;/span&gt;&lt;div class="art-bottomline"&gt;&lt;span&gt;몸을 살피는 시간&lt;/span&gt;&lt;span&gt;OHSUNG&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;/div&gt;
+&lt;/section&gt;
+&lt;section class="service-banners" aria-label="공진단·교통사고 진료 안내"&gt;&lt;div class="container"&gt;
+
 &lt;div class="priority-grid"&gt;
-&lt;a class="priority-card priority-herbal" href="https://ohsunghani.github.io/gongjindan.html"&gt;&lt;span class="eyebrow"&gt;01 · 공진단·한약&lt;/span&gt;&lt;h2&gt;공진단,&lt;br&gt;내 몸에 맞게.&lt;/h2&gt;&lt;p&gt;사향과 침향의 차이부터&lt;br&gt;문진·진맥을 통한 처방 상담까지.&lt;/p&gt;&lt;span class="text-link"&gt;공진단 자세히 보기 &lt;/span&gt;&lt;img class="priority-photo" src="https://ohsunghani.github.io/assets/services/gongjindan.jpg" width="693" height="729" alt="오성한의원 블로그의 공진단" fetchpriority="high"&gt;&lt;/a&gt;
-&lt;a class="priority-card priority-accident" href="https://ohsunghani.github.io/traffic-accident.html"&gt;&lt;span class="eyebrow"&gt;02 · 교통사고 진료&lt;/span&gt;&lt;h2&gt;사고 뒤의 불편함,&lt;br&gt;차근차근 살펴봅니다.&lt;/h2&gt;&lt;p&gt;목·허리 통증과 증상 변화,&lt;br&gt;자동차보험 접수와 내원 안내.&lt;/p&gt;&lt;span class="text-link"&gt;교통사고 진료 알아보기 &lt;/span&gt;&lt;span class="priority-mark" aria-hidden="true"&gt;02&lt;/span&gt;&lt;/a&gt;
+&lt;a class="priority-card priority-herbal" href="https://ohsunghani.github.io/gongjindan.html"&gt;&lt;span class="eyebrow"&gt;GONGJINDAN&lt;/span&gt;&lt;h2&gt;공진단·한약 안내&lt;/h2&gt;&lt;p&gt;사향·침향의 차이와 처방 상담 안내.&lt;/p&gt;&lt;span class="text-link"&gt;공진단 자세히 보기 &lt;/span&gt;&lt;img class="priority-photo" src="https://ohsunghani.github.io/assets/services/gongjindan.jpg" width="693" height="729" alt="오성한의원 블로그의 공진단" fetchpriority="high"&gt;&lt;/a&gt;
+&lt;a class="priority-card priority-accident" href="https://ohsunghani.github.io/traffic-accident.html"&gt;&lt;span class="eyebrow"&gt;TRAFFIC ACCIDENT CARE&lt;/span&gt;&lt;h2&gt;교통사고 진료 안내&lt;/h2&gt;&lt;p&gt;사고 후 증상과 치료, 자동차보험 접수 안내.&lt;/p&gt;&lt;span class="text-link"&gt;교통사고 진료 알아보기 &lt;/span&gt;&lt;/a&gt;
 &lt;/div&gt;&lt;/div&gt;&lt;/section&gt;
 &lt;section class="quick-info" aria-label="빠른 진료 안내"&gt;&lt;div class="container quick-info-grid"&gt;
 &lt;div&gt;&lt;div&gt;&lt;span class="label"&gt;진료시간&lt;/span&gt;&lt;p&gt;평일 &lt;strong&gt;09:00–18:00&lt;/strong&gt;&lt;br&gt;토요일 &lt;strong&gt;09:00–13:00&lt;/strong&gt;&lt;/p&gt;&lt;span class="small-note"&gt;점심 13:00–14:00 · 일요일·공휴일 휴진&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;

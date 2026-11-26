@@ -1,23 +1,19 @@
 /* Primary care pages and the homepage entry points. */
-.priority-home { background: var(--bg); padding: 34px 0 28px; }
-.priority-heading { display: flex; justify-content: space-between; align-items: end; gap: 32px; margin-bottom: 26px; }
-.priority-heading h1 { font-size: clamp(32px, 3.2vw, 44px); line-height: 1.35; }
-.priority-heading > p { max-width: 330px; font-size: 15px; color: var(--muted); }
+.service-banners { background: var(--paper); padding: 22px 0; border-bottom: 1px solid var(--line); }
 .priority-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-.priority-card { position: relative; display: flex; flex-direction: column; min-width: 0; min-height: 250px; padding: 26px 28px; overflow: hidden; border: 1px solid #e1d8c9; background: #fffdf9; }
+.priority-card { position: relative; display: flex; flex-direction: column; min-width: 0; min-height: 174px; padding: 20px 24px; overflow: hidden; border: 1px solid #e1d8c9; background: #fffdf9; }
 .priority-card:focus-visible { outline-offset: 4px; }
-.priority-card .eyebrow { font-size: 11px; letter-spacing: .07em; }
-.priority-card h2 { font-size: clamp(24px, 2.4vw, 31px); max-width: 75%; }
-.priority-card p { position: relative; z-index: 1; margin: 12px 0 18px; max-width: 68%; font-size: 14px; color: var(--muted); }
+.priority-card .eyebrow { font-size: 10px; letter-spacing: .07em; margin-bottom: 7px; }
+.priority-card h2 { font-size: clamp(22px, 2.2vw, 25px); max-width: 75%; }
+.priority-card p { position: relative; z-index: 1; margin: 8px 0 12px; max-width: 68%; font-size: 13px; color: var(--muted); }
 .priority-card .text-link { position: relative; z-index: 1; margin-top: auto; }
 .priority-card:hover .text-link { text-decoration: underline; }
-.priority-card .priority-photo { position: absolute; width: 40%; height: 100%; object-fit: cover; object-position: center; right: 0; top: 0; mix-blend-mode: multiply; }
+.priority-card .priority-photo { position: absolute; width: 40%; height: 100%; object-fit: contain; object-position: center; right: 0; top: 0; background: #efeeeb; mix-blend-mode: multiply; }
 .priority-herbal h2,.priority-herbal .eyebrow { position: relative; z-index: 1; max-width: 65%; }
 .priority-accident { background: var(--brand); border-color: var(--brand); color: #fff; }
 .priority-accident .eyebrow { color: #e0c6a2; }
 .priority-accident p { color: #d3dce4; max-width: 82%; }
 .priority-accident .text-link { color: #fff; }
-.priority-mark { position: absolute; right: 26px; top: 28px; font-size: 76px; font-weight: 450; line-height: 1; color: #ffffff15; letter-spacing: -.07em; }
 .home-care-focus #care .care-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .home-care-focus #care .care-item { padding: 18px 24px; }
 .home-care-focus #care .care-item:first-child { padding-left: 0; }
@@ -114,25 +110,20 @@
 .treatment-card p { color: var(--muted); font-size: 15px; }
 .treatment-card .treatment-label { display: block; margin-top: 15px; color: #6a7782; font-size: 12px; }
 @media (max-width: 1000px) {
- .priority-heading h1 { font-size: 36px; }
- .priority-card { padding: 24px; }
+ .priority-card { padding: 20px; }
  .service-hero-grid { gap: 28px; grid-template-columns: 1fr 1fr; }
  .service-hero h1 { font-size: 36px; }
  .service-reasons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
  .service-contact-layout { align-items: start; flex-direction: column; }
 }
 @media (max-width: 700px) {
- .priority-home { padding: 22px 0 20px; }
- .priority-heading { display: block; margin-bottom: 18px; }
- .priority-heading h1 { font-size: 31px; }
- .priority-heading > p { margin-top: 12px; font-size: 14px; max-width: none; }
+ .service-banners { padding: 16px 0; }
  .priority-grid { grid-template-columns: 1fr; gap: 12px; }
- .priority-card { min-height: 180px; padding: 19px 20px; }
- .priority-card h2 { font-size: 24px; line-height: 1.4; }
- .priority-card p { font-size: 13px; margin: 9px 0 11px; max-width: 70%; }
+ .priority-card { min-height: 150px; padding: 17px 20px; }
+ .priority-card h2 { font-size: 22px; line-height: 1.4; }
+ .priority-card p { font-size: 13px; margin: 8px 0 10px; max-width: 70%; }
  .priority-card .eyebrow { font-size: 10px; margin-bottom: 5px; }
  .priority-card .text-link { font-size: 13px; min-height: 32px; }
- .priority-mark { font-size: 66px; right: 22px; top: 22px; }
  .home-care-focus #care .care-grid { grid-template-columns: 1fr; }
  .home-care-focus #care .care-item,.home-care-focus #care .care-item:last-child { padding: 18px 0; border-left: 0; }
  .home-care-focus #care .care-item-top { margin-bottom: 9px; }
