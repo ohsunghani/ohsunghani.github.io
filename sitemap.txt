@@ -71,6 +71,7 @@ https://ohsunghani.github.io/health/chronic-pain-irritability-and-daily-relation
 https://ohsunghani.github.io/health/chuna-and-manual-therapy-differences.html
 https://ohsunghani.github.io/health/chuna-assessment-after-traffic-accident.html
 https://ohsunghani.github.io/health/chuna-sounds-and-gentle-techniques.html
+https://ohsunghani.github.io/health/circulation-as-a-perspective-in-korean-medicine-care.html
 https://ohsunghani.github.io/health/coffee-during-herbal-medicine.html
 https://ohsunghani.github.io/health/coin-sized-pain-patches-before-use.html
 https://ohsunghani.github.io/health/cold-air-triggered-runny-nose-and-rhinitis.html
@@ -102,6 +103,7 @@ https://ohsunghani.github.io/health/describing-pain-that-others-cannot-see.html
 https://ohsunghani.github.io/health/describing-pain-with-everyday-situations.html
 https://ohsunghani.github.io/health/describing-uncertain-pain-onset.html
 https://ohsunghani.github.io/health/diet-herbal-medicine-palpitations-sleep.html
+https://ohsunghani.github.io/health/different-needle-sensations-by-site-and-muscle-tension.html
 https://ohsunghani.github.io/health/difficulty-lifting-arm-after-traffic-accident.html
 https://ohsunghani.github.io/health/difficulty-reaching-hand-behind-back.html
 https://ohsunghani.github.io/health/discussing-other-discomforts-alongside-main-pain.html
@@ -135,8 +137,10 @@ https://ohsunghani.github.io/health/finger-joint-arthritis-pain-and-stiffness.ht
 https://ohsunghani.github.io/health/finger-pricking-for-indigestion-risks.html
 https://ohsunghani.github.io/health/first-acupuncture-sensations-guide.html
 https://ohsunghani.github.io/health/first-consultation-for-long-ignored-pain.html
+https://ohsunghani.github.io/health/five-questions-about-accident-pain-and-recovery.html
 https://ohsunghani.github.io/health/flour-foods-during-herbal-treatment.html
 https://ohsunghani.github.io/health/fluid-intake-when-swelling-recurs.html
+https://ohsunghani.github.io/health/following-accident-recovery-while-pain-remains.html
 https://ohsunghani.github.io/health/footwear-choices-for-forefoot-nerve-pain.html
 https://ohsunghani.github.io/health/forward-head-and-rounded-shoulders.html
 https://ohsunghani.github.io/health/frequent-headache-medicines-and-medication-day-diary.html
@@ -191,10 +195,12 @@ https://ohsunghani.github.io/health/knee-pain-in-cold-weather.html
 https://ohsunghani.github.io/health/knee-pain-when-descending-stairs.html
 https://ohsunghani.github.io/health/leg-care-during-long-standing-workdays.html
 https://ohsunghani.github.io/health/leg-swelling-after-long-travel.html
+https://ohsunghani.github.io/health/leg-tingling-more-troublesome-than-low-back-pain.html
 https://ohsunghani.github.io/health/lingering-dry-cough-after-cold.html
 https://ohsunghani.github.io/health/liver-tests-and-herbal-medicine-safety.html
 https://ohsunghani.github.io/health/long-car-journeys-and-back-knee-comfort.html
 https://ohsunghani.github.io/health/long-travel-distance-for-accident-outpatient-care.html
+https://ohsunghani.github.io/health/longstanding-pain-stiffness-and-repeated-posture.html
 https://ohsunghani.github.io/health/looking-at-repeated-symptoms-and-contributing-factors.html
 https://ohsunghani.github.io/health/low-back-and-buttock-pulling-after-sitting.html
 https://ohsunghani.github.io/health/low-back-neurologic-changes-after-accident.html
@@ -245,6 +251,7 @@ https://ohsunghani.github.io/health/nighttime-hand-numbness-and-carpal-tunnel.ht
 https://ohsunghani.github.io/health/nighttime-urination-and-sleep.html
 https://ohsunghani.github.io/health/no-clear-improvement-after-first-acupuncture-session.html
 https://ohsunghani.github.io/health/normal-endoscopy-and-damjeok-explanation.html
+https://ohsunghani.github.io/health/normal-xray-with-persistent-post-accident-pain.html
 https://ohsunghani.github.io/health/not-being-alone-in-everyday-pain-and-discomfort.html
 https://ohsunghani.github.io/health/observation-after-an-accident-without-symptoms.html
 https://ohsunghani.github.io/health/older-adult-joint-pain-before-herbal-tonics.html
@@ -269,6 +276,7 @@ https://ohsunghani.github.io/health/pelvic-discomfort-after-accident.html
 https://ohsunghani.github.io/health/persistent-dry-mouth-saliva-medication-and-dental-care.html
 https://ohsunghani.github.io/health/persistent-facial-redness-and-skin-irritation.html
 https://ohsunghani.github.io/health/persistent-fatigue-despite-weekend-rest.html
+https://ohsunghani.github.io/health/persistent-fullness-despite-smaller-meals.html
 https://ohsunghani.github.io/health/persistent-headache-and-neck-discomfort-after-accident.html
 https://ohsunghani.github.io/health/persistent-pain-after-accident-despite-normal-mri.html
 https://ohsunghani.github.io/health/persistent-pain-and-sensitization.html
@@ -337,6 +345,7 @@ https://ohsunghani.github.io/health/shoulder-impingement-and-rotator-cuff-tendon
 https://ohsunghani.github.io/health/shoulder-range-of-motion.html
 https://ohsunghani.github.io/health/showering-after-acupuncture.html
 https://ohsunghani.github.io/health/sleep-changes-after-accident.html
+https://ohsunghani.github.io/health/sleep-changes-and-rest-after-clinic-treatment.html
 https://ohsunghani.github.io/health/sleep-disruption-after-traffic-accident.html
 https://ohsunghani.github.io/health/sleeping-medicines-before-herbal-switch-and-tapering.html
 https://ohsunghani.github.io/health/sleeping-with-shoulder-pain-after-an-accident.html
@@ -389,6 +398,7 @@ https://ohsunghani.github.io/health/whole-body-aching-after-accident.html
 https://ohsunghani.github.io/health/why-injury-mechanism-matters-in-consultation.html
 https://ohsunghani.github.io/health/why-ohsung-does-not-promise-one-visit-cure.html
 https://ohsunghani.github.io/health/why-pain-patterns-guide-consultation.html
+https://ohsunghani.github.io/health/winter-cold-hands-feet-and-daily-discomfort.html
 https://ohsunghani.github.io/health/work-related-burnout-and-recovery-conditions.html
 https://ohsunghani.github.io/health/working-and-attending-care-after-accident.html
 https://ohsunghani.github.io/health/wrist-and-hand-pain-after-traffic-accident.html
