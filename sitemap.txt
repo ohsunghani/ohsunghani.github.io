@@ -7,7 +7,10 @@ https://ohsunghani.github.io/health/a-stiff-neck-described-as-dam-in-the-consult
 https://ohsunghani.github.io/health/abdominal-cold-sensation-and-digestive-discomfort.html
 https://ohsunghani.github.io/health/accident-delayed-pain.html
 https://ohsunghani.github.io/health/accident-injury-grades-and-individual-recovery.html
+https://ohsunghani.github.io/health/accident-pain-after-returning-to-daily-routine.html
+https://ohsunghani.github.io/health/accident-recovery-from-early-stage-to-lingering-pain.html
 https://ohsunghani.github.io/health/accident-shoulder-pain.html
+https://ohsunghani.github.io/health/accident-stiffness-after-driving-and-computer-work.html
 https://ohsunghani.github.io/health/accident-treatment-duration-and-recovery-changes.html
 https://ohsunghani.github.io/health/accident-visit-before-knowing-the-claim-number.html
 https://ohsunghani.github.io/health/accompanying-a-parent-to-clinic.html
@@ -62,6 +65,7 @@ https://ohsunghani.github.io/health/children-herbal-medicine-taste.html
 https://ohsunghani.github.io/health/choosing-a-wrist-splint-for-carpal-tunnel.html
 https://ohsunghani.github.io/health/choosing-between-acupuncture-and-pharmacopuncture.html
 https://ohsunghani.github.io/health/choosing-treatments-with-explanation.html
+https://ohsunghani.github.io/health/chronic-gastritis-burning-and-fullness.html
 https://ohsunghani.github.io/health/chronic-low-back-pain-management-while-working.html
 https://ohsunghani.github.io/health/chronic-pain-irritability-and-daily-relationships.html
 https://ohsunghani.github.io/health/chuna-and-manual-therapy-differences.html
@@ -75,6 +79,7 @@ https://ohsunghani.github.io/health/cold-drinking-water-temperature-myths.html
 https://ohsunghani.github.io/health/cold-hands-and-feet.html
 https://ohsunghani.github.io/health/cold-hands-feet-and-core-body-temperature.html
 https://ohsunghani.github.io/health/cold-herbal-medicine.html
+https://ohsunghani.github.io/health/cold-weather-muscle-tension-and-joint-discomfort.html
 https://ohsunghani.github.io/health/combining-digestive-medicines-and-ingredient-review.html
 https://ohsunghani.github.io/health/coming-to-clinic-after-relying-on-pain-patches.html
 https://ohsunghani.github.io/health/complexion-changes-during-herbal-treatment.html
@@ -88,6 +93,7 @@ https://ohsunghani.github.io/health/daily-hydration-needs-and-drinking-water.htm
 https://ohsunghani.github.io/health/daily-step-goals-and-gradual-walking.html
 https://ohsunghani.github.io/health/dangguisusan-formula-guide.html
 https://ohsunghani.github.io/health/daytime-urinary-urgency.html
+https://ohsunghani.github.io/health/delayed-accident-pain-and-examination-results.html
 https://ohsunghani.github.io/health/delaying-knee-care-while-relying-on-pain-patches.html
 https://ohsunghani.github.io/health/describing-dizziness-after-a-traffic-accident.html
 https://ohsunghani.github.io/health/describing-pain-location-in-your-own-words.html
@@ -102,6 +108,7 @@ https://ohsunghani.github.io/health/discussing-other-discomforts-alongside-main-
 https://ohsunghani.github.io/health/discussing-the-burden-of-attending-treatment.html
 https://ohsunghani.github.io/health/disposable-acupuncture-and-cupping-tools.html
 https://ohsunghani.github.io/health/distal-acupuncture-points-for-digestive-symptoms.html
+https://ohsunghani.github.io/health/dizziness-and-floating-sensation-after-accident.html
 https://ohsunghani.github.io/health/dizziness-nausea-after-accident.html
 https://ohsunghani.github.io/health/dizziness-patterns-and-evaluation.html
 https://ohsunghani.github.io/health/drinking-a-lot-of-water-before-bed.html
@@ -156,6 +163,7 @@ https://ohsunghani.github.io/health/heavy-shoulders-described-as-weight-on-the-b
 https://ohsunghani.github.io/health/herbal-medicine-consultation-after-traffic-accident.html
 https://ohsunghani.github.io/health/herbal-medicine-storage-guide.html
 https://ohsunghani.github.io/health/herbal-medicine-temperature-and-taking-it-away-from-home.html
+https://ohsunghani.github.io/health/hiking-downhill-anterior-knee-pain.html
 https://ohsunghani.github.io/health/how-acupuncture-may-affect-pain-processing.html
 https://ohsunghani.github.io/health/how-acupuncture-may-modulate-pain.html
 https://ohsunghani.github.io/health/immediate-relief-and-recovery-over-time.html
@@ -188,11 +196,13 @@ https://ohsunghani.github.io/health/liver-tests-and-herbal-medicine-safety.html
 https://ohsunghani.github.io/health/long-car-journeys-and-back-knee-comfort.html
 https://ohsunghani.github.io/health/long-travel-distance-for-accident-outpatient-care.html
 https://ohsunghani.github.io/health/looking-at-repeated-symptoms-and-contributing-factors.html
+https://ohsunghani.github.io/health/low-back-and-buttock-pulling-after-sitting.html
 https://ohsunghani.github.io/health/low-back-neurologic-changes-after-accident.html
 https://ohsunghani.github.io/health/low-back-pain-when-bending-over-the-sink.html
 https://ohsunghani.github.io/health/lumbar-disc-herniation-before-surgery-decisions.html
 https://ohsunghani.github.io/health/lumbar-mri-findings-and-treatment-decisions.html
 https://ohsunghani.github.io/health/lying-down-after-meals-and-reflux.html
+https://ohsunghani.github.io/health/making-time-for-persistent-back-discomfort.html
 https://ohsunghani.github.io/health/making-time-for-your-health-while-caring-for-family.html
 https://ohsunghani.github.io/health/making-time-to-care-for-your-body.html
 https://ohsunghani.github.io/health/managing-fluctuating-pain-during-accident-recovery.html
@@ -209,6 +219,7 @@ https://ohsunghani.github.io/health/modifying-work-with-tennis-elbow.html
 https://ohsunghani.github.io/health/morning-back-stiffness-eases-with-movement.html
 https://ohsunghani.github.io/health/morning-dry-throat-and-mouth-breathing.html
 https://ohsunghani.github.io/health/morning-heel-pain.html
+https://ohsunghani.github.io/health/morning-neck-back-stiffness-and-sleep-posture.html
 https://ohsunghani.github.io/health/morning-neck-pain-and-pillow-height-choice.html
 https://ohsunghani.github.io/health/morning-phlegm-and-cough-when-lying-down.html
 https://ohsunghani.github.io/health/morning-rhinitis.html
@@ -224,7 +235,9 @@ https://ohsunghani.github.io/health/neck-muscle-pain-versus-cervical-disc-sympto
 https://ohsunghani.github.io/health/neck-pain-when-turning.html
 https://ohsunghani.github.io/health/neck-related-headache-and-cervical-imaging.html
 https://ohsunghani.github.io/health/neck-stiffness-after-a-collision-and-symptom-changes.html
+https://ohsunghani.github.io/health/neck-stiffness-and-occipital-pulling-after-accident.html
 https://ohsunghani.github.io/health/neck-stiffness-and-pain-around-the-eyes.html
+https://ohsunghani.github.io/health/neck-stiffness-with-back-of-head-pain.html
 https://ohsunghani.github.io/health/neutral-eohyeol-pharmacopuncture-ingredients.html
 https://ohsunghani.github.io/health/new-facial-weakness-bells-palsy-and-eye-care.html
 https://ohsunghani.github.io/health/nighttime-calf-cramps.html
@@ -239,6 +252,7 @@ https://ohsunghani.github.io/health/older-adult-pain-and-changes-in-daily-activi
 https://ohsunghani.github.io/health/one-sided-neck-shoulder-pain-and-asymmetry.html
 https://ohsunghani.github.io/health/outer-elbow-pain-with-gripping.html
 https://ohsunghani.github.io/health/outer-knee-pain-and-iliotibial-band.html
+https://ohsunghani.github.io/health/overactive-bladder-urgency-and-daily-discomfort.html
 https://ohsunghani.github.io/health/pain-after-a-minor-traffic-collision.html
 https://ohsunghani.github.io/health/pain-despite-apparently-good-posture.html
 https://ohsunghani.github.io/health/pain-duration-and-course-in-consultation.html
@@ -255,6 +269,7 @@ https://ohsunghani.github.io/health/pelvic-discomfort-after-accident.html
 https://ohsunghani.github.io/health/persistent-dry-mouth-saliva-medication-and-dental-care.html
 https://ohsunghani.github.io/health/persistent-facial-redness-and-skin-irritation.html
 https://ohsunghani.github.io/health/persistent-fatigue-despite-weekend-rest.html
+https://ohsunghani.github.io/health/persistent-headache-and-neck-discomfort-after-accident.html
 https://ohsunghani.github.io/health/persistent-pain-after-accident-despite-normal-mri.html
 https://ohsunghani.github.io/health/persistent-pain-and-sensitization.html
 https://ohsunghani.github.io/health/persistent-stiffness-after-traffic-accident.html
@@ -269,8 +284,10 @@ https://ohsunghani.github.io/health/piriformis-symptoms-and-stretching-that-wors
 https://ohsunghani.github.io/health/planning-the-end-of-accident-outpatient-care.html
 https://ohsunghani.github.io/health/planning-visits-without-fixed-recovery-count.html
 https://ohsunghani.github.io/health/pork-and-radish-during-herbal-medicine.html
+https://ohsunghani.github.io/health/post-discharge-accident-pain-during-daily-activities.html
 https://ohsunghani.github.io/health/post-exercise-muscle-soreness-versus-injury.html
 https://ohsunghani.github.io/health/postmeal-drowsiness-and-diabetes-testing.html
+https://ohsunghani.github.io/health/postnasal-drip-throat-clearing-and-nasal-symptoms.html
 https://ohsunghani.github.io/health/postoperative-fatigue-before-herbal-consultation.html
 https://ohsunghani.github.io/health/postpartum-aches-and-chills.html
 https://ohsunghani.github.io/health/postpartum-herbal-consultation-and-recovery.html
@@ -286,6 +303,7 @@ https://ohsunghani.github.io/health/rear-end-collision-and-neck-low-back-strain.
 https://ohsunghani.github.io/health/recording-delayed-symptoms-after-an-accident.html
 https://ohsunghani.github.io/health/recurrent-ankle-sprains.html
 https://ohsunghani.github.io/health/recurrent-muscle-knots-and-myofascial-pain.html
+https://ohsunghani.github.io/health/recurrent-muscle-knots-and-repeated-daily-load.html
 https://ohsunghani.github.io/health/recurrent-pain-after-removing-analgesic-patch.html
 https://ohsunghani.github.io/health/recurrent-unexplained-bruising.html
 https://ohsunghani.github.io/health/red-skin-spots-rash-and-vascular-lesions.html
@@ -331,6 +349,7 @@ https://ohsunghani.github.io/health/sole-pain-is-not-always-plantar-fasciitis.ht
 https://ohsunghani.github.io/health/soreness-after-acupuncture-and-worsening-pain.html
 https://ohsunghani.github.io/health/spring-daytime-sleepiness.html
 https://ohsunghani.github.io/health/stress-digestion-and-gut-brain-interaction.html
+https://ohsunghani.github.io/health/stress-linked-neck-shoulder-tension-and-headache.html
 https://ohsunghani.github.io/health/stretching-a-leg-with-sciatic-symptoms.html
 https://ohsunghani.github.io/health/stretching-aerobic-and-strength-activity-differences.html
 https://ohsunghani.github.io/health/student-chongmyeongtang-consultation.html
@@ -366,6 +385,7 @@ https://ohsunghani.github.io/health/what-good-care-means-at-ohsung-clinic.html
 https://ohsunghani.github.io/health/when-a-low-back-treatment-plan-changes.html
 https://ohsunghani.github.io/health/when-pain-occurs-in-consultation.html
 https://ohsunghani.github.io/health/when-persistent-fatigue-needs-investigation.html
+https://ohsunghani.github.io/health/whole-body-aching-after-accident.html
 https://ohsunghani.github.io/health/why-injury-mechanism-matters-in-consultation.html
 https://ohsunghani.github.io/health/why-ohsung-does-not-promise-one-visit-cure.html
 https://ohsunghani.github.io/health/why-pain-patterns-guide-consultation.html
